@@ -31,7 +31,8 @@ Extract only subjects and objects that are specific, named concepts pertaining t
 - molecular activity
 - organism
 - pathway
-- phenotypic feature or symptom
+- phenotype
+- symptom
 
 Extract only predicates relating the concepts above that are semantically equivalent to any of the following:
 
@@ -94,8 +95,6 @@ Extract only predicates relating the concepts above that are semantically equiva
 - regulates
 - treats
 
-Again, do not use predicates outside of those in the list above.
-
 Here is the text to extract triples from:
 
 --- BEGIN TEXT ---
@@ -104,9 +103,15 @@ Here is the text to extract triples from:
 
 --- END TEXT ---
 
-Report each triple on a separate line in the following format: (subject, predicate, object)
+Lastly, extract only triples that **include the disease NGLY1 deficiency**.  This means that NGLY1 deficiency must 
+be either the subject or the object in the triple and as the implicit subject of the article is NGLY1 deficiency, it
+should be assumed that this disease is associated with any entities discussed where context does not dictate otherwise.
 
-Do not include explanation of any kind.
+Report each triple on a separate line with the format `(subject, subject_biomedical_entity, predicate, object, object_biomedical_entity)`
+where the "biomedical_entity" values for both the subject and the object are any of the entities listed above, exactly as-is (e.g. "pathway" or "disease").
+An example is "(NGLY1 deficiency, disease, causes, developmental delay, phenotype)".
+
+Do not include explanation of any kind in the results.
 
 Extracted triples:
 """
