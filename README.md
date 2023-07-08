@@ -1,4 +1,4 @@
-# Publication Citation Prediction
+# NGLY1 Review Automation
 
 WIP
 
