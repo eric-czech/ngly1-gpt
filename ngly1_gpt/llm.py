@@ -1,121 +1,63 @@
+import json
 import logging
+from typing import Any
 
+import networkx as nx
 import openai
+
+from ngly1_gpt import utils
 
 logger = logging.getLogger(__name__)
 
-PROMPT_FORMAT = """
-Text will be provided that contains information from a published, biomedical research article about "{disease}". Extract subject-predicate-object relations from this text.
-
-Extract only subjects and objects that are specific, named concepts pertaining to the following biomedical entities:
-- biological process
-- cell type
-- cellular component
-- tissue
-- chemical substance
-- disease
-- drug
-- gene
-- protein
-- gene family 
-- genotype
-- genetic variant
-- transcript variant
-- protein variant
-- macromolecular complex
-- molecular activity
-- organism
-- pathway
-- phenotype
-- symptom
-
-Extract only predicates relating the concepts above that are semantically equivalent, or nearly so, to any of the following:
-- affects risk for
-- associated with
-- capable of
-- caused by
-- causes
-- colocalizes with
-- contributes to
-- correlated with
-- decreases abundance of
-- decreases activity of
-- derives from
-- disrupts
-- enables
-- exact match
-- expressed in
-- expresses
-- genetically interacts with
-- has affected feature
-- has attribute
-- has gene product
-- has genotype
-- has metabolite
-- has output
-- has participant
-- has phenotype
-- has role
-- in 1 to 1 orthology relationship with
-- in orthology relationship with
-- in paralogy relationship with
-- in taxon
-- in xenology relationship with
-- increases abundance of
-- increases activity of
-- instance of
-- interacts with
-- involved in
-- is allele of
-- is marker for
-- is model of
-- is part of
-- located in
-- location of
-- manifestation of
-- molecularly interacts with
-- negatively correlated with
-- negatively regulates
-- occurs in
-- part of
-- participates in
-- pathogenic for condition
-- positively correlated with
-- positively regulates
-- precedes
-- prevents
-- produced by
-- produces
-- regulates
-- treats
-
-Assume that "{disease}" is associated with any entities discussed where context does not dictate otherwise, as is this is the primary subject of the article.
-
-Here is the text to extract relations from: 
---- BEGIN TEXT ---
-{text}
---- END TEXT ---
-
-Report each relation record on a separate line in CSV format using a pipe (i.e. "|") delimiter with the column headers: `subject`, `subject_entity`, `predicate`, `object`, `object_entity`. The `subject_entity` and `object_entity` values must be exactly one of the biomedical entities listed above (e.g. "pathway" or "disease"). 
-
-Here is an example response with a single record:
---- BEGIN EXAMPLE ---
-subject|subject_entity|predicate|object|object_entity
-Hutchinson-Gilford progeria syndrome|disease|has phenotype|osteolysis|phenotype
---- END EXAMPLE ---
-
-Report the CSV headers and the associated records without explanation or other text of any kind.
-
-Extracted relation records:
-"""
+DEFAULT_MODEL = "gpt-4"
 
 
-def extract_relations(text: str, disease: str, model="gpt-3.5-turbo") -> str:
-    prompt = PROMPT_FORMAT.strip().format(text=text, disease=disease)
-    logger.debug(f"Prompt:\n{prompt}")
+def _run_completion(prompt_template: str, model=DEFAULT_MODEL, **kwargs: Any) -> str:
+    with (utils.paths.prompts / prompt_template).open("r", encoding="utf-8") as f:
+        prompt = f.read().strip().format(**kwargs)
+    logger.info(f"Prompt:\n{prompt}")
     chat_completion = openai.ChatCompletion.create(
         model=model, messages=[{"role": "user", "content": prompt}]
     )
     response = chat_completion.choices[0].message.content
-    logger.debug(f"Response:\n{response}")
+    logger.info(f"Response:\n{response}")
     return response
+
+
+def extract_relations(text: str, disease: str, **kwargs: Any) -> str:
+    return _run_completion(
+        "relation_extraction_1.txt", text=text, disease=disease, **kwargs
+    )
+
+
+def extract_graph_description(text: str, disease: str, **kwargs: Any) -> str:
+    return _run_completion(
+        "graph_extraction_1.txt", text=text, disease=disease, **kwargs
+    )
+
+
+def extract_graph_json(text: str, description: str, disease: str, **kwargs: Any) -> str:
+    return _run_completion(
+        "graph_extraction_2.txt",
+        text=text,
+        disease=disease,
+        description=description,
+        **kwargs,
+    )
+
+
+def convert_graph_json(graph_json: str, disease: str) -> nx.MultiDiGraph:
+    G = nx.node_link_graph(json.loads(graph_json), directed=True, multigraph=True)
+    primary_node = None
+    for node in G.nodes():
+        if G.nodes[node]["label"] == disease:
+            primary_node = node
+    if primary_node is None:
+        raise ValueError(f"Could not find primary node with label '{disease}'")
+    for node in G.nodes():
+        if G.in_degree(node) == 0 and node != primary_node:
+            if not G.has_edge(primary_node, node) and not G.has_edge(
+                node, primary_node
+            ):
+                G.add_edge(primary_node, node, type="associated with")
+    return G

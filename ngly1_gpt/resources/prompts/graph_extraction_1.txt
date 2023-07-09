@@ -1,0 +1,9 @@
+Text will be provided that contains information from a published, biomedical research article about {disease}. 
+
+Extract all biological entities and processes that are hypothesized in this text as directly involved in the etiology of {disease}.  The intent of this extraction will ultimately be to create a graph (aka network) of these entities and processes as nodes with edges describing relations between them.  The focus will be on any proteins, genes, metabolites, pathways or other biological functions that are most likely to provide a means for chemical or physical intervention that may alter the course of the disease. 
+
+Let's think step by step.  List the nodes first, and then the types of edges/relations, and then which of these constitute opportunities for intervention.
+
+--- BEGIN TEXT ---
+{text}
+--- END TEXT ---
