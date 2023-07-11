@@ -1,0 +1,20 @@
+Define a taxonomy to describe the following list of human phenotypes associated with {disease}:
+
+--- BEGIN PHENOTYPE LIST ---
+{phenotypes}
+--- END PHENOTYPE LIST ---
+
+Requirements:
+
+- Create this taxonomy as a single, nested JSON object
+- There should be roughly 20 terms in the taxonomy overall and 3-5 levels when traversing any path downard through it from the top
+- The top level term for the taxonomy must be "{disease} Phenotypes"
+- Each object in the taxonomy must have only the fields `id`, `name`, `description` and `descendants` where:
+  - `id` is an auto-incrementing integer unique to each term in the taxonomy
+  - `name` is a representative name for the term
+  - `description` is a more detailed explanation of what the term corresponds to
+  - `descendants` is a list of all lower-level taxonomy objects
+- Do not include the original phenotypes in the taxonomy; include only more general categorizations of these terms
+- Report only the JSON for the taxonomy with no other explanation of any kind
+
+Taxonomy JSON object:

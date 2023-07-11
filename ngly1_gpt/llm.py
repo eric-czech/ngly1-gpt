@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_MODEL = "gpt-4"
 
 
-def _run_completion(
+def chat_completion(
     prompt_template: str,
     model=DEFAULT_MODEL,
     temperature: float | None = None,
@@ -33,19 +33,19 @@ def _run_completion(
 
 
 def extract_relations(text: str, disease: str, **kwargs: Any) -> str:
-    return _run_completion(
+    return chat_completion(
         "relation_extraction_1.txt", text=text, disease=disease, **kwargs
     )
 
 
 def extract_graph_description(text: str, disease: str, **kwargs: Any) -> str:
-    return _run_completion(
+    return chat_completion(
         "graph_extraction_1.txt", text=text, disease=disease, **kwargs
     )
 
 
 def extract_graph_json(text: str, description: str, disease: str, **kwargs: Any) -> str:
-    return _run_completion(
+    return chat_completion(
         "graph_extraction_2.txt",
         text=text,
         disease=disease,

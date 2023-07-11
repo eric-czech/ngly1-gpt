@@ -54,3 +54,8 @@ T = TypeVar("T")
 @retry(stop=stop_after_attempt(10), wait=wait_exponential(multiplier=1, min=1, max=180))
 def call_with_retry(fn: Callable[[], T]) -> T:
     return fn()
+
+
+def apply(obj: T, fn: Callable[[T], None]) -> T:
+    fn(obj)
+    return obj
