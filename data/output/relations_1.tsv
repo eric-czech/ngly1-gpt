@@ -1,0 +1,857 @@
+subject	subject_entity	predicate	object	object_entity
+Mutations	genetic variant	cause	Inherited Disorder of the Endoplasmic Reticulum-Associated Degradation	disease
+NGLY1	gene	has attribute	Mutations	genetic variant
+Inherited Disorder of the Endoplasmic Reticulum-Associated Degradation	disease	part of	ERAD Pathway	pathway
+ERAD pathway	pathway	responsible for	translocation of misfolded proteins	biological process
+ERAD pathway	pathway	part of	NGLY1 deficiency	disease
+N-glycanase 1	protein	involved in	ERAD dysfunction	biological process
+N-glycanase 1	protein	has genotype	c.1201A>T (p.R401X)	genetic variant
+NGLY1 deficiency	disease	causes	global developmental delay	phenotype
+NGLY1 deficiency	disease	causes	movement disorder	phenotype
+NGLY1 deficiency	disease	causes	hypotonia	phenotype
+NGLY1 deficiency	disease	associated with	hypo- or alacrima	phenotype
+NGLY1 deficiency	disease	associated with	elevated liver transaminases	phenotype
+NGLY1 deficiency	disease	associated with	microcephaly	phenotype
+NGLY1 deficiency	disease	associated with	diminished reflexes	phenotype
+NGLY1 deficiency	disease	associated with	hepatocyte cytoplasmic storage material or vacuolization	phenotype
+NGLY1 deficiency	disease	associated with	seizures	phenotype
+NGLY1 deficiency	disease	associated with	neurological dysfunction	phenotype
+NGLY1 deficiency	disease	associated with	abnormal tear production	phenotype
+NGLY1 deficiency	disease	associated with	liver disease	phenotype
+c.1201A>T (p.R401X)	genetic variant	associated with	severe disease	phenotype
+NGLY1 deficiency	disease	has phenotype	alacrima	phenotype
+NGLY1 deficiency	disease	has phenotype	choreoathetosis	phenotype
+NGLY1 deficiency	disease	has phenotype	seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	liver disease	phenotype
+N-glycanase 1	protein	also known as	peptide:N-glycanase	protein
+N-glycanase 1	protein	catalyzes	protein deglycosylation	biological process
+N-glycanase 1	protein	participates in	endoplasmic reticulum-associated degradation	pathway
+N-glycanase 1	protein	interacts with	AAA ATPase complex p97	macromolecular complex
+endoplasmic reticulum-associated degradation	pathway	has participant	misfolded glycoproteins	protein
+N-glycans	macromolecular complex	has role	quality control tags for proteins	biological process
+misfolded glycoproteins	protein	located in	ER luminal	cellular component
+misfolded glycoproteins	protein	produced by	ERAD machinery	macromolecular complex
+ERAD machinery	macromolecular complex	produces	misfolded glycoproteins	protein
+misfolded glycoproteins	protein	degraded by	cytosolic enzymes	macromolecular complex
+cytosolic enzymes	macromolecular complex	includes	NGLY1	protein
+NGLY1 deficiency	disease	caused by	inactivating mutations in NGLY1	genetic variant
+NGLY1 deficiency	disease	has phenotype	congenital disorder of glycosylation	phenotype
+NGLY1 deficiency	disease	associated with	ERAD process	biological process
+NGLY1	gene	produces	misfolded glycoproteins	protein
+Liver biopsy	assay	produces	accumulation of an amorphous unidentified substance	phenotype
+NGLY1 dysfunction	disease	causes	abnormal accumulation of misfolded glycoproteins	phenotype
+NGLY1 deficiency	disease	has phenotype	clinical presentation	phenotype
+mutations in NGLY1	genetic variant	causes	NGLY1 deficiency	disease
+NGLY1 deficiency	disease	has phenotype	accumulation of an amorphous unidentified substance	phenotype
+NGLY1 deficiency	disease	has phenotype	impaired cytosolic degradation	phenotype
+NGLY1 deficiency	disease	associated with	previously undiagnosed or unresolved genetic conditions	disease
+NGLY1 deficiency	disease	has phenotype	compound heterozygous inactivating mutations in NGLY1	genetic variant
+NGLY1 deficiency	disease	has phenotype	clinical and molecular findings	phenotype
+NGLY1 deficiency	disease	has phenotype	mutations in NGLY1	genetic variant
+NGLY1 deficiency	disease	has phenotype	liver biopsy	assay
+NGLY1 deficiency	disease	has phenotype	transferrin isoelectric focusing and N-glycan analyses	assay
+NGLY1 deficiency	disease	has phenotype	3-year-old boy	organism
+NGLY1 deficiency	disease	has phenotype	whole-exome sequencing (WES) study	assay
+NGLY1 deficiency	disease	has phenotype	underlying genetic etiology	phenotype
+NGLY1 deficiency	disease	has phenotype	new disorder	disease
+NGLY1 deficiency	disease	has phenotype	original case	phenotype
+NGLY1 deficiency	disease	has phenotype	seven newly diagnosed patients	organism
+NGLY1 deficiency	disease	has phenotype	inherited disorder	disease
+NGLY1 deficiency	disease	has phenotype	clinical presentation	phenotype
+NGLY1 deficiency	disease	has phenotype	ERAD process	biological process
+NGLY1 deficiency	disease	has phenotype	cytoplasm	cellular component
+NGLY1 deficiency	disease	has phenotype	amorphous unidentified substance	chemical substance
+NGLY1 deficiency	disease	has phenotype	NGLY1 dysfunction	disease
+NGLY1 deficiency	disease	has phenotype	cytosolic degradation	biological process
+NGLY1 deficiency	disease	has phenotype	misfolded glycoproteins	protein
+NGLY1 deficiency	disease	has phenotype	NGLY1	gene
+NGLY1 deficiency	disease	has phenotype	genetic conditions	disease
+NGLY1 deficiency	disease	has phenotype	genetic etiology	phenotype
+NGLY1 deficiency	disease	has phenotype	disorders	disease
+NGLY1 deficiency	disease	has phenotype	technology	<other>
+NGLY1 deficiency	disease	has phenotype	utility	<other>
+NGLY1 deficiency	disease	has phenotype	study	<other>
+NGLY1 deficiency	disease	has phenotype	patient	organism
+NGLY1 deficiency	disease	has phenotype	boy	organism
+NGLY1 deficiency	disease	has phenotype	mutations	genetic variant
+NGLY1 deficiency	disease	has phenotype	disorder	disease
+NGLY1 deficiency	disease	has phenotype	glycosylation	biological process
+NGLY1 deficiency	disease	has phenotype	analyses	assay
+NGLY1 deficiency	disease	has phenotype	biopsy	assay
+NGLY1 deficiency	disease	has phenotype	substance	chemical substance
+NGLY1 deficiency	disease	has phenotype	cytoplasm	cellular component
+NGLY1 deficiency	disease	has phenotype	degradation	biological process
+NGLY1 deficiency	disease	has phenotype	glycoproteins	protein
+NGLY1 deficiency	disease	has phenotype	patients	organism
+NGLY1 deficiency	disease	has phenotype	case	<other>
+NGLY1 deficiency	disease	has phenotype	observations	<other>
+NGLY1 deficiency	disease	has phenotype	presentation	<other>
+Exome sequencing	assay	produced by	Duke University	organization
+Exome sequencing	assay	produced by	University of British Columbia	organization
+Exome sequencing	assay	produced by	Stanford University	organization
+Exome sequencing	assay	produced by	Baylor College of Medicine	organization
+Exome sequencing	assay	produced by	Baylor College of Medicine Whole Genome Laboratory	organization
+Exome sequencing	assay	produced by	Emory Genetics Laboratory	organization
+Sanger sequencing of NGLY1	assay	produced by	Duke University	organization
+Sanger sequencing of NGLY1	assay	produced by	GeneDx	organization
+Illumina HiSeq2000	macromolecular complex	used in	Exome sequencing	assay
+Agilent SureSelect Human All Exon 50 Mb Kit	macromolecular complex	used in	Exome sequencing	assay
+Complete Genomics platforms	macromolecular complex	used in	Exome sequencing	assay
+VCRome2	macromolecular complex	used in	DNA capture-sequencing	assay
+Hugeseq	macromolecular complex	used in	Variant calling	biological process
+Real Time Genomics pipelines	macromolecular complex	used in	Variant calling	biological process
+Complete Genomics variant callers	macromolecular complex	used in	Variant calling	biological process
+Patient 1	organism	has phenotype	NGLY1 deficiency	disease
+Patient 2	organism	has phenotype	NGLY1 deficiency	disease
+Patient 3	organism	has phenotype	NGLY1 deficiency	disease
+Patient 4	organism	has phenotype	NGLY1 deficiency	disease
+Patient 5	organism	has phenotype	NGLY1 deficiency	disease
+Patient 6	organism	has phenotype	NGLY1 deficiency	disease
+Patient 7	organism	has phenotype	NGLY1 deficiency	disease
+NGLY1 deficiency	disease	has phenotype	global developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	movement disorder	phenotype
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype
+NGLY1 deficiency	disease	has phenotype	hypo- or alacrima	phenotype
+NGLY1 deficiency	disease	has phenotype	abnormal brain imaging	phenotype
+NGLY1 deficiency	disease	has phenotype	EEG abnormalities	phenotype
+NGLY1 deficiency	disease	has phenotype	elevated liver transaminases	phenotype
+NGLY1 deficiency	disease	has phenotype	microcephaly	phenotype
+NGLY1 deficiency	disease	has phenotype	diminished reflexes	phenotype
+NGLY1 deficiency	disease	has phenotype	hepatocyte cytoplasmic storage material or vacuolization	phenotype
+NGLY1 deficiency	disease	has phenotype	seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	abnormal nerve conduction	phenotype
+NGLY1 deficiency	disease	causes	premature death	phenotype
+NGLY1 deficiency	disease	has phenotype	involuntary movements	phenotype
+NGLY1 deficiency	disease	has phenotype	athetosis involving the trunk and extremities	phenotype
+NGLY1 deficiency	disease	has phenotype	constant lip smacking and pursing while awake	phenotype
+NGLY1 deficiency	disease	has phenotype	mild neonatal jaundice	phenotype
+NGLY1 deficiency	disease	has phenotype	Global developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype
+NGLY1 deficiency	disease	has phenotype	intractable multifocal epilepsy	phenotype
+NGLY1 deficiency	disease	has phenotype	myoclonic seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	drop attacks	phenotype
+NGLY1 deficiency	disease	has phenotype	staring or tonic episodes	phenotype
+NGLY1 deficiency	disease	has phenotype	liver disease	phenotype
+NGLY1 deficiency	disease	has phenotype	cortical vision loss	phenotype
+NGLY1 deficiency	disease	has phenotype	congenital alacrima	phenotype
+NGLY1 deficiency	disease	has phenotype	corneal ulcerations with scarring	phenotype
+NGLY1 deficiency	disease	has phenotype	central hypotonia	phenotype
+NGLY1 deficiency	disease	has phenotype	global developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	intrauterine growth retardation	phenotype
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype
+NGLY1 deficiency	disease	has phenotype	developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	elevated liver transaminases	phenotype
+NGLY1 deficiency	disease	has phenotype	intention tremor	phenotype
+NGLY1 deficiency	disease	has phenotype	involuntary movements of neck, hands and arm	phenotype
+NGLY1 deficiency	disease	has phenotype	ocular apraxia	phenotype
+NGLY1 deficiency	disease	has phenotype	distal tapering of hands and feet	phenotype
+NGLY1 deficiency	disease	has phenotype	diminished deep tendon reflexes	phenotype
+NGLY1 deficiency	disease	has phenotype	cortical vision impairment	phenotype
+NGLY1 deficiency	disease	has phenotype	alacrima	phenotype
+NGLY1 deficiency	disease	has phenotype	dry eyes	phenotype
+NGLY1 deficiency	disease	has phenotype	intellectual disabilities	phenotype
+NGLY1 deficiency	disease	has phenotype	limited expressive speech	phenotype
+NGLY1 deficiency	disease	has phenotype	ambulation with a walker	phenotype
+Patient 3	organism	has phenotype	poor feeding	phenotype
+Patient 3	organism	has phenotype	lethargy	phenotype
+Patient 3	organism	has phenotype	hyperbilirubinemia	phenotype
+Phototherapy	treatment	treats	hyperbilirubinemia	disease
+Patient 3	organism	has phenotype	elevated liver transaminases	phenotype
+Patient 3	organism	has phenotype	transient thrombocytopenia	phenotype
+Patient 3	organism	has phenotype	global developmental delay	phenotype
+Patient 3	organism	has phenotype	acquired microcephaly	phenotype
+Patient 3	organism	has phenotype	bilateral exotropia	phenotype
+Patient 3	organism	has phenotype	hypotonia	phenotype
+Patient 3	organism	has phenotype	constipation	phenotype
+Patient 3	organism	has phenotype	intermittent mild lactic acidemia	phenotype
+Patient 3	organism	has phenotype	absence of tears when crying	phenotype
+Patient 3	organism	has phenotype	intermittent chalazions	phenotype
+Patient 3	organism	has phenotype	staring spells	phenotype
+Patient 3	organism	has phenotype	extrapyramidal movement disorder	phenotype
+Patient 3	organism	has phenotype	asynchronous myoclonic jerks of the limbs and shoulders	phenotype
+Patient 3	organism	has phenotype	subtle choreoathetotic movements of the hands and fingers	phenotype
+Patient 3	organism	has phenotype	unsteady gait	phenotype
+Patient 3	organism	has phenotype	limited communication abilities	phenotype
+Patient 3	organism	has phenotype	use of a speech-generating device	phenotype
+NGLY1 deficiency	disease	has phenotype	intrauterine growth restriction	phenotype
+NGLY1 deficiency	disease	has phenotype	oligohydramnios	phenotype
+NGLY1 deficiency	disease	has phenotype	mild hyperbilirubinemia	phenotype
+NGLY1 deficiency	disease	has phenotype	intermittent head flexion	phenotype
+NGLY1 deficiency	disease	has phenotype	generalized poly-spike discharges	phenotype
+NGLY1 deficiency	disease	has phenotype	mild tonic seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	symmetric spasms with bilateral arm extension	phenotype
+NGLY1 deficiency	disease	has phenotype	Involuntary movements of the upper extremities	phenotype
+NGLY1 deficiency	disease	has phenotype	global developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	bilateral ptosis	phenotype
+NGLY1 deficiency	disease	has phenotype	abnormal tear production	phenotype
+NGLY1 deficiency	disease	has phenotype	elevated liver transaminases	phenotype
+NGLY1 deficiency	disease	has phenotype	constipation	phenotype
+NGLY1 deficiency	disease	has phenotype	recurrent episodes of keratoconjunctivitis	phenotype
+NGLY1 deficiency	disease	has phenotype	poor lid closure during sleep	phenotype
+NGLY1 deficiency	disease	has phenotype	corneal scarring	phenotype
+Patient 5	organism	has phenotype	global developmental delay	phenotype
+Patient 5	organism	has phenotype	constant movements of arms and legs	phenotype
+Patient 5	organism	has phenotype	head bobbing	phenotype
+Patient 5	organism	has phenotype	liver transaminase elevations	phenotype
+Patient 5	organism	has phenotype	diminished reflexes	phenotype
+Patient 5	organism	has phenotype	dry eyes	phenotype
+Patient 5	organism	has phenotype	microcephaly	phenotype
+Patient 5	organism	has phenotype	myoclonic seizures	phenotype
+Patient 5	organism	has phenotype	developmental regression	phenotype
+lubricant drops	drug	treats	dry eyes	phenotype
+myoclonic seizures	phenotype	caused by	NGLY1 deficiency	disease
+microcephaly	phenotype	caused by	NGLY1 deficiency	disease
+dry eyes	phenotype	caused by	NGLY1 deficiency	disease
+diminished reflexes	phenotype	caused by	NGLY1 deficiency	disease
+liver transaminase elevations	phenotype	caused by	NGLY1 deficiency	disease
+head bobbing	phenotype	caused by	NGLY1 deficiency	disease
+constant movements of arms and legs	phenotype	caused by	NGLY1 deficiency	disease
+global developmental delay	phenotype	caused by	NGLY1 deficiency	disease
+developmental regression	phenotype	caused by	NGLY1 deficiency	disease
+NGLY1 deficiency	disease	causes	myoclonic seizures	phenotype
+NGLY1 deficiency	disease	causes	microcephaly	phenotype
+NGLY1 deficiency	disease	causes	dry eyes	phenotype
+NGLY1 deficiency	disease	causes	diminished reflexes	phenotype
+NGLY1 deficiency	disease	causes	liver transaminase elevations	phenotype
+NGLY1 deficiency	disease	causes	head bobbing	phenotype
+NGLY1 deficiency	disease	causes	constant movements of arms and legs	phenotype
+NGLY1 deficiency	disease	causes	global developmental delay	phenotype
+NGLY1 deficiency	disease	causes	developmental regression	phenotype
+Patient 6	organism	has phenotype	developmental delay	phenotype
+Patient 6	organism	has phenotype	hypotonia	phenotype
+Patient 6	organism	has phenotype	microcephaly	phenotype
+Patient 6	organism	has phenotype	myopathic- appearing face	phenotype
+Patient 6	organism	has phenotype	constant involuntary movements	phenotype
+Patient 6	organism	has phenotype	tendency to hyperextend her arms	phenotype
+Patient 6	organism	has phenotype	tendency to close her fists	phenotype
+Patient 6	organism	has phenotype	jaundice	phenotype
+trisomy 18	genetic variant	associated with	positive second trimester serum screen	assay
+SLOS	disease	associated with	positive second trimester serum screen	assay
+Cesarean section	procedure	produces	Patient 6	organism
+ultrasound	assay	associated with	IUGR	disease
+phototherapy	procedure	treats	jaundice	disease
+Patient 6	organism	has attribute	normal female karyotype	genotype
+Patient 6	organism	has phenotype	death at 9 1⁄2 months of age	phenotype
+Patient 7	organism	has phenotype	mild jaundice	phenotype
+Patient 7	organism	has phenotype	strabismus	phenotype
+Patient 7	organism	has phenotype	hypotonia	phenotype
+Patient 7	organism	has phenotype	athetoid arm and hand movements	phenotype
+Patient 7	organism	has phenotype	clasped hands	phenotype
+Patient 7	organism	has phenotype	elevated liver transaminases	phenotype
+Patient 7	organism	has phenotype	Microcephaly	phenotype
+Patient 7	organism	has phenotype	severe developmental delay	phenotype
+Patient 7	organism	has phenotype	slow progress without regression	phenotype
+trisomy 21	genetic variant	increases abundance of	risk	phenotype
+Patient 7	organism	has phenotype	learned to sit alone	phenotype
+Patient 7	organism	has phenotype	started to crawl at 2 years	phenotype
+Patient 7	organism	has phenotype	had no words	phenotype
+NGLY1 deficiency	disease	has phenotype	decreased fetal movement	phenotype
+NGLY1 deficiency	disease	has phenotype	bradycardia	phenotype
+NGLY1 deficiency	disease	has phenotype	IUGR	phenotype
+NGLY1 deficiency	disease	has phenotype	cyanosis at birth	phenotype
+NGLY1 deficiency	disease	has phenotype	Anal stenosis	phenotype
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype
+NGLY1 deficiency	disease	has phenotype	movement disorder	phenotype
+NGLY1 deficiency	disease	has phenotype	developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	Seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	acquired microcephaly	phenotype
+NGLY1 deficiency	disease	has phenotype	inability to close her eyes completely during sleep	phenotype
+NGLY1 deficiency	disease	has phenotype	chronic conjunctivitis	phenotype
+NGLY1 deficiency	disease	has phenotype	corneal clouding	phenotype
+NGLY1 deficiency	disease	has phenotype	hypolacrima	phenotype
+NGLY1 deficiency	disease	has phenotype	strabismus	phenotype
+NGLY1 deficiency	disease	has phenotype	hearing impairment	phenotype
+NGLY1 deficiency	disease	has phenotype	gastro-esophageal reflux	phenotype
+NGLY1 deficiency	disease	has phenotype	chronic constipation	phenotype
+NGLY1 deficiency	disease	has phenotype	severe scoliosis	phenotype
+NGLY1 deficiency	disease	has phenotype	talipes equinovarus	phenotype
+c.1201A>T (p.R401X) mutation	genetic variant	causes	NGLY1 deficiency	disease
+NGLY1 gene	gene	has genotype	compound heterozygote genotype	genotype
+NGLY1 gene	gene	has gene product	Q631S protein variant	protein variant
+NGLY1 gene	gene	has gene product	R401X protein variant	protein variant
+Q631S protein variant	protein variant	produces	NGLY1 deficiency	disease
+R401X protein variant	protein variant	produces	NGLY1 deficiency	disease
+c.1201A>T (p.R401X) mutation	genetic variant	associated with	mild clinical phenotype	phenotype
+whole exome sequencing (WES)	assay	detects	knock out mutations in NGLY1 gene	genetic variant
+knock out mutations in NGLY1 gene	genetic variant	causes	NGLY1 deficiency	disease
+Patient 2	organism	has genotype	c.1370dupG or p.R458fs	genetic variant
+NGLY1 gene	gene	has gene product	exon 9	macromolecular complex
+c.1370dupG or p.R458fs	genetic variant	causes	frame shift in codon 458	phenotype
+c.1370dupG or p.R458fs	genetic variant	causes	insertion of 13 incorrect residues	phenotype
+c.1370dupG or p.R458fs	genetic variant	causes	stop codon in exon 9	phenotype
+Baylor College of Medicine Whole Genome Laboratory	organization	produces	WES	assay
+Sanger sequencing	assay	confirms	heterozygous carriers	genotype
+Exome Variant Server	organization	has participant	6503 subjects	organism
+Duke	organization	has participant	3321 subjects	organism
+Patient 3	organism	has genotype	Mutations in NGLY1	genetic variant
+Baylor College of Medicine	organization	produces	WES and whole-genome sequencing	assay
+Stanford University	organization	produces	WES and whole-genome sequencing	assay
+G>A mutation at position 3:25761670 (hg19)	genetic variant	causes	p.R542X	protein variant
+3 base pair in-frame deletion TCC>	genetic variant	located in	position 3:25775416 (hg19)	<other>
+G>T mutation at position 3:25777564	genetic variant	produces	heterozygous SMP	genetic variant
+NGLY1	gene	has gene product	p.R542X	protein
+NGLY1	gene	has gene product	heterozygous SMP	protein
+NGLY1 deficiency	disease	caused by	Mutations in NGLY1	genetic variant
+Patient 4	organism	has genotype	p.R401X	genetic variant
+p.R401X	genetic variant	located in	3:25775422 (hg19)	<other>
+p.R401X	genetic variant	located in	ENST00000280700	transcript variant
+p.R401X	genetic variant	located in	c.1201A>T	genetic variant
+p.R401X	genetic variant	located in	exon 8 of NGLY1	genetic variant
+Duke University	organization	produces	p.R401X	genetic variant
+GeneDx	organization	confirms	p.R401X	genetic variant
+NGLY1	gene	has genotype	single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant
+single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant	causes	R401X	protein variant
+R401X	protein variant	caused by	single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant
+Patients 5 and 6	organism	has genotype	single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant
+mother of Patients 5 and 6	organism	has genotype	single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant
+NGLY1	gene	produces	R401X	protein variant
+R401X	protein variant	produced by	NGLY1	gene
+Patients 7 and 8	organism	has genotype	R401X	genetic variant
+R401X	genetic variant	located in	3:25775422 (hg19)	<other>
+R401X	genetic variant	located in	transcript ENST00000280700	transcript variant
+R401X	genetic variant	located in	exon 8 of NGLY1	genetic variant
+c.1201A>T	genetic variant	located in	exon 8 of NGLY1	genetic variant
+c.1201A>T	genetic variant	instance of	homozygous nonsense mutation	<other>
+NGLY1 deficiency	disease	has phenotype	abnormal tear production	phenotype
+NGLY1 deficiency	disease	has phenotype	choreoathetosis	phenotype
+NGLY1 deficiency	disease	has phenotype	liver disease	phenotype
+NGLY1 deficiency	disease	has phenotype	global developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	acquired microcephaly	phenotype
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype
+NGLY1 deficiency	disease	has phenotype	EEG abnormalities	phenotype
+NGLY1 deficiency	disease	has phenotype	brain imaging abnormalities	phenotype
+NGLY1 deficiency	disease	has phenotype	peripheral neuropathy	phenotype
+NGLY1 deficiency	disease	has phenotype	constipation	phenotype
+NGLY1 deficiency	disease	has phenotype	history of IUGR	phenotype
+NGLY1 deficiency	disease	has phenotype	dysmorphic features	phenotype
+NGLY1 deficiency	disease	has phenotype	adrenal cortex vacuolation	phenotype
+NGLY1 deficiency	disease	has phenotype	low uE3	phenotype
+NGLY1 deficiency	disease	associated with	ERAD pathway	pathway
+NGLY1 deficiency	disease	associated with	cytosolic proteasome	cellular component
+NGLY1 deficiency	disease	caused by	knockout mutations in NGLY1	genetic variant
+NGLY1 deficiency	disease	associated with	adrenal function dysfunction	phenotype
+NGLY1 deficiency	disease	associated with	central nervous system	tissue
+NGLY1 deficiency	disease	associated with	heart	tissue
+NGLY1 deficiency	disease	associated with	liver	tissue
+NGLY1 deficiency	disease	associated with	gastrointestinal tract	tissue
+NGLY1 deficiency	disease	associated with	endocrine system	tissue
+NGLY1 deficiency	disease	associated with	IUGR	phenotype
+NGLY1 deficiency	disease	associated with	failure to thrive	phenotype
+NGLY1 deficiency	disease	associated with	global developmental delay	phenotype
+NGLY1 deficiency	disease	associated with	liver impairment	phenotype
+NGLY1 deficiency	disease	associated with	abnormalities detected on brain imaging	phenotype
+NGLY1 deficiency	disease	associated with	hypo- or alacrima	phenotype
+NGLY1 deficiency	disease	associated with	movement disorder	phenotype
+NGLY1 deficiency	disease	associated with	tremulousness	phenotype
+NGLY1 deficiency	disease	associated with	varying degrees of choreoathetosis	phenotype
+NGLY1 deficiency	disease	associated with	multi-system disease	phenotype
+NGLY1 deficiency	disease	associated with	prominent neuromuscular involvement	phenotype
+NGLY1 deficiency	disease	associated with	Lactic acidemia	phenotype
+NGLY1 deficiency	disease	not associated with	cerebellar atrophy	phenotype
+NGLY1 deficiency	disease	not associated with	lipodystrophy	phenotype
+NGLY1 deficiency	disease	not associated with	significant heart manifestations	phenotype
+NGLY1 deficiency	disease	not associated with	CDGs	disease
+Mitochondrial electron transport chain enzymology	biological process	occurs in	skin fibroblasts	cell type
+Mitochondrial electron transport chain enzymology	biological process	occurs in	muscle	tissue
+Mitochondrial electron transport chain enzymology	biological process	occurs in	liver	tissue
+Mitochondrial DNA	macromolecular complex	located in	liver sample	tissue
+Patient 3	organism	has attribute	reduction in mitochondrial DNA content	phenotype
+NGLY1 deficiency	disease	associated with	multiple systems	<other>
+NGLY1 deficiency	disease	negatively correlated with	basal ganglia involvement	phenotype
+NGLY1 deficiency	disease	negatively correlated with	retinitis pigmentosa	disease
+NGLY1 deficiency	disease	negatively correlated with	cardiomyopathy	disease
+NGLY1 deficiency	disease	negatively correlated with	liver failure	disease
+NGLY1 deficiency	disease	negatively correlated with	renal tubular acidosis	disease
+Brain disease	disease	occurs in	Patients 5 and 6	organism
+Patients 5 and 6	organism	has phenotype	hypoxic-ischemic encephalopathy	disease
+Hypoxic-ischemic encephalopathy	disease	associated with	secondary mitochondrial dysfunction	phenotype
+NGLY1 deficiency	disease	negatively correlated with	spongiform degeneration	phenotype
+Mitochondrial disorders	disease	part of	differential diagnosis	<other>
+NGLY1 deficiency	disease	negatively correlated with	mitochondrial disorders	disease
+ERAD pathway	pathway	associated with	Golgi apparatus	cellular component
+ERAD pathway	pathway	associated with	erlin1/2 complex	macromolecular complex
+ERAD pathway	pathway	associated with	E3-ubiquitin ligase	protein
+NGLY1	gene	causes	NGLY1 deficiency	disease
+MAN1B1	gene	associated with	non-syndromic autosomal recessive intellectual disability	disease
+MAN1B1	gene	associated with	subtle dysmorphic features	phenotype
+α-1,2-Mannosidase	protein	located in	Golgi apparatus	cellular component
+α-1,2-Mannosidase	protein	participates in	glycoprotein quality control	biological process
+ERLIN2	gene	associated with	intellectual disability	disease
+ERLIN2	gene	associated with	developmental regression	phenotype
+ERLIN2	gene	associated with	multiple contractures	phenotype
+abnormal erlin2	protein variant	causes	impaired ERAD	phenotype
+abnormal erlin2	protein variant	disrupts	erlin1/2 complex	macromolecular complex
+ERLIN2	gene	associated with	hereditary spastic paraplegia	disease
+IP3 receptors	protein	form	calcium channels	macromolecular complex
+IP3 receptors	protein	part of	ER membranes	cellular component
+IP3 receptors	protein	play role in	mammalian cell signaling	biological process
+IP3 receptors	protein	undergo	rapid degradation	biological process
+rapid degradation	biological process	part of	ubiquitin-proteasome pathway	pathway
+RNF170	protein	mediates	ubiquitination and processing of the IP3 receptor	biological process
+RNF170	protein	interacts with	erlin1/2 complex	macromolecular complex
+Mutations in RNF170	genetic variant	cause	late- onset autosomal dominant sensory ataxia	disease
+Abnormal E3-ubiquitin ligase activity	biological process	plays role in	pathogenesis of an autosomal dominant form of Charcot-Marie-Tooth disease	disease
+quality control system for targeting and degrading misfolded proteins	biological process	implicated in	neurological conditions	disease
+NGLY1	protein	located in	cytoplasm	cellular component
+NGLY1	protein	participates in	proteasomal degradation of aberrant glycoproteins	biological process
+NGLY1	protein	enables	initial cleavage of bulky N-glycan chains on misfolded glycoproteins	molecular activity
+NGLY1 deficiency	disease	causes	accumulation of intact glycoproteins in the cytoplasm	phenotype
+NGLY1	protein	involved in	processing of misfolded glycoproteins	biological process
+NGLY1 deficiency	disease	associated with	liver disease	disease
+NGLY1 deficiency	disease	causes	accumulation of misfolded glycoproteins	phenotype
+Transferrin isoelectric focusing	assay	used in	NGLY1-deficient patients	organism
+mass spectrometry studies	assay	used in	NGLY1-deficient patients	organism
+NGLY1	gene	has role	maintaining central nervous system integrity	biological process
+png-1	gene	is allele of	NGLY1	gene
+Caenorhabditis elegans	organism	expresses	png-1	gene
+png-1	gene	involved in	peripheral nervous system defects	phenotype
+peripheral nervous system defects	phenotype	associated with	loss-of-function mutations in png-1	genetic variant
+NGLY1 deficiency	disease	associated with	peripheral neuropathy	disease
+central nervous system abnormalities	phenotype	associated with	NGLY1 deficiency	disease
+peripheral nervous system abnormalities	phenotype	associated with	NGLY1 deficiency	disease
+c.1201A>T (p.R401X)	genetic variant	associated with	NGLY1	gene
+homozygous mutations	genetic variant	associated with	p.R401X	protein variant
+homozygous mutations	genetic variant	causes	severe phenotype	phenotype
+c.1201A>T (p.R401X)	genetic variant	associated with	disease	disease
+NGLY1	gene	associated with	NGLY1 deficiency	disease
+NGLY1	gene	associated with	functional genetic variation	genetic variant
+functional genetic variation	genetic variant	associated with	human population	organism
+mutations	genetic variant	associated with	disease	disease
+NGLY1 deficiency	disease	has phenotype	elevation of AFP and liver enzymes in infancy	phenotype
+NGLY1 deficiency	disease	has phenotype	relative normalization in early childhood	phenotype
+NGLY1 deficiency	disease	has phenotype	accumulation of a substance with staining properties similar to glycogen in hepatocyte cytoplasm	phenotype
+NGLY1 deficiency	disease	has phenotype	absent tears resulting in blepharitis and corneal ulceration	phenotype
+NGLY1 deficiency	disease	has phenotype	a movement disorder	phenotype
+NGLY1 deficiency	disease	has phenotype	peripheral neuropathy	phenotype
+NGLY1 deficiency	disease	has phenotype	transient nature of the AFP and liver transaminase elevation	phenotype
+NGLY1 deficiency	disease	has phenotype	more mild phenotype	phenotype
+WES and whole genome sequencing	assay	produces	detection of further cases	phenotype
+NGLY1 deficiency	disease	causes	accumulation of misfolded glycoproteins	phenotype
+misfolded glycoproteins	macromolecular complex	located in	hepatocyte cytoplasm	cellular component
+N-glycanase 1	protein	encoded by	NGLY1	gene
+N-glycanase 1	protein	involved in	cleavage of the beta-aspartyl glycosylamine bond of N-linked glycoproteins	biological process
+NGLY1 deficiency	disease	has phenotype	optic atrophy	phenotype
+NGLY1 deficiency	disease	has phenotype	retinal pigmentary changes/cone dystrophy	phenotype
+NGLY1 deficiency	disease	has phenotype	delayed bone age	phenotype
+NGLY1 deficiency	disease	has phenotype	joint hypermobility	phenotype
+NGLY1 deficiency	disease	has phenotype	lower than predicted resting energy expenditure	phenotype
+NGLY1 deficiency	disease	has phenotype	low CSF total protein and albumin	phenotype
+NGLY1 deficiency	disease	has phenotype	high antibody titers towards rubella and/or rubeola following vaccination	phenotype
+NGLY1 deficiency	disease	has phenotype	decreased tear production	phenotype
+NGLY1 deficiency	disease	has phenotype	transient transaminitis	phenotype
+NGLY1 deficiency	disease	has phenotype	small feet	phenotype
+NGLY1 deficiency	disease	has phenotype	complex hyperkinetic movement disorder	phenotype
+NGLY1 deficiency	disease	has phenotype	global developmental delay with relatively preserved socialization	phenotype
+NGLY1	gene	associated with	Deglycosylation	biological process
+NGLY1	gene	associated with	glycosylation	biological process
+NGLY1	gene	associated with	NGLY1-CDDG	disease
+NGLY1	gene	associated with	congenital disorder of glycosylation	disease
+NGLY1	gene	associated with	N-linked glycosylation	biological process
+NGLY1	gene	associated with	phenotype	phenotype
+NGLY1	gene	associated with	human	organism
+Congenital disorders of glycosylation	disease	has attribute	abnormalities in the process of glycosylation of biomolecules	phenotype
+NGLY1 deficiency	disease	caused by	biallelic mutations in the NGLY1 gene	genetic variant
+NGLY1 gene	gene	has genotype	biallelic mutations	genetic variant
+NGLY1 deficiency	disease	instance of	congenital disorder of de-glycosylation	disease
+NGLY1 deficiency	disease	has phenotype	abnormalities in the process of glycosylation of biomolecules	phenotype
+NGLY1	gene	encodes	N-glycanase 1	protein
+N-glycanase 1	protein	involved in	cytosolic degradation of misfolded glycoproteins	biological process
+N-glycanase 1	protein	involved in	degradation of other glycoproteins	biological process
+3-year-old male	organism	has genotype	c.1891delC (p.Q631S NM_018297.3) variant	genetic variant
+3-year-old male	organism	has genotype	c.1201A>T (p.R401* NM_018297.3) variant	genetic variant
+NGLY1 protein	protein	expressed in	leukocytes	cell type
+NGLY1 protein	protein	decreases abundance of	in the parents	organism
+NGLY1 protein	protein	decreases abundance of	in the proband	organism
+Transferrin isoelectric focusing	assay	associated with	difficulty in ascertaining other affected individuals	phenotype
+N-glycan profiling	assay	associated with	difficulty in ascertaining other affected individuals	phenotype
+social media campaign	<other>	identified	seven additional affected individuals	organism
+Enns et al.	organization	published	retrospective chart review	<other>
+retrospective chart review	<other>	highlighted	most common findings in the eight known NGLY1-CDDG patients	phenotype
+National Institutes of Health (NIH) Clinical Center	organization	initiated	natural history study of the disorder	<other>
+natural history study	<other>	has participant	12 affected individuals	organism
+trial NCT00369421	clinical trial	part of	natural history study of the disorder	<other>
+trial NCT02089789	clinical trial	part of	natural history study of the disorder	<other>
+NIH protocol #76-HG-0238	clinical trial	has participant	Inborn Errors of Metabolism	disease
+NIH protocol #76-HG-0238	clinical trial	has participant	Other Genetic Disorders	disease
+NIH protocol #14-HG-0071	clinical trial	has participant	Congenital Disorders of Glycosylation	disease
+National Human Genome Research Institute’s Institutional Review Board	organization	produces	NIH protocol #76-HG-0238	clinical trial
+National Human Genome Research Institute’s Institutional Review Board	organization	produces	NIH protocol #14-HG-0071	clinical trial
+NIH Clinical Center	organization	has participant	each subject	<other>
+NGLY1-CDDG	disease	has participant	Blood	biological process
+NGLY1-CDDG	disease	has participant	urine	biological process
+NGLY1-CDDG	disease	has participant	cerebral spinal fluid	biological process
+NGLY1-CDDG	disease	has participant	lymphoblasts	cell type
+NGLY1-CDDG	disease	has participant	primary dermal fibroblasts	cell type
+NGLY1-CDDG	disease	has participant	brain magnetic resonance imaging and spectroscopy	assay
+NGLY1-CDDG	disease	has participant	electroencephalograms	assay
+NGLY1-CDDG	disease	has participant	electromyogram	assay
+NGLY1-CDDG	disease	has participant	nerve conduction studies	assay
+NGLY1-CDDG	disease	has participant	indirect calorimetry	assay
+NGLY1-CDDG	disease	has participant	eye examination with Schirmer II testing	assay
+NGLY1-CDDG	disease	has participant	optical coherence tomography scans and electroretinography	assay
+NGLY1-CDDG	disease	has participant	behavioral determination of pure tone thresholds	assay
+NGLY1-CDDG	disease	has participant	tympanometry	assay
+NGLY1-CDDG	disease	has participant	distortion product otoacoustic emissions	assay
+NGLY1-CDDG	disease	has participant	auditory brainstem evoked potentials	assay
+NGLY1-CDDG	disease	has participant	quantitative sweat analysis autonomic testing	assay
+NGLY1-CDDG	disease	has participant	gastric aspiration	assay
+NGLY1-CDDG	disease	has participant	swallow study	assay
+NGLY1-CDDG	disease	has participant	skeletal survey	assay
+NGLY1-CDDG	disease	has participant	bone age	assay
+NGLY1-CDDG	disease	has participant	dual X-ray absorptiometry	assay
+NGLY1-CDDG	disease	has participant	abdominal ultrasound	assay
+NGLY1-CDDG	disease	has participant	vibration controlled transient elastography	assay
+NGLY1-CDDG	disease	has participant	echocardiogram	assay
+NGLY1-CDDG	disease	has participant	electrocardiogram	assay
+NGLY1-CDDG	disease	has participant	clinical neurology	biological process
+NGLY1-CDDG	disease	has participant	audiology	biological process
+NGLY1-CDDG	disease	has participant	nutrition	biological process
+NGLY1-CDDG	disease	has participant	ophthalmology	biological process
+NGLY1-CDDG	disease	has participant	hepatology	biological process
+NGLY1-CDDG	disease	has participant	growth, puberty and hormonal studies	biological process
+NGLY1-CDDG	disease	has participant	allergy and immunology	biological process
+NGLY1-CDDG	disease	has participant	genetic counseling	biological process
+NGLY1-CDDG	disease	has participant	physiatry	biological process
+NGLY1-CDDG	disease	has participant	speech, occupational, and physical therapy	biological process
+NGLY1-CDDG	disease	has participant	developmental psychological evaluations	assay
+NGLY1-CDDG	disease	has participant	Vineland Adaptive Behavior Scales, 2nd edition	assay
+NGLY1-CDDG	disease	has participant	Cognitive function testing	assay
+NGLY1-CDDG	disease	has participant	Nijmegen pediatric CDG rating scale	assay
+NGLY1	gene	has genotype	biallelic mutations	genetic variant
+biallelic mutations in NGLY1	genetic variant	causes	NGLY1 deficiency	disease
+c.1201A>T (p.R401*)	genetic variant	part of	biallelic mutations in NGLY1	genetic variant
+mutations in NGLY1	genetic variant	located in	catalytic domain	cellular component
+c.953T>C	genetic variant	associated with	NGLY1 deficiency	disease
+p.L318P	protein variant	associated with	NGLY1 deficiency	disease
+c.1169G>C	genetic variant	associated with	NGLY1 deficiency	disease
+p.R390P	protein variant	associated with	NGLY1 deficiency	disease
+c.1201A>T	genetic variant	associated with	NGLY1 deficiency	disease
+p.R401*	protein variant	associated with	NGLY1 deficiency	disease
+c.931G>A	genetic variant	associated with	NGLY1 deficiency	disease
+p.E311K	protein variant	associated with	NGLY1 deficiency	disease
+c.730T>C	genetic variant	associated with	NGLY1 deficiency	disease
+p.W244R	protein variant	associated with	NGLY1 deficiency	disease
+c.1604G>A	genetic variant	associated with	NGLY1 deficiency	disease
+p.W535*	protein variant	associated with	NGLY1 deficiency	disease
+c.1910delT	genetic variant	associated with	NGLY1 deficiency	disease
+p.L637*	protein variant	associated with	NGLY1 deficiency	disease
+c.1891delC	genetic variant	associated with	NGLY1 deficiency	disease
+p.Q631S	protein variant	associated with	NGLY1 deficiency	disease
+c.622C>T	genetic variant	associated with	NGLY1 deficiency	disease
+p.Q208*	protein variant	associated with	NGLY1 deficiency	disease
+c.930C>T	genetic variant	associated with	NGLY1 deficiency	disease
+p.G310G (splice site)	protein variant	associated with	NGLY1 deficiency	disease
+c.347C>G	genetic variant	associated with	NGLY1 deficiency	disease
+p.S116*	protein variant	associated with	NGLY1 deficiency	disease
+c.881+5G>T	genetic variant	associated with	NGLY1 deficiency	disease
+IVS5+5G>T	genetic variant	associated with	NGLY1 deficiency	disease
+c.1370dupG	genetic variant	associated with	NGLY1 deficiency	disease
+p.R458Kfs*14	protein variant	associated with	NGLY1 deficiency	disease
+NGLY1 deficiency	disease	has phenotype	hypotonic facies	phenotype
+NGLY1 deficiency	disease	has phenotype	low weight	phenotype
+NGLY1 deficiency	disease	has phenotype	thin facies	phenotype
+NGLY1 deficiency	disease	has phenotype	hollowed cheeks	phenotype
+NGLY1 deficiency	disease	has phenotype	visible zygomatic arches	phenotype
+NGLY1 deficiency	disease	has phenotype	poor growth after mid-childhood	phenotype
+NGLY1 deficiency	disease	has phenotype	acquired microcephaly	phenotype
+NGLY1 deficiency	disease	has phenotype	total foot length < 3rd percentile	phenotype
+Nijmegen Pediatric CDG Severity scale	assay	has participant	individuals under age 18 years	organism
+mutation c.1201A>T	genetic variant	associated with	moderately or severely impaired	phenotype
+mutation c.1201A>T	genetic variant	has attribute	higher mean score	phenotype
+private cryptic splice site mutation (c.930C>T)	genetic variant	associated with	mild impairment	phenotype
+private nonsense mutation (c.622C>T)	genetic variant	associated with	mild impairment	phenotype
+disease severity	phenotype	has attribute	males compared to females	organism
+NGLY1 deficiency	disease	has phenotype	developmental delay	phenotype
+NGLY1 deficiency	disease	has phenotype	intellectual disability	phenotype
+NGLY1 deficiency	disease	has phenotype	profound intellectual disability	phenotype
+NGLY1 deficiency	disease	has phenotype	verbal fluency	phenotype
+NGLY1 deficiency	disease	has phenotype	nonverbal	phenotype
+NGLY1 deficiency	disease	has phenotype	single word usage	phenotype
+NGLY1 deficiency	disease	has phenotype	phrase speech	phenotype
+NGLY1 deficiency	disease	has phenotype	Motor deficits	phenotype
+NGLY1 deficiency	disease	has phenotype	impaired Daily Living Skills scores	phenotype
+NGLY1 deficiency	disease	has phenotype	strong Socialization scores	phenotype
+NGLY1 deficiency	disease	has phenotype	Communication scores	phenotype
+NGLY1 deficiency	disease	has phenotype	Daily Living Skills scores	phenotype
+NGLY1 deficiency	disease	has phenotype	Vineland Adaptive Behavior Composite	phenotype
+NGLY1 deficiency	disease	has phenotype	clinical seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	subclinical seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	multifocal epileptiform activity	phenotype
+NGLY1 deficiency	disease	has phenotype	hyperkinetic movement disorders	phenotype
+NGLY1 deficiency	disease	has phenotype	choreiform movements	phenotype
+NGLY1 deficiency	disease	has phenotype	athetoid movements	phenotype
+NGLY1 deficiency	disease	has phenotype	dystonic movements	phenotype
+NGLY1 deficiency	disease	has phenotype	myoclonic movements	phenotype
+NGLY1 deficiency	disease	has phenotype	action tremor	phenotype
+NGLY1 deficiency	disease	has phenotype	dysmetric movements	phenotype
+NGLY1 deficiency	disease	has phenotype	Delayed myelination	phenotype
+NGLY1 deficiency	disease	has phenotype	cerebral atrophy	phenotype
+NGLY1 deficiency	disease	has phenotype	cerebellar atrophy	phenotype
+NGLY1 deficiency	disease	correlated with	worsening of all functional measurements	phenotype
+NGLY1 deficiency	disease	correlated with	IQ or DQ	phenotype
+NGLY1 deficiency	disease	correlated with	Vineland assessments	phenotype
+NGLY1 deficiency	disease	correlated with	Nijmegen scores	phenotype
+NGLY1 deficiency	disease	correlated with	CSF levels of 5-HIAA	chemical substance
+NGLY1 deficiency	disease	correlated with	tetrahydrobiopterin	chemical substance
+NGLY1 deficiency	disease	correlated with	5-HVA	chemical substance
+N-acetylaspartylglutamate + N-acetylaspartate	chemical substance	associated with	NGLY1 deficiency	disease
+glutamine + glutamate + gamma-aminobutyric acid	chemical substance	associated with	NGLY1 deficiency	disease
+Choline	chemical substance	associated with	NGLY1 deficiency	disease
+myo-inositol	chemical substance	associated with	NGLY1 deficiency	disease
+NGLY1 deficiency	disease	correlated with	total CSF protein	chemical substance
+NGLY1 deficiency	disease	correlated with	CSF albumin	chemical substance
+NGLY1 deficiency	disease	correlated with	CSF/serum albumin ratio	chemical substance
+NGLY1 deficiency	disease	associated with	CSF total protein and albumin concentrations	chemical substance
+NGLY1 deficiency	disease	associated with	CSF/serum albumin ratios	chemical substance
+NGLY1 deficiency	disease	associated with	CSF 5-hydroxyindolacetic acid (5-HIAA)	chemical substance
+NGLY1 deficiency	disease	associated with	homovanillic acid (HVA)	chemical substance
+NGLY1 deficiency	disease	associated with	neuronal loss	phenotype
+NGLY1 deficiency	disease	associated with	Neopterin levels	chemical substance
+NGLY1 deficiency	disease	associated with	CSF tetrahydrobiopterin (BH4) levels	chemical substance
+NGLY1 deficiency	disease	associated with	brain atrophy	phenotype
+NGLY1 deficiency	disease	associated with	CSF lactate and amino acid levels	chemical substance
+NGLY1 deficiency	disease	associated with	CSF leucocyte counts	cell type
+NGLY1 deficiency	disease	associated with	glucose concentrations	chemical substance
+NGLY1 deficiency	disease	associated with	3-O-methyldopa concentrations	chemical substance
+NGLY1 deficiency	disease	associated with	5-methyltetrahydrofolate concentrations	chemical substance
+Nerve conduction studies	assay	has participant	11 individuals	organism
+axonal sensorimotor polyneuropathy	disease	has phenotype	demyelinative features	phenotype
+neurophysiological testing	assay	demonstrates	loss of sensory and motor axons	phenotype
+neurophysiological testing	assay	demonstrates	sympathetic nerve function abnormalities	phenotype
+neurophysiological testing	assay	demonstrates	abnormalities in myelination of peripheral nerves	phenotype
+neurophysiological testing	assay	demonstrates	possible motor neuron degeneration	phenotype
+individual #6	organism	has phenotype	progression of the neuropathy	phenotype
+needle EMG	assay	has participant	9 subjects	organism
+QSWEATs	assay	has participant	11 individuals	organism
+QSWEATs	assay	associated with	axonal sensorimotor neuropathies	disease
+distal lower extremity QSWEAT	assay	associated with	absence	phenotype
+forearm QSWEAT	assay	associated with	presence	phenotype
+severity of neuropathy	phenotype	correlated with	age	<other>
+tibial motor amplitude	phenotype	negatively correlated with	age	<other>
+NGLY1 deficiency	disease	has phenotype	Lagophthalmous	phenotype
+NGLY1 deficiency	disease	has phenotype	ptosis	phenotype
+NGLY1 deficiency	disease	has phenotype	exotropia	phenotype
+NGLY1 deficiency	disease	has phenotype	esotropia	phenotype
+NGLY1 deficiency	disease	has phenotype	corneal neovascularization	phenotype
+NGLY1 deficiency	disease	has phenotype	pannus formation	phenotype
+NGLY1 deficiency	disease	has phenotype	scarring	phenotype
+NGLY1 deficiency	disease	has phenotype	optic nerve pallor	phenotype
+NGLY1 deficiency	disease	has phenotype	atrophy	phenotype
+NGLY1 deficiency	disease	has phenotype	retinal	phenotype
+NGLY1 deficiency	disease	has phenotype	pigmentary changes	phenotype
+NGLY1 deficiency	disease	has phenotype	alacrima	phenotype
+NGLY1 deficiency	disease	has phenotype	cone dystrophy	phenotype
+NGLY1 deficiency	disease	has phenotype	abnormal auditory brainstem transmission	phenotype
+NGLY1 deficiency	disease	has phenotype	abnormal 8th nerve transmission	phenotype
+NGLY1 deficiency	disease	has phenotype	normal hearing sensitivity	phenotype
+NGLY1 deficiency	disease	has phenotype	unremarkable tympanometry	phenotype
+age	<other>	correlated with	severity of the transmission abnormality through the auditory brainstem	phenotype
+age	<other>	correlated with	bilateral involvement of the eighth nerve	phenotype
+NGLY1 deficiency	disease	has phenotype	Oral motor deficits	phenotype
+NGLY1 deficiency	disease	has phenotype	Premature spillage	phenotype
+NGLY1 deficiency	disease	has phenotype	pharyngeal swallow response delays	phenotype
+NGLY1 deficiency	disease	has phenotype	Developmental delays in mastication	phenotype
+NGLY1 deficiency	disease	has phenotype	Generalized weakness of the lips and tongue	phenotype
+NGLY1 deficiency	disease	has phenotype	Dystonic movements of the tongue	phenotype
+NGLY1 deficiency	disease	has phenotype	persistent oral reflexes of suckling and suck/swallows	phenotype
+NGLY1 deficiency	disease	has phenotype	unremarkable Echocardiograms	phenotype
+NGLY1 deficiency	disease	has phenotype	heart rates in the low 100s	phenotype
+NGLY1 deficiency	disease	has phenotype	QTcB >440 ms	phenotype
+NGLY1 deficiency	disease	has phenotype	normal QTcF	phenotype
+NGLY1 deficiency	disease	has phenotype	obstructive sleep apnea	phenotype
+NGLY1 deficiency	disease	has phenotype	central sleep apnea	phenotype
+NGLY1 deficiency	disease	has phenotype	combined obstructive and central sleep apnea	phenotype
+NGLY1 deficiency	disease	has phenotype	frequent periodic limb movements	phenotype
+NGLY1 deficiency	disease	has phenotype	Gastric pH alteration	phenotype
+NGLY1 deficiency	disease	has phenotype	constipation	phenotype
+NGLY1 deficiency	disease	has phenotype	abnormal abdominal ultrasound	phenotype
+NGLY1 deficiency	disease	has phenotype	liver fibrosis	phenotype
+NGLY1 deficiency	disease	has phenotype	altered resting energy expenditure	phenotype
+NGLY1 deficiency	disease	has phenotype	elevated aspartate aminotransferase	phenotype
+NGLY1 deficiency	disease	has phenotype	elevated alanine transaminase	phenotype
+NGLY1 deficiency	disease	has phenotype	hepatocellular carcinoma	phenotype
+NGLY1 deficiency	disease	has phenotype	low total cholesterol	phenotype
+NGLY1 deficiency	disease	has phenotype	low LDL	phenotype
+NGLY1 deficiency	disease	has phenotype	low triglycerides	phenotype
+NGLY1 deficiency	disease	has phenotype	unremarkable complete blood counts	phenotype
+NGLY1 deficiency	disease	has phenotype	low protein C activity	phenotype
+NGLY1 deficiency	disease	has phenotype	low Factor II activity	phenotype
+NGLY1 deficiency	disease	has phenotype	low Factor IX	phenotype
+NGLY1 deficiency	disease	has phenotype	low Factor XI	phenotype
+NGLY1 deficiency	disease	has phenotype	low fibrinogen	phenotype
+c.1201A>T mutation	genetic variant	associated with	lower Factor II, Factor IX, and Factor XI	phenotype
+NGLY1 deficiency	disease	has phenotype	elevations in antibody titers towards rubella and/or rubeola	phenotype
+NGLY1 deficiency	disease	has phenotype	abnormal biochemical markers in mitochondropathies and hypoglycosylation disorders	phenotype
+one subject	organism	has phenotype	acute lymphocytic leukemia	disease
+NGLY1 deficiency	disease	has phenotype	delayed bone age	phenotype
+NGLY1 deficiency	disease	has phenotype	low femoral bone density	phenotype
+NGLY1 deficiency	disease	has phenotype	joint hypermobility	phenotype
+NGLY1 deficiency	disease	has phenotype	contractures in both small and large joints	phenotype
+NGLY1 deficiency	disease	has phenotype	coxa valga	phenotype
+NGLY1 deficiency	disease	has phenotype	scoliosis	phenotype
+NGLY1 deficiency	disease	has phenotype	growth arrest lines	phenotype
+NGLY1 deficiency	disease	has phenotype	metaphyseal banding	phenotype
+NGLY1 deficiency	disease	has phenotype	dislocations or subluxations involving the hips and shoulder joints	phenotype
+NGLY1 deficiency	disease	has phenotype	sclerosis of the phalanges or tarsal bones	phenotype
+NGLY1 deficiency	disease	has phenotype	flexion deformity of the fingers	phenotype
+NGLY1 deficiency	disease	has phenotype	hallux valgus	phenotype
+NGLY1 deficiency	disease	has phenotype	sclerotic lesion of the distal femur	phenotype
+NGLY1 deficiency	disease	has phenotype	thinning of the fibulas	phenotype
+NGLY1 deficiency	disease	has phenotype	prominent apophyseal bone formation in the ileac crests and ischia	phenotype
+NGLY1 deficiency	disease	has phenotype	ulnar bowing	phenotype
+NGLY1 deficiency	disease	has phenotype	expansion of the cortexes in the proximal and middle phalanges in digits 2–4	phenotype
+NGLY1 deficiency	disease	has phenotype	widened phalanges	phenotype
+NGLY1 deficiency	disease	has phenotype	shortened and widened metatarsals	phenotype
+NGLY1-CDDG	disease	associated with	low CSF total protein	phenotype
+NGLY1-CDDG	disease	associated with	albumin	protein
+NGLY1-CDDG	disease	associated with	optic atrophy	phenotype
+NGLY1-CDDG	disease	associated with	retinal pigmentary changes	phenotype
+NGLY1-CDDG	disease	associated with	cone dystrophy	phenotype
+NGLY1-CDDG	disease	associated with	poor weight gain	phenotype
+NGLY1-CDDG	disease	associated with	lower than predicted resting energy expenditure	phenotype
+NGLY1-CDDG	disease	associated with	central and obstructive sleep apnea	phenotype
+NGLY1-CDDG	disease	associated with	delayed bone age	phenotype
+NGLY1-CDDG	disease	associated with	joint hypermobility	phenotype
+NGLY1-CDDG	disease	associated with	progressive brain atrophy	phenotype
+NGLY1-CDDG	disease	associated with	abnormalities in brain MRS-measured metabolites	phenotype
+NGLY1-CDDG	disease	associated with	abnormalities on skeletal survey	phenotype
+NGLY1-CDDG	disease	associated with	high antibody titers after rubella and rubeola vaccination	phenotype
+NGLY1-CDDG	disease	associated with	low levels of several pro- and anti- coagulation factors	phenotype
+NGLY1-CDDG	disease	associated with	global developmental delay	phenotype
+NGLY1-CDDG	disease	associated with	movement disorder	phenotype
+NGLY1-CDDG	disease	associated with	frequent seizure disorder	phenotype
+NGLY1-CDDG	disease	associated with	hypotonia	phenotype
+NGLY1-CDDG	disease	associated with	hypolacrima or alacrima	phenotype
+NGLY1-CDDG	disease	associated with	corneal disease	phenotype
+NGLY1-CDDG	disease	associated with	ptosis	phenotype
+NGLY1-CDDG	disease	associated with	lagophthalmous	phenotype
+NGLY1-CDDG	disease	associated with	strabismus	phenotype
+NGLY1-CDDG	disease	associated with	peripheral neuropathy	phenotype
+NGLY1-CDDG	disease	associated with	diminished reflexes	phenotype
+NGLY1-CDDG	disease	associated with	hypohidrosis	phenotype
+NGLY1-CDDG	disease	associated with	auditory brainstem response abnormalities	phenotype
+NGLY1-CDDG	disease	associated with	abnormal brain imaging	phenotype
+NGLY1-CDDG	disease	associated with	scoliosis	phenotype
+NGLY1-CDDG	disease	associated with	acquired microcephaly	phenotype
+NGLY1-CDDG	disease	associated with	small hands and feet	phenotype
+NGLY1-CDDG	disease	associated with	dysmorphic features	phenotype
+NGLY1-CDDG	disease	associated with	constipation	phenotype
+NGLY1-CDDG	disease	associated with	elevated liver enzymes	phenotype
+NGLY1-CDDG	disease	associated with	osteopenia	phenotype
+NGLY1-CDDG	disease	associated with	hypocholesterolemia	phenotype
+NGLY1-CDDG	disease	associated with	developmental delay/intellectual disability	phenotype
+NGLY1-CDDG	disease	associated with	hyperkinetic movement disorder	phenotype
+NGLY1-CDDG	disease	associated with	history of elevated transaminases during early childhood	phenotype
+NGLY1 deficiency	disease	has phenotype	auditory neural pathway dysfunction	phenotype
+NGLY1 deficiency	disease	has phenotype	hypohidrosis	phenotype
+NGLY1 deficiency	disease	has phenotype	hypo-lacrima	phenotype
+NGLY1 deficiency	disease	has phenotype	disordered mastication	phenotype
+NGLY1 deficiency	disease	has phenotype	low Motor Skills scores	phenotype
+NGLY1 deficiency	disease	has phenotype	hyperkinetic movement disorder	phenotype
+NGLY1 deficiency	disease	has phenotype	myoclonic seizures	phenotype
+NGLY1 deficiency	disease	has phenotype	neurotransmitter deficiency	phenotype
+NGLY1 deficiency	disease	has phenotype	peripheral neuropathy	phenotype
+NGLY1 deficiency	disease	has phenotype	sensory ataxia	phenotype
+auditory neuropathy	disease	has phenotype	difficulty hearing in the presence of background noise	phenotype
+auditory neuropathy	disease	benefits from	quiet listening environments	<other>
+hypohidrosis	phenotype	causes	dangerous core body hyperthermia	phenotype
+hypo-lacrima	phenotype	causes	secondary complications that can impact vision	phenotype
+disordered mastication	phenotype	suggests	need for oral motor and swallowing therapies	<other>
+low Motor Skills scores	phenotype	resembles	Daily Living Skills scores	phenotype
+hyperkinetic movement disorder	phenotype	causes	significant motor involvement required for daily tasks	phenotype
+myoclonic seizures	phenotype	contributes to	movement disorder	phenotype
+neurotransmitter deficiency	phenotype	contributes to	movement disorder	phenotype
+peripheral neuropathy	phenotype	manifests as	sensory ataxia	phenotype
+brain atrophy	phenotype	correlated with	functional assessments	<other>
+loss of neurons	biological process	contributes to	functional impairment	phenotype
+brain atrophy	phenotype	correlated with	CSF metabolites	metabolite
+CSF metabolites	metabolite	associated with	damage to neurotransmitter producing neurons	biological process
+biochemical abnormalities	phenotype	associated with	brain atrophy	phenotype
+functional impairment	phenotype	increases activity of	NAA	chemical substance
+age	<other>	increases activity of	NAA	chemical substance
+functional impairment	phenotype	increases abundance of	choline	chemical substance
+age	<other>	increases abundance of	choline	chemical substance
+functional impairment	phenotype	increases abundance of	myo-inositol	chemical substance
+age	<other>	increases abundance of	myo-inositol	chemical substance
+functional impairment	phenotype	increases abundance of	creatine	chemical substance
+age	<other>	increases abundance of	creatine	chemical substance
+creatine	chemical substance	negatively correlated with	myoinositol	chemical substance
+NAA	chemical substance	positively correlated with	neurotransmitter levels	<other>
+NAA	chemical substance	decreases abundance of	neurons	cell type
+choline	chemical substance	increases abundance of	glial cells	cell type
+myo-inositol	chemical substance	increases abundance of	glial cells	cell type
+creatine	chemical substance	increases abundance of	glial cells	cell type
+glial cells	cell type	increases abundance of	NGLY1-CDDG individuals	disease
+neuronal loss	phenotype	causes	abundance of glial cells	<other>
+imbalance	<other>	contributes to	severity of the phenotype	phenotype
+impaired sweat response	phenotype	associated with	small fiber neuropathy	disease
+Albumin CSF/serum quotient	biological process	is marker for	blood-CSF barrier dysfunction	disease
+Albumin CSF/serum quotient	biological process	negatively correlated with	CSF turnover rate	biological process
+decreased CSF protein and albumin concentrations	phenotype	is marker for	NGLY1 deficiency	disease
+NGLY1-CDDG	disease	has phenotype	low cholesterol	phenotype
+NGLY1-CDDG	disease	has phenotype	hepatopathy	phenotype
+NGLY1-CDDG	disease	has phenotype	peripheral neuropathy	phenotype
+NGLY1-CDDG	disease	has phenotype	retinal and optic nerve abnormalities	phenotype
+NGLY1-CDDG	disease	has phenotype	seizures	phenotype
+NGLY1-CDDG	disease	has phenotype	developmental delay with socialization as a relative strength	phenotype
+NGLY1-CDDG	disease	has phenotype	delayed bone age	phenotype
+NGLY1-CDDG	disease	has phenotype	hypolacrima	phenotype
+N-glycanase 1	protein	enables	the cleavage of the amide bond between the proximal N-acetylglucosamine residue of glycans and the asparagine residue of the protein	molecular activity
+NGLY1-CDDG	disease	causes	impairment of glycan recycling	biological process
+NGLY1-CDDG	disease	causes	hypoglycosylation	biological process
+NGLY1-CDDG	disease	has phenotype	abnormalities in transferrin and ApoC-III glycosylation	phenotype
+misfolded glycoproteins	protein	processed through	endoplasmic reticulum associated degradation pathway	pathway
+endoplasmic reticulum associated degradation pathway	pathway	part of	NGLY1-CDDG phenotype	phenotype
+N-glycanase	protein	is part of	degradation of these molecules	biological process
+ERAD dysfunction	phenotype	contributes to	NGLY1-CDDG phenotype	phenotype
+ER-stress	phenotype	occurs in	mouse embryonic fibroblasts	cell type
+ERAD marker expression	biological process	occurs in	NGLY1-CDDG patient fibroblasts	cell type
+NGLY1-CDDG	disease	has phenotype	progressive disorder	phenotype
+NGLY1-CDDG	disease	has phenotype	peripheral neuropathy	phenotype
+NGLY1-CDDG	disease	has phenotype	auditory neural dysfunction	phenotype
+NGLY1-CDDG	disease	has phenotype	scoliosis	phenotype
+NGLY1-CDDG	disease	has phenotype	inability to maintain weight	phenotype
+NGLY1-CDDG	disease	has phenotype	brain atrophy	phenotype
+NGLY1-CDDG	disease	has phenotype	abnormalities in brain metabolites	phenotype
+NGLY1-CDDG	disease	has phenotype	Hypolacrima	phenotype
+NGLY1-CDDG	disease	has phenotype	hepatopathy	phenotype
+NGLY1-CDDG	disease	has phenotype	hyperkinetic movement disorder	phenotype
+brain volume	biological process	part of	NGLY1-CDDG	disease
+choline levels on MRS	biological process	part of	NGLY1-CDDG	disease
+nerve conduction velocities and amplitudes	biological process	part of	NGLY1-CDDG	disease
+auditory brainstem evoked responses	biological process	part of	NGLY1-CDDG	disease
+NGLY1 mutations	genetic variant	located in	exons	cellular component
+c.1624C>T	genetic variant	part of	NGLY1 mutations	genetic variant
+c.1205_1207delGAA	genetic variant	part of	NGLY1 mutations	genetic variant
+c.1533_1536delTCAA	genetic variant	part of	NGLY1 mutations	genetic variant
+c.730T>C	genetic variant	part of	NGLY1 mutations	genetic variant
+c.953T>C	genetic variant	part of	NGLY1 mutations	genetic variant
+c.931G>A	genetic variant	part of	NGLY1 mutations	genetic variant
+c.930C> T	genetic variant	part of	NGLY1 mutations	genetic variant
+NGLY1-CDDG	disease	has phenotype	upturned nasal tip	phenotype
+NGLY1-CDDG	disease	has phenotype	hypotonic facies	phenotype
+NGLY1-CDDG	disease	has phenotype	ptosis	phenotype
+NGLY1-CDDG	disease	has phenotype	brachycephaly	phenotype
+NGLY1-CDDG	disease	has phenotype	thinned facies	phenotype
+NGLY1-CDDG	disease	has phenotype	hollowed cheeks	phenotype
+NGLY1-CDDG	disease	has phenotype	visible zygomatic arches	phenotype
+NGLY1-CDDG	disease	has phenotype	interpupillary distance	phenotype
+NGLY1-CDDG	disease	has phenotype	horizontal fissure length	phenotype
+NGLY1-CDDG	disease	has phenotype	inner canthal distance	phenotype
+NGLY1-CDDG	disease	has phenotype	outer canthal distance	phenotype
+NGLY1-CDDG	disease	has phenotype	canthal index	phenotype
+Brain MRI findings	phenotype	has participant	White matter lesions	phenotype
+White matter lesions	phenotype	located in	two of eleven individuals	organism
+White matter lesions	phenotype	located in	periventricular white matter	cellular component
+Cerebral atrophy	phenotype	has participant	Brain MRI findings	phenotype
+Cerebral atrophy	phenotype	located in	A and B	organism
+Sulci	cellular component	has attribute	slightly prominent	phenotype
+Ventricles	cellular component	has attribute	prominent	phenotype
+Cerebellar tonsils	cellular component	has attribute	high position	phenotype
+Foramen of Magendie	cellular component	has attribute	large	phenotype
+Cisterna magna	cellular component	has attribute	large	phenotype
+NGLY1 deficiency	disease	causes	conjunctival injection	symptom
+NGLY1 deficiency	disease	causes	limbal neovascularization	symptom
+NGLY1 deficiency	disease	causes	corneal scarring	symptom
+NGLY1 deficiency	disease	causes	severe dry eyes	symptom
+NGLY1 deficiency	disease	causes	lagophthalmous	symptom

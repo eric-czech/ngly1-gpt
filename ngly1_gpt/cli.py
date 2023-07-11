@@ -13,11 +13,16 @@ logger = logging.getLogger(__name__)
 
 
 class Commands:
-    def extract_relations(self, model=llm.DEFAULT_MODEL, max_chunk_tokens: int = 2000):
+    def extract_relations(
+        self,
+        model=llm.DEFAULT_MODEL,
+        max_chunk_tokens: int = 2000,
+        output_filename: str = "relations.tsv",
+    ):
         paths = list(utils.get_paths().extract_data.glob("*.txt"))
         results = []
         for path in tqdm.tqdm(paths):
-            logger.info(f"Processing {path}")
+            logger.info(f"Processing ({path.stem}): {path}")
             with open(path, "r", encoding="utf-8") as f:
                 text = f.read()
             chunks = doc.split_text(
@@ -34,8 +39,11 @@ class Commands:
                     temperature=0.0,
                 )
                 try:
-                    relations = pd.read_csv(io.StringIO(response), sep="|")
-                    results.append(relations)
+                    results.append(
+                        pd.read_csv(io.StringIO(response), sep="|").assign(
+                            doc_id=path.stem, doc_filename=path.name
+                        )
+                    )
                 except Exception as e:
                     logger.error(
                         f'Invalid response.\ntext="""\n{text}"""\n\nresponse="""\n{response}"""'
@@ -46,8 +54,9 @@ class Commands:
         ipdb.set_trace()
         relations = pd.concat(results)
         relations.to_csv(
-            utils.get_paths().output_data / "relations.tsv", index=False, sep="\t"
+            utils.get_paths().output_data / output_filename, index=False, sep="\t"
         )
+        logger.info("Extraction complete")
 
 
 if __name__ == "__main__":
