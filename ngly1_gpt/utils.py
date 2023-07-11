@@ -1,11 +1,16 @@
 import itertools
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Callable
 from typing import Hashable
 from typing import Sequence
+from typing import TypeVar
 
 import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
+from tenacity import retry
+from tenacity import stop_after_attempt
+from tenacity import wait_exponential
 
 
 @dataclass
@@ -41,3 +46,11 @@ def get_colormap(values: Sequence[Hashable], cmap: str) -> dict[Hashable, str]:
             hex_color = mcolors.rgb2hex(rgba_color)
             res[string] = hex_color
     return res
+
+
+T = TypeVar("T")
+
+
+@retry(stop=stop_after_attempt(10), wait=wait_exponential(multiplier=1, min=1, max=180))
+def call_with_retry(fn: Callable[[], T]) -> T:
+    return fn()

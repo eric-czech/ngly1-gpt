@@ -1,3 +1,4 @@
+import functools
 import io
 import logging
 
@@ -32,26 +33,20 @@ class Commands:
                 encoding=doc.encoding(model),
             )
             for chunk in tqdm.tqdm(chunks):
-                response = llm.extract_relations(
-                    chunk.text,
-                    disease=utils.NGLY1_DEFICIENCY,
-                    model=model,
-                    temperature=0.0,
+                response = utils.call_with_retry(
+                    functools.partial(
+                        llm.extract_relations,
+                        text=chunk.text,
+                        disease=utils.NGLY1_DEFICIENCY,
+                        model=model,
+                        temperature=0.0,
+                    )
                 )
-                try:
-                    results.append(
-                        pd.read_csv(io.StringIO(response), sep="|").assign(
-                            doc_id=path.stem, doc_filename=path.name
-                        )
+                results.append(
+                    pd.read_csv(io.StringIO(response), sep="|").assign(
+                        doc_id=path.stem, doc_filename=path.name
                     )
-                except Exception as e:
-                    logger.error(
-                        f'Invalid response.\ntext="""\n{text}"""\n\nresponse="""\n{response}"""'
-                    )
-                    logger.exception(e)
-        import ipdb
-
-        ipdb.set_trace()
+                )
         relations = pd.concat(results)
         relations.to_csv(
             utils.get_paths().output_data / output_filename, index=False, sep="\t"

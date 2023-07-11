@@ -135,7 +135,7 @@ Figure 1: Distribution of NGLY1 mutations.
 Shaded bars are exons. Previously unreported mutations are in bold. Mutations previously
 published and not in this paper include c.1624C>T (exon 11), c.1205_1207delGAA (exon 8) and c.1533_1536delTCAA (exon 10). Four mutations lie within the catalytic domain (amino acid residues 292–353);, i.e., c.730T>C, c.953T>C, c.931G>A, and c.930C>T. The accession numbers for the NM_018297.3:c.931G>A, NM_018297.3:c.1604G>A, NM_018297.3:c.622C>T, NM_018297.3:c.347C>G, NM_018297.3:c.1169G>C, NM_018297.3:c.730T>C, NM_018297.3:c.1910delT, NM_018297.3:c.930C>T, NM_018297.3:c.881+5G>T
 sequences reported in this paper are ClinVar: SCV000259179, SCV000259180, SCV000259181, SCV000259182, SCV000259183, SCV000259184, SCV000259185, SCV000259186, and SCV000259187 respectively.
-   
+
 Figure 2: Facial features of NGLY1-CDDG.
 Individuals with NGLY1-CDDG are arranged from youngest (top left) to oldest (bottom right). Facial features include upturned nasal tip, hypotonic facies, ptosis, brachycephaly, thinned facies, hollowed cheeks, and visible zygomatic arches. Interpupillary distance ranged from the 13–95 centiles with the mean at the 66th centile, and SEM of 8. Horizontal fissure length ranged from 3–70 centiles with mean at the 20th centile, and SEM of 1. Inner canthal distance ranged from 3–100 centiles with the mean at the 59th centile and SEM of 10. Outer canthal distance ranged from 6–81 centile with mean at the 43 centile and SEM of 7. Canthal index ranged from −2 to +2 SD from the normal mean.
 

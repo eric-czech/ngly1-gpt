@@ -1,0 +1,922 @@
+subject	subject_entity	predicate	object	object_entity	doc_id	doc_filename
+Mutations	genetic variant	cause	Inherited Disorder of the Endoplasmic Reticulum-Associated Degradation	disease	PMC4243708	PMC4243708.txt
+NGLY1	gene	has gene product	Mutations	genetic variant	PMC4243708	PMC4243708.txt
+ERAD pathway	pathway	responsible for	translocation of misfolded proteins	biological process	PMC4243708	PMC4243708.txt
+ERAD pathway	pathway	has participant	proteasome	molecular activity	PMC4243708	PMC4243708.txt
+N-glycanase 1	protein	involved in	ERAD pathway	pathway	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	movement disorder	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	hypo- or alacrima	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	microcephaly	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	diminished reflexes	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	hepatocyte cytoplasmic storage material or vacuolization	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	seizures	phenotype	PMC4243708	PMC4243708.txt
+c.1201A>T (p.R401X)	genetic variant	is allele of	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	neurological dysfunction	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	abnormal tear production	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	liver disease	disease	PMC4243708	PMC4243708.txt
+c.1201A>T (p.R401X)	genetic variant	associated with	severe disease	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	alacrima	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	choreoathetosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	seizures	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	liver disease	phenotype	PMC4243708	PMC4243708.txt
+N-glycanase 1	protein	also known as	peptide:N-glycanase	protein	PMC4243708	PMC4243708.txt
+N-glycanase 1	protein	catalyzes	protein deglycosylation	biological process	PMC4243708	PMC4243708.txt
+N-glycanase 1	protein	participates in	endoplasmic reticulum-associated degradation	pathway	PMC4243708	PMC4243708.txt
+N-glycanase 1	protein	interacts with	AAA ATPase complex p97	macromolecular complex	PMC4243708	PMC4243708.txt
+endoplasmic reticulum-associated degradation	pathway	involved in	degrading misfolded glycoproteins	biological process	PMC4243708	PMC4243708.txt
+N-glycans	macromolecular complex	has role	quality control tags for proteins	biological process	PMC4243708	PMC4243708.txt
+Misfolded glycoproteins	protein	detected by	ER luminal lectins	protein	PMC4243708	PMC4243708.txt
+Misfolded glycoproteins	protein	translocated to	the cytosol	cellular component	PMC4243708	PMC4243708.txt
+Misfolded glycoproteins	protein	degraded by	cytosolic enzymes	protein	PMC4243708	PMC4243708.txt
+cytosolic enzymes	protein	includes	NGLY1	protein	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	caused by	mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	ERAD process	biological process	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	congenital disorder of glycosylation	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	accumulation of an amorphous unidentified substance	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	abnormal accumulation of misfolded glycoproteins	phenotype	PMC4243708	PMC4243708.txt
+NGLY1	gene	produces	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+NGLY1	gene	has role	impaired cytosolic degradation	molecular activity	PMC4243708	PMC4243708.txt
+Liver biopsy	assay	produces	accumulation of an amorphous unidentified substance	phenotype	PMC4243708	PMC4243708.txt
+Liver biopsy	assay	produces	abnormal accumulation of misfolded glycoproteins	phenotype	PMC4243708	PMC4243708.txt
+Liver biopsy	assay	located in	cytoplasm	cellular component	PMC4243708	PMC4243708.txt
+mutations in NGLY1	genetic variant	causes	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+mutations in NGLY1	genetic variant	causes	impaired cytosolic degradation	molecular activity	PMC4243708	PMC4243708.txt
+mutations in NGLY1	genetic variant	causes	abnormal accumulation of misfolded glycoproteins	phenotype	PMC4243708	PMC4243708.txt
+mutations in NGLY1	genetic variant	causes	accumulation of an amorphous unidentified substance	phenotype	PMC4243708	PMC4243708.txt
+mutations in NGLY1	genetic variant	causes	congenital disorder of glycosylation	phenotype	PMC4243708	PMC4243708.txt
+ERAD process	biological process	associated with	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+ERAD process	biological process	has participant	NGLY1	gene	PMC4243708	PMC4243708.txt
+ERAD process	biological process	has participant	mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+ERAD process	biological process	has participant	impaired cytosolic degradation	molecular activity	PMC4243708	PMC4243708.txt
+ERAD process	biological process	has participant	abnormal accumulation of misfolded glycoproteins	phenotype	PMC4243708	PMC4243708.txt
+ERAD process	biological process	has participant	accumulation of an amorphous unidentified substance	phenotype	PMC4243708	PMC4243708.txt
+ERAD process	biological process	has participant	congenital disorder of glycosylation	phenotype	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	Liver biopsy	assay	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	accumulation of an amorphous unidentified substance	phenotype	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	abnormal accumulation of misfolded glycoproteins	phenotype	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	impaired cytosolic degradation	molecular activity	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	NGLY1	gene	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	ERAD process	biological process	PMC4243708	PMC4243708.txt
+cytoplasm	cellular component	location of	congenital disorder of glycosylation	phenotype	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	caused by	mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	caused by	NGLY1	gene	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	causes	abnormal accumulation of misfolded glycoproteins	phenotype	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	causes	accumulation of an amorphous unidentified substance	phenotype	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	causes	congenital disorder of glycosylation	phenotype	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	part of	ERAD process	biological process	PMC4243708	PMC4243708.txt
+impaired cytosolic degradation	molecular activity	located in	cytoplasm	cellular component	PMC4243708	PMC4243708.txt
+abnormal accumulation of misfolded glycoproteins	phenotype	caused by	mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+abnormal accumulation of misfolded glycoproteins	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+abnormal accumulation of misfolded glycoproteins	phenotype	caused by	NGLY1	gene	PMC4243708	PMC4243708.txt
+abnormal accumulation of misfolded glycoproteins	phenotype	caused by	impaired cytosolic degradation	molecular activity	PMC4243708	PMC4243708.txt
+abnormal accumulation of misfolded glycoproteins	phenotype	part of	ERAD process	biological process	PMC4243708	PMC4243708.txt
+abnormal accumulation of misfolded glycoproteins	phenotype	located in	cytoplasm	cellular component	PMC4243708	PMC4243708.txt
+accumulation of an amorphous unidentified substance	phenotype	caused by	mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+accumulation of an amorphous unidentified substance	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+accumulation of an amorphous unidentified substance	phenotype	caused by	NGLY1	gene	PMC4243708	PMC4243708.txt
+accumulation of an amorphous unidentified substance	phenotype	caused by	impaired cytosolic degradation	molecular activity	PMC4243708	PMC4243708.txt
+accumulation of an amorphous unidentified substance	phenotype	part of	ERAD process	biological process	PMC4243708	PMC4243708.txt
+accumulation of an amorphous unidentified substance	phenotype	located in	cytoplasm	cellular component	PMC4243708	PMC4243708.txt
+congenital disorder of glycosylation	phenotype	caused by	mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+congenital disorder of glycosylation	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+congenital disorder of glycosylation	phenotype	caused by	NGLY1	gene	PMC4243708	PMC4243708.txt
+congenital disorder of glycosylation	phenotype	caused by	impaired cytosolic degradation	molecular activity	PMC4243708	PMC4243708.txt
+congenital disorder of glycosylation	phenotype	part of	ERAD process	biological process	PMC4243708	PMC4243708.txt
+congenital disorder of glycosylation	phenotype	located in	cytoplasm	cellular component	PMC4243708	PMC4243708.txt
+Exome sequencing	assay	produced by	Duke University	organization	PMC4243708	PMC4243708.txt
+Exome sequencing	assay	produced by	University of British Columbia	organization	PMC4243708	PMC4243708.txt
+Exome sequencing	assay	produced by	Stanford University	organization	PMC4243708	PMC4243708.txt
+Exome sequencing	assay	produced by	Baylor College of Medicine	organization	PMC4243708	PMC4243708.txt
+Sanger sequencing of NGLY1	assay	performed in	Patient 4	<other>	PMC4243708	PMC4243708.txt
+Sanger sequencing of NGLY1	assay	confirmed by	GeneDx	organization	PMC4243708	PMC4243708.txt
+Illumina HiSeq2000	macromolecular complex	used in	Exome sequencing	assay	PMC4243708	PMC4243708.txt
+Agilent SureSelect Human All Exon 50 Mb Kit	macromolecular complex	used in	Exome sequencing	assay	PMC4243708	PMC4243708.txt
+Complete Genomics	organization	used in	Exome sequencing	assay	PMC4243708	PMC4243708.txt
+VCRome2	macromolecular complex	used in	DNA capture-sequencing	assay	PMC4243708	PMC4243708.txt
+Illumina HiSeq2000	macromolecular complex	produces	Sequence data	<other>	PMC4243708	PMC4243708.txt
+Baylor College of Medicine Whole Genome Laboratory	organization	performed	WES	assay	PMC4243708	PMC4243708.txt
+Emory Genetics Laboratory	organization	performed	WES	assay	PMC4243708	PMC4243708.txt
+Stanford Institutional Review Board	organization	approved	this study	<other>	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	movement disorder	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hypo- or alacrima	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	abnormal brain imaging	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	EEG abnormalities	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	microcephaly	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	diminished reflexes	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hepatocyte cytoplasmic storage material or vacuolization	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	seizures	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	abnormal nerve conduction	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	premature death	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Microcephaly	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Hypotonia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Movement disorder	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	EEG abnormalities	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Seizures	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Ocular apraxia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Alacrima/hypolacrima	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Corneal ulcerations/scarring	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Chalazions	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Strabismus	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Lactic acidosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Neonatal jaundice	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Elevated AFP	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Liver fibrosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Liver storage or vacuolization	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Constipation	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Dysmorphic features	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Scoliosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Small hands/feet	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Peripheral neuropathy	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	involuntary movements	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	athetosis involving the trunk and extremities	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	constant lip smacking and pursing while awake	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	mild neonatal jaundice	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	Global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	intractable multifocal epilepsy	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	myoclonic seizures	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	drop attacks	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	staring or tonic episodes	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	liver disease	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	cortical vision loss	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	congenital alacrima	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	corneal ulcerations with scarring	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	central hypotonia	phenotype	PMC4243708	PMC4243708.txt
+Patient 1	organism	has phenotype	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	intrauterine growth retardation	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	intention tremor	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	involuntary movements of neck, hands and arm	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	ocular apraxia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	distal tapering of hands and feet	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	diminished deep tendon reflexes	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	cortical vision impairment	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	alacrima	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	dry eyes	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	intellectual disabilities	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	limited expressive speech	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	ambulation with a walker	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	poor feeding	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	lethargy	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	hyperbilirubinemia	phenotype	PMC4243708	PMC4243708.txt
+Phototherapy	treatment	treats	hyperbilirubinemia	disease	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	transient thrombocytopenia	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	acquired microcephaly	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	bilateral exotropia	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	constipation	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	intermittent mild lactic acidemia	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	absence of tears when crying	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	intermittent chalazions	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	staring spells	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	extrapyramidal movement disorder	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	asynchronous myoclonic jerks of the limbs and shoulders	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	subtle choreoathetotic movements of the hands and fingers	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	unsteady gait	phenotype	PMC4243708	PMC4243708.txt
+Patient 3	organism	has phenotype	communication with vocalizations, gestures and use of a speech-generating device	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	intrauterine growth restriction (IUGR)	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	oligohydramnios	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	mild hyperbilirubinemia	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	intermittent head flexion	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	generalized poly-spike discharges	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	mild tonic seizures	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	symmetric spasms with bilateral arm extension	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	Involuntary movements of the upper extremities	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	bilateral ptosis	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	abnormal tear production	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	constipation	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	recurrent episodes of keratoconjunctivitis	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	poor lid closure during sleep	phenotype	PMC4243708	PMC4243708.txt
+Patient 4	organism	has phenotype	corneal scarring	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	constant movements of arms and legs	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	head bobbing	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	liver transaminase elevations	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	diminished reflexes	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	dry eyes	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	microcephaly	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	myoclonic seizures	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	developmental regression	phenotype	PMC4243708	PMC4243708.txt
+Patient 5	organism	has phenotype	death following viral illness and prolonged seizure	phenotype	PMC4243708	PMC4243708.txt
+lubricant drops	drug	treats	dry eyes	phenotype	PMC4243708	PMC4243708.txt
+myoclonic seizures	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+microcephaly	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+dry eyes	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+diminished reflexes	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+liver transaminase elevations	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+head bobbing	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+constant movements of arms and legs	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+global developmental delay	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+developmental regression	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+death following viral illness and prolonged seizure	phenotype	caused by	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	developmental delay	phenotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	microcephaly	phenotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	myopathic- appearing face	phenotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	constant involuntary movements	phenotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	tendency to hyperextend her arms	phenotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	tendency to close her fists	phenotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has phenotype	jaundice	phenotype	PMC4243708	PMC4243708.txt
+trisomy 18	genetic variant	associated with	positive second trimester serum screen	assay	PMC4243708	PMC4243708.txt
+SLOS	disease	associated with	positive second trimester serum screen	assay	PMC4243708	PMC4243708.txt
+Cesarean section	biological process	produces	Patient 6	organism	PMC4243708	PMC4243708.txt
+ultrasound	assay	associated with	IUGR	disease	PMC4243708	PMC4243708.txt
+phototherapy	treatment	treats	jaundice	disease	PMC4243708	PMC4243708.txt
+Patient 6	organism	has attribute	normal female karyotype	genotype	PMC4243708	PMC4243708.txt
+Patient 6	organism	has attribute	death at 9 1⁄2 months of age	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	strabismus	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	athetoid arm and hand movements	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	clasped hands	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	Microcephaly	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	severe developmental delay	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	slow progress without regression	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	learned to sit alone	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	started to crawl at 2 years	phenotype	PMC4243708	PMC4243708.txt
+Patient 7	organism	has phenotype	no words	phenotype	PMC4243708	PMC4243708.txt
+Prenatal screen	assay	associated with	increased risk for trisomy 21	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	mild jaundice	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	strabismus	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	athetoid arm and hand movements	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	clasped hands	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	elevated liver transaminases	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Microcephaly	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	severe developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	slow progress without regression	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	learned to sit alone	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	started to crawl at 2 years	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	no words	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	decreased fetal movement	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	bradycardia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	IUGR	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	cyanosis at birth	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Anal stenosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	movement disorder	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	head bobbing	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	extremity athetosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	Seizures	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	loss of mobility	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	acquired microcephaly	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	inability to close eyes during sleep	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	chronic conjunctivitis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	corneal clouding	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hypolacrima	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	strabismus	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hearing impairment	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	gastro-esophageal reflux	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	chronic constipation	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	severe scoliosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	talipes equinovarus	phenotype	PMC4243708	PMC4243708.txt
+c.1201A>T (p.R401X) mutation	genetic variant	associated with	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+c.1201A>T (p.R401X) mutation	genetic variant	has phenotype	mild clinical phenotype	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 gene	gene	has genotype	compound heterozygote genotype	genotype	PMC4243708	PMC4243708.txt
+NGLY1 gene	gene	produces	Q631S	protein variant	PMC4243708	PMC4243708.txt
+NGLY1 gene	gene	produces	R401X	protein variant	PMC4243708	PMC4243708.txt
+Q631S	protein variant	located in	transcript ENST00000280700	transcript variant	PMC4243708	PMC4243708.txt
+R401X	protein variant	located in	transcript ENST00000280700	transcript variant	PMC4243708	PMC4243708.txt
+Q631S	protein variant	causes	nonsense mutation	genetic variant	PMC4243708	PMC4243708.txt
+R401X	protein variant	causes	nonsense mutation	genetic variant	PMC4243708	PMC4243708.txt
+Patient 2	organism	has genotype	c.1370dupG or p.R458fs	genetic variant	PMC4243708	PMC4243708.txt
+NGLY1 gene	gene	has gene product	exon 9	macromolecular complex	PMC4243708	PMC4243708.txt
+c.1370dupG or p.R458fs	genetic variant	causes	frame shift in codon 458	phenotype	PMC4243708	PMC4243708.txt
+c.1370dupG or p.R458fs	genetic variant	causes	insertion of 13 incorrect residues	phenotype	PMC4243708	PMC4243708.txt
+c.1370dupG or p.R458fs	genetic variant	causes	stop codon in exon 9	phenotype	PMC4243708	PMC4243708.txt
+c.1370dupG or p.R458fs	genetic variant	not seen in	3321 other subjects at Duke	organism	PMC4243708	PMC4243708.txt
+c.1370dupG or p.R458fs	genetic variant	not seen in	6503 subjects on the Exome Variant Server	organism	PMC4243708	PMC4243708.txt
+Patient 3	organism	has genotype	Mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+Baylor College of Medicine	organization	produces	WES and whole-genome sequencing	assay	PMC4243708	PMC4243708.txt
+Stanford University	organization	produces	WES and whole-genome sequencing	assay	PMC4243708	PMC4243708.txt
+G>A mutation at position 3:25761670 (hg19)	genetic variant	causes	p.R542X	protein variant	PMC4243708	PMC4243708.txt
+3 base pair in-frame deletion TCC>	genetic variant	located in	position 3:25775416 (hg19)	genetic variant	PMC4243708	PMC4243708.txt
+G>T mutation at position 3:25777564	genetic variant	produces	heterozygous SMP	genetic variant	PMC4243708	PMC4243708.txt
+NGLY1	gene	has gene product	p.R542X	protein	PMC4243708	PMC4243708.txt
+NGLY1	gene	has gene product	heterozygous SMP	protein	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	caused by	Mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+Patient 4	organism	has genotype	p.R401X	genetic variant	PMC4243708	PMC4243708.txt
+p.R401X	genetic variant	located in	3:25775422 (hg19)	<other>	PMC4243708	PMC4243708.txt
+p.R401X	genetic variant	located in	ENST00000280700	transcript variant	PMC4243708	PMC4243708.txt
+p.R401X	genetic variant	located in	c.1201A>T	genetic variant	PMC4243708	PMC4243708.txt
+p.R401X	genetic variant	located in	exon 8 of NGLY1	<other>	PMC4243708	PMC4243708.txt
+Sanger sequencing	assay	produces	p.R401X	genetic variant	PMC4243708	PMC4243708.txt
+Duke University	organization	produces	p.R401X	genetic variant	PMC4243708	PMC4243708.txt
+CLIA-certified laboratory	organization	confirms	p.R401X	genetic variant	PMC4243708	PMC4243708.txt
+GeneDx	organization	confirms	p.R401X	genetic variant	PMC4243708	PMC4243708.txt
+NGLY1	gene	has genotype	single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant	PMC4243708	PMC4243708.txt
+single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant	causes	R401X	protein variant	PMC4243708	PMC4243708.txt
+R401X	protein variant	caused by	base pair substitution	genetic variant	PMC4243708	PMC4243708.txt
+Patients 5 and 6	organism	has genotype	single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant	PMC4243708	PMC4243708.txt
+mother of Patients 5 and 6	organism	has genotype	heterozygous call of single nucleotide variant T> A at position 3:25775422 (hg19)	genetic variant	PMC4243708	PMC4243708.txt
+NGLY1 variant	genetic variant	validated by	Sanger sequencing	molecular activity	PMC4243708	PMC4243708.txt
+Patients 7 and 8	organism	has genotype	R401X	genetic variant	PMC4243708	PMC4243708.txt
+R401X	genetic variant	located in	3:25775422 (hg19)	<other>	PMC4243708	PMC4243708.txt
+R401X	genetic variant	located in	ENST00000280700	transcript variant	PMC4243708	PMC4243708.txt
+R401X	genetic variant	located in	c.1201A>T	genetic variant	PMC4243708	PMC4243708.txt
+R401X	genetic variant	located in	exon 8 of NGLY1	<other>	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	abnormal tear production	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	choreoathetosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	liver disease	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	acquired microcephaly	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	hypotonia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	EEG abnormalities	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	brain imaging abnormalities	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	peripheral neuropathy	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	constipation	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	history of IUGR	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	dysmorphic features	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	adrenal cortex vacuolation	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	low uE3	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	part of	ERAD pathway	pathway	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	involved in	cytosolic proteasome	cellular component	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	caused by	knockout mutations in NGLY1	genetic variant	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	adrenal function dysfunction	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	central nervous system	cell type	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	heart	organism	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	liver	organism	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	gastrointestinal tract	organism	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	endocrine system	organism	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	IUGR	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	failure to thrive	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	global developmental delay	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	liver impairment	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	abnormalities detected on brain imaging	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	hypo- or alacrima	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	movement disorder	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	tremulousness	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	varying degrees of choreoathetosis	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	multi-system disease	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	prominent neuromuscular involvement	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	Lactic acidemia	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	not associated with	cerebellar atrophy	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	not associated with	lipodystrophy	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	not associated with	significant heart manifestations	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	not associated with	CDGs	disease	PMC4243708	PMC4243708.txt
+Mitochondrial electron transport chain enzymology	biological process	occurs in	skin fibroblasts	cell type	PMC4243708	PMC4243708.txt
+Mitochondrial electron transport chain enzymology	biological process	occurs in	muscle	tissue	PMC4243708	PMC4243708.txt
+Mitochondrial electron transport chain enzymology	biological process	occurs in	liver	tissue	PMC4243708	PMC4243708.txt
+Mitochondrial DNA	macromolecular complex	located in	liver	tissue	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	basal ganglia involvement	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	retinitis pigmentosa	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	cardiomyopathy	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	liver failure	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	renal tubular acidosis	disease	PMC4243708	PMC4243708.txt
+Brain disease	disease	has participant	Patients 5 and 6	organism	PMC4243708	PMC4243708.txt
+Hypoxic-ischemic encephalopathy	disease	associated with	secondary mitochondrial dysfunction	phenotype	PMC4243708	PMC4243708.txt
+Hypoxic-ischemic encephalopathy	disease	associated with	neuronal loss	phenotype	PMC4243708	PMC4243708.txt
+Hypoxic-ischemic encephalopathy	disease	associated with	gliosis	phenotype	PMC4243708	PMC4243708.txt
+Spongiform degeneration	phenotype	associated with	mitochondrial disorders	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	mitochondrial disorders	disease	PMC4243708	PMC4243708.txt
+ERAD pathway	pathway	associated with	Golgi apparatus	cellular component	PMC4243708	PMC4243708.txt
+ERAD pathway	pathway	associated with	erlin1/2 complex	macromolecular complex	PMC4243708	PMC4243708.txt
+ERAD pathway	pathway	associated with	E3-ubiquitin ligase	protein	PMC4243708	PMC4243708.txt
+NGLY1	gene	causes	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+MAN1B1	gene	associated with	non-syndromic autosomal recessive intellectual disability	disease	PMC4243708	PMC4243708.txt
+MAN1B1	gene	associated with	subtle dysmorphic features	phenotype	PMC4243708	PMC4243708.txt
+α-1,2-Mannosidase	protein	located in	Golgi apparatus	cellular component	PMC4243708	PMC4243708.txt
+α-1,2-Mannosidase	protein	participates in	glycoprotein quality control	biological process	PMC4243708	PMC4243708.txt
+ERLIN2	gene	causes	intellectual disability	disease	PMC4243708	PMC4243708.txt
+ERLIN2	gene	causes	developmental regression	phenotype	PMC4243708	PMC4243708.txt
+ERLIN2	gene	causes	multiple contractures	phenotype	PMC4243708	PMC4243708.txt
+abnormal erlin2	protein variant	causes	impaired ERAD	phenotype	PMC4243708	PMC4243708.txt
+abnormal erlin2	protein variant	disrupts	erlin1/2 complex	macromolecular complex	PMC4243708	PMC4243708.txt
+ERLIN2	gene	associated with	hereditary spastic paraplegia	disease	PMC4243708	PMC4243708.txt
+IP3 receptors	protein	form	calcium channels	macromolecular complex	PMC4243708	PMC4243708.txt
+IP3 receptors	protein	part of	ER membranes	cellular component	PMC4243708	PMC4243708.txt
+IP3 receptors	protein	involved in	mammalian cell signaling	biological process	PMC4243708	PMC4243708.txt
+IP3 receptors	protein	undergo	rapid degradation	biological process	PMC4243708	PMC4243708.txt
+rapid degradation	biological process	part of	ubiquitin-proteasome pathway	pathway	PMC4243708	PMC4243708.txt
+RNF170	protein	mediates	ubiquitination and processing of the IP3 receptor	biological process	PMC4243708	PMC4243708.txt
+RNF170	protein	interacts with	erlin1/2 complex	macromolecular complex	PMC4243708	PMC4243708.txt
+Mutations in RNF170	genetic variant	cause	late- onset autosomal dominant sensory ataxia	disease	PMC4243708	PMC4243708.txt
+Abnormal E3-ubiquitin ligase activity	biological process	postulated to play a role in	pathogenesis of an autosomal dominant form of Charcot-Marie-Tooth disease	disease	PMC4243708	PMC4243708.txt
+quality control system for targeting and degrading misfolded proteins	biological process	implicated in	neurological conditions	disease	PMC4243708	PMC4243708.txt
+NGLY1	protein	located in	cytoplasm	cellular component	PMC4243708	PMC4243708.txt
+NGLY1	protein	participates in	proteasomal degradation of aberrant glycoproteins	biological process	PMC4243708	PMC4243708.txt
+NGLY1	protein	enables	initial cleavage of bulky N-glycan chains on misfolded glycoproteins	molecular activity	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	accumulation of intact glycoproteins in the cytoplasm	phenotype	PMC4243708	PMC4243708.txt
+NGLY1	protein	involved in	proteolysis	biological process	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	accumulation of an amorphous substance in the liver	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	vacuolization	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	liver disease	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	causes	accumulation of misfolded glycoproteins in the cytoplasm	phenotype	PMC4243708	PMC4243708.txt
+Transferrin isoelectric focusing	assay	used in	NGLY1-deficient patients	organism	PMC4243708	PMC4243708.txt
+mass spectrometry studies	assay	used in	NGLY1-deficient patients	organism	PMC4243708	PMC4243708.txt
+NGLY1	gene	plays a role in	maintaining central nervous system integrity	biological process	PMC4243708	PMC4243708.txt
+png-1	gene	is allele of	NGLY1	gene	PMC4243708	PMC4243708.txt
+Caenorhabditis elegans	organism	has genotype	loss-of-function mutations in png-1	genetic variant	PMC4243708	PMC4243708.txt
+loss-of-function mutations in png-1	genetic variant	causes	peripheral nervous system defects	phenotype	PMC4243708	PMC4243708.txt
+peripheral nervous system defects	phenotype	associated with	aberrant neuronal branching	phenotype	PMC4243708	PMC4243708.txt
+aberrant neuronal branching	phenotype	associated with	peripheral neuropathy	disease	PMC4243708	PMC4243708.txt
+peripheral neuropathy	disease	associated with	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	central and peripheral nervous system abnormalities	phenotype	PMC4243708	PMC4243708.txt
+c.1201A>T (p.R401X)	genetic variant	associated with	NGLY1	gene	PMC4243708	PMC4243708.txt
+homozygous mutations	genetic variant	associated with	p.R401X	protein variant	PMC4243708	PMC4243708.txt
+homozygous mutations	genetic variant	causes	severe phenotype	phenotype	PMC4243708	PMC4243708.txt
+c.1201A>T (p.R401X)	genetic variant	associated with	disease	disease	PMC4243708	PMC4243708.txt
+NGLY1	gene	associated with	NGLY1 deficiency	disease	PMC4243708	PMC4243708.txt
+NGLY1	gene	associated with	functional genetic variation	genetic variant	PMC4243708	PMC4243708.txt
+functional genetic variation	genetic variant	associated with	human population	organism	PMC4243708	PMC4243708.txt
+mutations	genetic variant	associated with	disease	disease	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	elevation of AFP and liver enzymes in infancy	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	relative normalization in early childhood	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	accumulation of a substance with staining properties similar to glycogen in hepatocyte cytoplasm	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	absent tears resulting in blepharitis and corneal ulceration	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	a movement disorder	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	peripheral neuropathy	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	transient nature of the AFP and liver transaminase elevation	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	has phenotype	more mild phenotype	phenotype	PMC4243708	PMC4243708.txt
+WES and whole genome sequencing	assay	produces	detection of further cases	phenotype	PMC4243708	PMC4243708.txt
+NGLY1 deficiency	disease	associated with	undetected older or more mildly affected individuals	phenotype	PMC4243708	PMC4243708.txt
+N-glycanase 1	protein	encoded by	NGLY1	gene	PMC7477955	PMC7477955.txt
+N-glycanase 1	protein	involved in	cleavage of the beta-aspartyl glycosylamine bond of N-linked glycoproteins	biological process	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	optic atrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	retinal pigmentary changes/cone dystrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	delayed bone age	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	joint hypermobility	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	lower than predicted resting energy expenditure	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	low CSF total protein and albumin	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	high antibody titers towards rubella and/or rubeola following vaccination	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	decreased tear production	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	transient transaminitis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	small feet	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	complex hyperkinetic movement disorder	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	global developmental delay with relatively preserved socialization	phenotype	PMC7477955	PMC7477955.txt
+NGLY1	gene	associated with	Deglycosylation	biological process	PMC7477955	PMC7477955.txt
+NGLY1	gene	associated with	glycosylation	biological process	PMC7477955	PMC7477955.txt
+NGLY1	gene	associated with	NGLY1-CDDG	disease	PMC7477955	PMC7477955.txt
+NGLY1	gene	associated with	congenital disorder of glycosylation	disease	PMC7477955	PMC7477955.txt
+NGLY1	gene	associated with	N-linked glycosylation	biological process	PMC7477955	PMC7477955.txt
+NGLY1	gene	has phenotype	phenotype	phenotype	PMC7477955	PMC7477955.txt
+NGLY1	gene	associated with	human	organism	PMC7477955	PMC7477955.txt
+Congenital disorders of glycosylation	disease	has attribute	abnormalities in the process of glycosylation of biomolecules	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	caused by	biallelic mutations in the NGLY1 gene	genetic variant	PMC7477955	PMC7477955.txt
+Need et al.	organization	produces	exome sequencing	assay	PMC7477955	PMC7477955.txt
+exome sequencing	assay	identifies	biallelic mutations in the NGLY1 gene	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 gene	gene	has genotype	biallelic mutations	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	instance of	congenital disorder of de-glycosylation	disease	PMC7477955	PMC7477955.txt
+NGLY1	gene	encodes	N-glycanase 1	protein	PMC7477955	PMC7477955.txt
+N-glycanase 1	protein	involved in	cytosolic degradation of misfolded glycoproteins	biological process	PMC7477955	PMC7477955.txt
+N-glycanase 1	protein	involved in	degradation of other glycoproteins	biological process	PMC7477955	PMC7477955.txt
+3-year-old male	organism	has genotype	c.1891delC (p.Q631S NM_018297.3) variant	genetic variant	PMC7477955	PMC7477955.txt
+3-year-old male	organism	has genotype	c.1201A>T (p.R401* NM_018297.3) variant	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 protein	protein	expressed in	leukocytes	cell type	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has participant	Transferrin isoelectric focusing	assay	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has participant	N-glycan profiling	assay	PMC7477955	PMC7477955.txt
+social media campaign	<other>	identified	additional affected individuals	organism	PMC7477955	PMC7477955.txt
+Enns et al.	organization	published	retrospective chart review	<other>	PMC7477955	PMC7477955.txt
+National Institutes of Health (NIH) Clinical Center	organization	initiated	natural history study of the disorder	clinical trial	PMC7477955	PMC7477955.txt
+National Institutes of Health (NIH) Clinical Center	organization	performed	laboratory investigations	assay	PMC7477955	PMC7477955.txt
+National Institutes of Health (NIH) Clinical Center	organization	performed	clinical investigations	assay	PMC7477955	PMC7477955.txt
+National Institutes of Health (NIH) Clinical Center	organization	performed	radiologic investigations	assay	PMC7477955	PMC7477955.txt
+National Institutes of Health (NIH) Clinical Center	organization	performed	investigations on 12 affected individuals	<other>	PMC7477955	PMC7477955.txt
+NIH protocol #76-HG-0238	clinical trial	has participant	Inborn Errors of Metabolism	disease	PMC7477955	PMC7477955.txt
+NIH protocol #76-HG-0238	clinical trial	has participant	Other Genetic Disorders	disease	PMC7477955	PMC7477955.txt
+NIH protocol #14-HG-0071	clinical trial	has participant	Congenital Disorders of Glycosylation	disease	PMC7477955	PMC7477955.txt
+National Human Genome Research Institute’s Institutional Review Board	organization	produces	NIH protocol #76-HG-0238	clinical trial	PMC7477955	PMC7477955.txt
+National Human Genome Research Institute’s Institutional Review Board	organization	produces	NIH protocol #14-HG-0071	clinical trial	PMC7477955	PMC7477955.txt
+NIH Clinical Center	organization	has participant	each subject	<other>	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	Blood	biological process	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	urine	biological process	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	cerebral spinal fluid	biological process	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	lymphoblasts	cell type	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	primary dermal fibroblasts	cell type	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	brain magnetic resonance imaging and spectroscopy	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	electroencephalograms	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	electromyogram	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	nerve conduction studies	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	indirect calorimetry	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	eye examination with Schirmer II testing	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	optical coherence tomography scans and electroretinography	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	behavioral determination of pure tone thresholds	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	tympanometry	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	distortion product otoacoustic emissions	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	auditory brainstem evoked potentials	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	quantitative sweat analysis autonomic testing	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	gastric aspiration	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	swallow study	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	skeletal survey	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	bone age	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	dual X-ray absorptiometry	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	abdominal ultrasound	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	vibration controlled transient elastography	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	echocardiogram	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	electrocardiogram	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	clinical neurology	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	audiology	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	nutrition	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	ophthalmology	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	hepatology	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	growth, puberty and hormonal studies	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	allergy and immunology	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	genetic counseling	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	physiatry	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	speech, occupational, and physical therapy	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	developmental psychological evaluations	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	Vineland Adaptive Behavior Scales, 2nd edition	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	Cognitive function testing	assay	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has participant	Nijmegen pediatric CDG rating scale	assay	PMC7477955	PMC7477955.txt
+NGLY1	gene	has genotype	biallelic mutations	genetic variant	PMC7477955	PMC7477955.txt
+biallelic mutations in NGLY1	genetic variant	causes	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has participant	Twelve individuals	organism	PMC7477955	PMC7477955.txt
+Twelve individuals	organism	has phenotype	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+c.1201A>T (p.R401*)	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1	gene	has gene product	catalytic domain	protein	PMC7477955	PMC7477955.txt
+catalytic domain	protein	part of	NGLY1	gene	PMC7477955	PMC7477955.txt
+NGLY1	gene	has genotype	13 different mutations	genetic variant	PMC7477955	PMC7477955.txt
+13 different mutations	genetic variant	part of	NGLY1	gene	PMC7477955	PMC7477955.txt
+NGLY1	gene	has genotype	five missense mutations	genetic variant	PMC7477955	PMC7477955.txt
+five missense mutations	genetic variant	part of	NGLY1	gene	PMC7477955	PMC7477955.txt
+NGLY1	gene	has genotype	five nonsense mutations	genetic variant	PMC7477955	PMC7477955.txt
+five nonsense mutations	genetic variant	part of	NGLY1	gene	PMC7477955	PMC7477955.txt
+NGLY1	gene	has genotype	two splice site mutations	genetic variant	PMC7477955	PMC7477955.txt
+two splice site mutations	genetic variant	part of	NGLY1	gene	PMC7477955	PMC7477955.txt
+NGLY1	gene	has genotype	one frameshift mutation	genetic variant	PMC7477955	PMC7477955.txt
+one frameshift mutation	genetic variant	part of	NGLY1	gene	PMC7477955	PMC7477955.txt
+NGLY1	gene	has genotype	four mutations in the catalytic domain	genetic variant	PMC7477955	PMC7477955.txt
+four mutations in the catalytic domain	genetic variant	part of	NGLY1	gene	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.953T>C	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.1169G>C	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.1201A>T	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.931G>A	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.730T>C	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.1604G>A	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.1910delT	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.1891delC	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.622C>T	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.930C>T	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.347C>G	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.881+5G>T	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has genotype	c.1370dupG	genetic variant	PMC7477955	PMC7477955.txt
+c.1201A>T	genetic variant	associated with	rs201337954	<other>	PMC7477955	PMC7477955.txt
+c.931G>A	genetic variant	associated with	rs201791209	<other>	PMC7477955	PMC7477955.txt
+c.1891delC	genetic variant	associated with	rs587776982	<other>	PMC7477955	PMC7477955.txt
+c.622C>T	genetic variant	associated with	rs200561967	<other>	PMC7477955	PMC7477955.txt
+c.1370dupG	genetic variant	associated with	rs587777265	<other>	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hypotonic facies	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	low weight	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	thin facies	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hollowed cheeks	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	visible zygomatic arches	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	poor growth after mid-childhood	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	acquired microcephaly	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	total foot length < 3rd percentile	phenotype	PMC7477955	PMC7477955.txt
+Nijmegen Scores	phenotype	associated with	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+c.1201A>T	genetic variant	associated with	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+c.930C>T	genetic variant	associated with	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+c.622C>T	genetic variant	associated with	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+c.1201A>T	genetic variant	correlated with	disease severity	phenotype	PMC7477955	PMC7477955.txt
+c.930C>T	genetic variant	correlated with	mild impairment	phenotype	PMC7477955	PMC7477955.txt
+c.622C>T	genetic variant	correlated with	mild impairment	phenotype	PMC7477955	PMC7477955.txt
+males	organism	has phenotype	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+females	organism	has phenotype	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	developmental delay	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	intellectual disability	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	profound intellectual disability	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Motor deficits	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	impaired Daily Living Skills scores	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	below average IQ	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	nonverbal communication	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	single word speech	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	phrase speech	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	strong Socialization scores	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Communication scores	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Daily Living Skills scores	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Vineland Adaptive Behavior Composite scores	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	clinical seizures	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	subclinical seizures	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	multifocal epileptiform activity	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hyperkinetic movement disorders	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	choreiform movements	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	athetoid movements	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	dystonic movements	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	myoclonic movements	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	action tremor	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	dysmetric movements	phenotype	PMC7477955	PMC7477955.txt
+Brain MRI and MRS	assay	has participant	Eleven individuals	organism	PMC7477955	PMC7477955.txt
+Delayed myelination	phenotype	occurs in	three of the four youngest individuals	organism	PMC7477955	PMC7477955.txt
+Cerebral atrophy	phenotype	occurs in	Six of nine individuals	organism	PMC7477955	PMC7477955.txt
+Cerebellar atrophy	phenotype	occurs in	Four individuals (#1, #2, #6, #10)	organism	PMC7477955	PMC7477955.txt
+Atrophy	phenotype	correlated with	age	<other>	PMC7477955	PMC7477955.txt
+Atrophy	phenotype	correlated with	worsening of all functional measurements	phenotype	PMC7477955	PMC7477955.txt
+Brain volume	phenotype	correlated with	CSF levels of 5-HIAA	chemical substance	PMC7477955	PMC7477955.txt
+Brain volume	phenotype	correlated with	tetrahydrobiopterin	chemical substance	PMC7477955	PMC7477955.txt
+Brain volume	phenotype	correlated with	5-HVA	chemical substance	PMC7477955	PMC7477955.txt
+N-acetylaspartylglutamate + N-acetylaspartate	metabolite	decreases abundance of	left centrum semiovale	cellular component	PMC7477955	PMC7477955.txt
+N-acetylaspartylglutamate + N-acetylaspartate	metabolite	decreases abundance of	midline parietal grey matter	cellular component	PMC7477955	PMC7477955.txt
+N-acetylaspartylglutamate + N-acetylaspartate	metabolite	decreases abundance of	superior cerebellar vermis	cellular component	PMC7477955	PMC7477955.txt
+glutamine + glutamate + gamma-aminobutyric acid	metabolite	decreases abundance of	midline parietal grey matter	cellular component	PMC7477955	PMC7477955.txt
+glutamine + glutamate + gamma-aminobutyric acid	metabolite	decreases abundance of	left centrum semiovale	cellular component	PMC7477955	PMC7477955.txt
+glutamine + glutamate + gamma-aminobutyric acid	metabolite	decreases abundance of	pons	cellular component	PMC7477955	PMC7477955.txt
+Choline	metabolite	increases abundance of	left centrum semiovale	cellular component	PMC7477955	PMC7477955.txt
+myo-inositol	metabolite	increases abundance of	pons	cellular component	PMC7477955	PMC7477955.txt
+age	phenotype	correlated with	MRS-measured metabolites	metabolite	PMC7477955	PMC7477955.txt
+functional assessments	phenotype	correlated with	MRS-measured metabolites	metabolite	PMC7477955	PMC7477955.txt
+brain volume	phenotype	correlated with	MRS-measured metabolites	metabolite	PMC7477955	PMC7477955.txt
+neurotransmitters in the CSF	metabolite	correlated with	MRS-measured metabolites	metabolite	PMC7477955	PMC7477955.txt
+atrophy	phenotype	correlated with	total CSF protein	protein	PMC7477955	PMC7477955.txt
+MRS metabolite measurements	metabolite	not correlated with	total CSF protein	protein	PMC7477955	PMC7477955.txt
+MRS metabolite measurements	metabolite	not correlated with	CSF albumin	protein	PMC7477955	PMC7477955.txt
+MRS metabolite measurements	metabolite	not correlated with	CSF/serum albumin ratio	<other>	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	CSF total protein and albumin concentrations	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	CSF/serum albumin ratios	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	CSF 5-hydroxyindolacetic acid (5-HIAA)	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	homovanillic acid (HVA)	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	neuronal loss	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	Neopterin levels	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	CSF tetrahydrobiopterin (BH4) levels	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	brain atrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	CSF lactate and amino acid levels	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	CSF leucocyte counts	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	glucose concentrations	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	3-O-methyldopa concentrations	chemical substance	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	5-methyltetrahydrofolate concentrations	chemical substance	PMC7477955	PMC7477955.txt
+Nerve conduction studies	assay	has participant	individuals	organism	PMC7477955	PMC7477955.txt
+axonal sensorimotor polyneuropathy	disease	has phenotype	demyelinative features	phenotype	PMC7477955	PMC7477955.txt
+neurophysiological testing	assay	demonstrates	loss of sensory and motor axons	phenotype	PMC7477955	PMC7477955.txt
+neurophysiological testing	assay	demonstrates	sympathetic nerve function	phenotype	PMC7477955	PMC7477955.txt
+neurophysiological testing	assay	demonstrates	abnormalities in myelination of peripheral nerves	phenotype	PMC7477955	PMC7477955.txt
+neurophysiological testing	assay	demonstrates	motor neuron degeneration	phenotype	PMC7477955	PMC7477955.txt
+individual #6	organism	has phenotype	progression of the neuropathy	phenotype	PMC7477955	PMC7477955.txt
+needle EMG	assay	has participant	subjects	organism	PMC7477955	PMC7477955.txt
+NCS results	assay	associated with	neurogenic findings	phenotype	PMC7477955	PMC7477955.txt
+NCS results	assay	associated with	acute and chronic changes	phenotype	PMC7477955	PMC7477955.txt
+QSWEATs	assay	associated with	axonal sensorimotor neuropathies	disease	PMC7477955	PMC7477955.txt
+distal lower extremity QSWEAT	assay	associated with	length dependent neuropathy	disease	PMC7477955	PMC7477955.txt
+tibial motor amplitude	phenotype	negatively correlated with	age	<other>	PMC7477955	PMC7477955.txt
+tibial motor amplitude	phenotype	decreases abundance of	amplitude	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Lagophthalmous	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	ptosis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	exotropia	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	esotropia	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	corneal neovascularization	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	pannus formation	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	scarring	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	optic nerve pallor	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	atrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	retinal	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	pigmentary changes	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	blonde or poorly pigmented retinal periphery	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	refractive errors	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hypo- or complete alacrima	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	cone dystrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	reduced photopic responses	phenotype	PMC7477955	PMC7477955.txt
+Audiologic assessments	assay	has participant	11 subjects	organism	PMC7477955	PMC7477955.txt
+Behavioral hearing thresholds	phenotype	has attribute	normal hearing sensitivity	phenotype	PMC7477955	PMC7477955.txt
+Tympanometry	assay	has attribute	unremarkable	<other>	PMC7477955	PMC7477955.txt
+auditory brainstem	cellular component	has attribute	dyssynchronous and/or absent transmission	phenotype	PMC7477955	PMC7477955.txt
+auditory brainstem	cellular component	has attribute	increased severity of transmission abnormality with increasing age	phenotype	PMC7477955	PMC7477955.txt
+8th nerve	cellular component	has attribute	dyssynchronous and/or absent transmission	phenotype	PMC7477955	PMC7477955.txt
+8th nerve	cellular component	has attribute	bilateral involvement in the 4 oldest individuals	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	dyssynchronous and/or absent transmission through the auditory brainstem and/or 8th nerve	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Oral motor deficits	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Premature spillage	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	pharyngeal swallow response delays	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Developmental delays in mastication	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Generalized weakness of the lips and tongue	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Dystonic movements of the tongue	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	persistent oral reflexes of suckling and suck/swallows	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	unremarkable Echocardiograms	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	heart rates in the low 100s	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	QTcB >440 ms	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	normal QTcF	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	obstructive sleep apnea	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	central sleep apnea	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	combined obstructive and central sleep apnea	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	frequent periodic limb movements	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	Gastric pH alteration	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	constipation	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	abnormal abdominal ultrasound	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	possible liver fibrosis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	altered resting energy expenditure	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	elevated aspartate aminotransferase	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	elevated alanine transaminase	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hepatocellular carcinoma	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	low total cholesterol	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	low LDL	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	low triglycerides	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	unremarkable complete blood counts	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	lymphoblasts	cell type	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	acute lymphocytic leukemia	disease	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	normal prothrombin time	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	normal partial thromboplastin time	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	normal international normalized ratio	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	low protein C activity	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	low Factor II activity	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	low Factor IX	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	low Factor XI	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	low fibrinogen	phenotype	PMC7477955	PMC7477955.txt
+c.1201A>T mutation	genetic variant	associated with	lower Factor II	phenotype	PMC7477955	PMC7477955.txt
+c.1201A>T mutation	genetic variant	associated with	lower Factor IX	phenotype	PMC7477955	PMC7477955.txt
+c.1201A>T mutation	genetic variant	associated with	lower Factor XI	phenotype	PMC7477955	PMC7477955.txt
+c.1201A>T mutation	genetic variant	associated with	Antithrombin III	protein	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	out of range elevations in antibody titers towards rubella and/or rubeola	phenotype	PMC7477955	PMC7477955.txt
+MMR vaccination	biological process	causes	out of range elevations in antibody titers towards rubella and/or rubeola	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	associated with	abnormal biochemical markers in mitochondropathies and hypoglycosylation disorders	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	delayed bone age	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	low femoral bone density	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	joint hypermobility	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	contractures in both small and large joints	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	coxa valga	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	scoliosis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	growth arrest lines	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	metaphyseal banding	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	dislocations or subluxations involving the hips and shoulder joints	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	sclerosis of the phalanges or tarsal bones	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	flexion deformity of the fingers	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hallux valgus	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	sclerotic lesion of the distal femur	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	thinning of the fibulas	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	prominent apophyseal bone formation in the ileac crests and ischia	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	ulnar bowing	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	expansion of the cortexes in the proximal and middle phalanges in digits 2–4	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	widened phalanges	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	shortened and widened metatarsals	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	low CSF total protein	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	low albumin	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	optic atrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	retinal pigmentary changes	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	cone dystrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	poor weight gain	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	lower than predicted resting energy expenditure	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	central sleep apnea	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	obstructive sleep apnea	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	delayed bone age	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	joint hypermobility	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	progressive brain atrophy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	abnormalities in brain MRS-measured metabolites	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	abnormalities on skeletal survey	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	high antibody titers after rubella and rubeola vaccination	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	low levels of several pro- and anti- coagulation factors	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	normal Echocardiograms	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	normal electrocardiograms	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	normal CSF lactate levels	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	global developmental delay	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	movement disorder	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	frequent seizure disorder	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	hypotonia	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	hypolacrima or alacrima	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	corneal disease	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	ptosis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	lagophthalmous	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	strabismus	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	peripheral neuropathy	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	diminished reflexes	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	hypohidrosis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	auditory brainstem response abnormalities	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	abnormal brain imaging	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	scoliosis	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	acquired microcephaly	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	small hands and feet	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	dysmorphic features	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	constipation	symptom	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	elevated liver enzymes	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	osteopenia	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	hypocholesterolemia	disease	PMC7477955	PMC7477955.txt
+liver biopsy specimens	biological process	produces	minimal fibrosis	phenotype	PMC7477955	PMC7477955.txt
+liver biopsy specimens	biological process	does not produce	abnormal storage material	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	not associated with	ocular apraxia	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	developmental delay/intellectual disability	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	hyperkinetic movement disorder	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	hypolacrima	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	associated with	elevated transaminases	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	auditory neural pathway dysfunction	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hypohidrosis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	hypo-lacrima	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	has phenotype	disordered mastication	phenotype	PMC7477955	PMC7477955.txt
+auditory neural pathway dysfunction	phenotype	causes	difficulty hearing in the presence of background noise	symptom	PMC7477955	PMC7477955.txt
+hypohidrosis	phenotype	causes	core body hyperthermia	symptom	PMC7477955	PMC7477955.txt
+hypo-lacrima	phenotype	causes	secondary complications that can impact vision	symptom	PMC7477955	PMC7477955.txt
+disordered mastication	phenotype	causes	need for oral motor and swallowing therapies	symptom	PMC7477955	PMC7477955.txt
+Motor Skills scores	phenotype	associated with	Daily Living Skills scores	phenotype	PMC7477955	PMC7477955.txt
+motor deficits	phenotype	part of	NGLY1-CDDG	disease	PMC7477955	PMC7477955.txt
+hyperkinetic movement disorder	phenotype	part of	NGLY1-CDDG	disease	PMC7477955	PMC7477955.txt
+myoclonic seizures	phenotype	contributes to	movement disorder	phenotype	PMC7477955	PMC7477955.txt
+neurotransmitter deficiency	phenotype	contributes to	movement disorder	phenotype	PMC7477955	PMC7477955.txt
+peripheral neuropathy	phenotype	manifestation of	sensory ataxia	phenotype	PMC7477955	PMC7477955.txt
+brain atrophy	phenotype	correlated with	functional assessments	<other>	PMC7477955	PMC7477955.txt
+loss of neurons	biological process	contributes to	functional impairment	phenotype	PMC7477955	PMC7477955.txt
+brain atrophy	phenotype	correlated with	CSF metabolites	metabolite	PMC7477955	PMC7477955.txt
+CSF metabolites	metabolite	associated with	damage to neurotransmitter producing neurons	biological process	PMC7477955	PMC7477955.txt
+brain atrophy	phenotype	causes	biochemical abnormalities	phenotype	PMC7477955	PMC7477955.txt
+NAA	chemical substance	decreases abundance of	functional impairment	phenotype	PMC7477955	PMC7477955.txt
+NAA	chemical substance	decreases abundance of	age	<other>	PMC7477955	PMC7477955.txt
+choline	chemical substance	increases abundance of	functional impairment	phenotype	PMC7477955	PMC7477955.txt
+choline	chemical substance	increases abundance of	age	<other>	PMC7477955	PMC7477955.txt
+myo-inositol	chemical substance	increases abundance of	functional impairment	phenotype	PMC7477955	PMC7477955.txt
+myo-inositol	chemical substance	increases abundance of	age	<other>	PMC7477955	PMC7477955.txt
+creatine	chemical substance	increases abundance of	functional impairment	phenotype	PMC7477955	PMC7477955.txt
+creatine	chemical substance	increases abundance of	age	<other>	PMC7477955	PMC7477955.txt
+creatine	chemical substance	negatively correlated with	myoinositol	chemical substance	PMC7477955	PMC7477955.txt
+NAA	chemical substance	positively correlated with	neurotransmitter levels	<other>	PMC7477955	PMC7477955.txt
+NAA	chemical substance	decreases abundance of	neurons	cell type	PMC7477955	PMC7477955.txt
+choline	chemical substance	increases abundance of	glial cells	cell type	PMC7477955	PMC7477955.txt
+myo-inositol	chemical substance	increases abundance of	gliosis	phenotype	PMC7477955	PMC7477955.txt
+creatine	chemical substance	increases abundance of	glial cells	cell type	PMC7477955	PMC7477955.txt
+glial cells	cell type	increases abundance of	NGLY1-CDDG individuals	organism	PMC7477955	PMC7477955.txt
+neurons	cell type	decreases abundance of	NGLY1-CDDG individuals	organism	PMC7477955	PMC7477955.txt
+imbalance	<other>	contributes to	severity of the phenotype	phenotype	PMC7477955	PMC7477955.txt
+impaired sweat response	phenotype	associated with	small fiber neuropathy	disease	PMC7477955	PMC7477955.txt
+QAlb	biological process	is marker for	blood-CSF barrier dysfunction	disease	PMC7477955	PMC7477955.txt
+decreased CSF protein and albumin concentrations	phenotype	is marker for	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	low cholesterol	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	hepatopathy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	peripheral neuropathy	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	retinal and optic nerve abnormalities	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	seizures	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	developmental delay with socialization as a relative strength	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	delayed bone age	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	hypolacrima	phenotype	PMC7477955	PMC7477955.txt
+N-glycanase 1	protein	enables	the cleavage of the amide bond between the proximal N-acetylglucosamine residue of glycans and the asparagine residue of the protein	molecular activity	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	impairment of glycan recycling	biological process	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	hypoglycosylation	biological process	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	abnormalities in transferrin and ApoC-III glycosylation	phenotype	PMC7477955	PMC7477955.txt
+misfolded glycoproteins	protein	processed through	endoplasmic reticulum associated degradation pathway	pathway	PMC7477955	PMC7477955.txt
+N-glycanase	protein	is part of	degradation of these molecules	biological process	PMC7477955	PMC7477955.txt
+ERAD dysfunction	phenotype	contributes to	NGLY1-CDDG phenotype	disease	PMC7477955	PMC7477955.txt
+ER-stress	phenotype	occurs in	mouse embryonic fibroblasts	cell type	PMC7477955	PMC7477955.txt
+NGLY1-CDDG patient fibroblasts	cell type	expresses	standard ERAD marker	protein	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	progressive disorder	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	worsening function with age	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	peripheral neuropathy	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	auditory neural dysfunction	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	scoliosis	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	inability to maintain weight	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	brain atrophy	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	abnormalities in brain metabolites	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	changes in CSF neurotransmitter levels	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	hypolacrima	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	hepatopathy	disease	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	causes	hyperkinetic movement disorder	disease	PMC7477955	PMC7477955.txt
+brain volume	biological process	derives from	NGLY1-CDDG	disease	PMC7477955	PMC7477955.txt
+choline levels on MRS	biological process	derives from	NGLY1-CDDG	disease	PMC7477955	PMC7477955.txt
+nerve conduction velocities and amplitudes	biological process	derives from	NGLY1-CDDG	disease	PMC7477955	PMC7477955.txt
+auditory brainstem evoked responses	biological process	derives from	NGLY1-CDDG	disease	PMC7477955	PMC7477955.txt
+NGLY1 mutations	genetic variant	located in	exons	cellular component	PMC7477955	PMC7477955.txt
+c.1624C>T	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+c.1205_1207delGAA	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+c.1533_1536delTCAA	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+c.730T>C	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+c.953T>C	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+c.931G>A	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+c.930C> T	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+catalytic domain	macromolecular complex	has participant	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.931G>A	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.1604G>A	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.622C>T	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.347C>G	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.1169G>C	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.730T>C	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.1910delT	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.930C>T	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+NM_018297.3:c.881+5G>T	genetic variant	part of	NGLY1 mutations	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259179	organization	has output	NM_018297.3:c.931G>A	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259180	organization	has output	NM_018297.3:c.1604G>A	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259181	organization	has output	NM_018297.3:c.622C>T	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259182	organization	has output	NM_018297.3:c.347C>G	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259183	organization	has output	NM_018297.3:c.1169G>C	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259184	organization	has output	NM_018297.3:c.730T>C	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259185	organization	has output	NM_018297.3:c.1910delT	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259186	organization	has output	NM_018297.3:c.930C>T	genetic variant	PMC7477955	PMC7477955.txt
+ClinVar: SCV000259187	organization	has output	NM_018297.3:c.881+5G>T	genetic variant	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	upturned nasal tip	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	hypotonic facies	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	ptosis	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	brachycephaly	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	thinned facies	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	hollowed cheeks	phenotype	PMC7477955	PMC7477955.txt
+NGLY1-CDDG	disease	has phenotype	visible zygomatic arches	phenotype	PMC7477955	PMC7477955.txt
+Brain MRI findings	phenotype	has participant	White matter lesions	phenotype	PMC7477955	PMC7477955.txt
+White matter lesions	phenotype	located in	two of eleven individuals	organism	PMC7477955	PMC7477955.txt
+White matter lesions	phenotype	located in	periventricular white matter	cellular component	PMC7477955	PMC7477955.txt
+Cerebral atrophy	phenotype	manifestation of	NGLY1 deficiency	disease	PMC7477955	PMC7477955.txt
+Cerebral atrophy	phenotype	produced by	T2-weighting	assay	PMC7477955	PMC7477955.txt
+Sulci	cellular component	has attribute	slightly prominent	phenotype	PMC7477955	PMC7477955.txt
+Ventricles	cellular component	has attribute	prominent	phenotype	PMC7477955	PMC7477955.txt
+Cerebellar tonsils	cellular component	has attribute	high position	phenotype	PMC7477955	PMC7477955.txt
+Foramen of Magendie	cellular component	has attribute	large	phenotype	PMC7477955	PMC7477955.txt
+Cisterna magna	cellular component	has attribute	large	phenotype	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	causes	conjunctival injection	symptom	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	causes	limbal neovascularization	symptom	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	causes	corneal scarring	symptom	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	causes	severe dry eyes	symptom	PMC7477955	PMC7477955.txt
+NGLY1 deficiency	disease	causes	lagophthalmous	symptom	PMC7477955	PMC7477955.txt
