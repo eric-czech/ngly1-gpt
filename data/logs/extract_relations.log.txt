@@ -1,0 +1,515 @@
+
+  0%|          | 0/2 [00:00<?, ?it/s]INFO:__main__:Processing /Users/eczech/repos/misc/ngly1-gpt/data/extract/PMC4243708.txt
+
+
+  0%|          | 0/13 [00:00<?, ?it/s][AINFO:ngly1_gpt.llm:Prompt (temperature=0.0, model=gpt-4):
+Text will be provided that contains information from a published, biomedical research article about NGLY1 deficiency. Extract subject-predicate-object relations from this text.
+
+Types of subjects and objects to extract:
+- assay
+- biological process
+- cell type
+- cellular component
+- chemical substance
+- clinical trial
+- disease
+- drug
+- gene
+- gene family 
+- genetic variant
+- genotype
+- macromolecular complex
+- metabolite
+- molecular activity
+- organism
+- organization
+- pathway
+- phenotype
+- protein
+- protein variant
+- symptom
+- tissue
+- transcript variant
+- <other>
+
+Predicates to extract:
+- affects risk for
+- associated with
+- capable of
+- caused by
+- causes
+- colocalizes with
+- contributes to
+- correlated with
+- decreases abundance of
+- decreases activity of
+- derives from
+- disrupts
+- enables
+- exact match
+- expressed in
+- expresses
+- genetically interacts with
+- has affected feature
+- has attribute
+- has gene product
+- has genotype
+- has metabolite
+- has output
+- has participant
+- has phenotype
+- has role
+- in 1 to 1 orthology relationship with
+- in orthology relationship with
+- in paralogy relationship with
+- in taxon
+- in xenology relationship with
+- increases abundance of
+- increases activity of
+- instance of
+- interacts with
+- involved in
+- is allele of
+- is marker for
+- is model of
+- is part of
+- located in
+- location of
+- manifestation of
+- molecularly interacts with
+- negatively correlated with
+- negatively regulates
+- occurs in
+- part of
+- participates in
+- pathogenic for condition
+- positively correlated with
+- positively regulates
+- precedes
+- prevents
+- produced by
+- produces
+- regulates
+- treats
+- <other>
+
+Here is the text to extract relations from: 
+--- BEGIN TEXT ---
+Title
+Mutations in NGLY1 Cause an Inherited Disorder of the Endoplasmic Reticulum-Associated Degradation (ERAD) Pathway
+--- END TEXT ---
+
+Report each relation record on a separate line in CSV format using a pipe (i.e. "|") delimiter with the column headers: `subject`, `subject_entity`, `predicate`, `object`, `object_entity`.
+
+Requirements for extracted relations:
+
+- All `subject` and `object` values must be INDIVIDUAL, specific, named concepts that represent an instance of one of the biomedical entities listed above.
+- The `subject_entity` and `object_entity` values must be exactly one of the biomedical entities listed above (e.g. "pathway" or "disease"), and they must describe the entity associated with the specific `subject` and `object`, repsectively.
+- All `predicate` values must be EXACTLY equivalent to one of the provided predicates (e.g. "causes" or "participates in"); do not use predicates outside of this list.
+- Assume that "NGLY1 deficiency" is associated with any entities discussed where context does not dictate otherwise, as is this is the primary subject of the article.
+- Extract as many relations as possible; do not ignore any of them that match the criteria provided.
+- Include the CSV headers in the response.
+- If there are no relations to extract in the text, return only the CSV headers.
+
+Here is an example response with illustrative data that demonstrates the desired result format:
+--- BEGIN EXAMPLE ---
+subject|subject_entity|predicate|object|object_entity
+Hutchinson-Gilford progeria syndrome|disease|has phenotype|osteolysis|phenotype
+--- END EXAMPLE ---
+
+Report only the relation records without explanation or other text of any kind.
+
+Extracted relation records:
+INFO:ngly1_gpt.llm:Response:
+subject|subject_entity|predicate|object|object_entity
+Mutations|genetic variant|cause|Inherited Disorder of the Endoplasmic Reticulum-Associated Degradation (ERAD) Pathway|disease
+NGLY1|gene|has gene product|Mutations|genetic variant
+
+
+  8%|▊         | 1/13 [00:05<01:05,  5.48s/it][AINFO:ngly1_gpt.llm:Prompt (temperature=0.0, model=gpt-4):
+Text will be provided that contains information from a published, biomedical research article about NGLY1 deficiency. Extract subject-predicate-object relations from this text.
+
+Types of subjects and objects to extract:
+- assay
+- biological process
+- cell type
+- cellular component
+- chemical substance
+- clinical trial
+- disease
+- drug
+- gene
+- gene family 
+- genetic variant
+- genotype
+- macromolecular complex
+- metabolite
+- molecular activity
+- organism
+- organization
+- pathway
+- phenotype
+- protein
+- protein variant
+- symptom
+- tissue
+- transcript variant
+- <other>
+
+Predicates to extract:
+- affects risk for
+- associated with
+- capable of
+- caused by
+- causes
+- colocalizes with
+- contributes to
+- correlated with
+- decreases abundance of
+- decreases activity of
+- derives from
+- disrupts
+- enables
+- exact match
+- expressed in
+- expresses
+- genetically interacts with
+- has affected feature
+- has attribute
+- has gene product
+- has genotype
+- has metabolite
+- has output
+- has participant
+- has phenotype
+- has role
+- in 1 to 1 orthology relationship with
+- in orthology relationship with
+- in paralogy relationship with
+- in taxon
+- in xenology relationship with
+- increases abundance of
+- increases activity of
+- instance of
+- interacts with
+- involved in
+- is allele of
+- is marker for
+- is model of
+- is part of
+- located in
+- location of
+- manifestation of
+- molecularly interacts with
+- negatively correlated with
+- negatively regulates
+- occurs in
+- part of
+- participates in
+- pathogenic for condition
+- positively correlated with
+- positively regulates
+- precedes
+- prevents
+- produced by
+- produces
+- regulates
+- treats
+- <other>
+
+Here is the text to extract relations from: 
+--- BEGIN TEXT ---
+Abstract
+Purpose: The endoplasmic reticulum-associated degradation (ERAD) pathway is responsible for the translocation of misfolded proteins across the ER membrane into the cytosol for subsequent degradation by the proteasome. In order to understand the spectrum of clinical and molecular findings in a complex neurological syndrome, we studied a series of eight patients with inherited deficiency of N-glycanase 1 (NGLY1), a novel disorder of cytosolic ERAD dysfunction.
+ Methods: Whole-genome, whole-exome or standard Sanger sequencing techniques were employed. Retrospective chart reviews were performed in order to obtain clinical data.
+ Results: All patients had global developmental delay, a movement disorder, and hypotonia. Other common findings included hypo- or alacrima (7/8), elevated liver transaminases (6/7), microcephaly (6/8), diminished reflexes (6/8), hepatocyte cytoplasmic storage material or vacuolization (5/6), and seizures (4/8). The nonsense mutation c.1201A>T (p.R401X) was the most common deleterious allele.
+ Conclusions: NGLY1 deficiency is a novel autosomal recessive disorder of the ERAD pathway associated with neurological dysfunction, abnormal tear production, and liver disease. The majority of patients detected to date carry a specific nonsense mutation that appears to be associated with severe disease. The phenotypic spectrum is likely to enlarge as cases with a more broad range of mutations are detected.
+--- END TEXT ---
+
+Report each relation record on a separate line in CSV format using a pipe (i.e. "|") delimiter with the column headers: `subject`, `subject_entity`, `predicate`, `object`, `object_entity`.
+
+Requirements for extracted relations:
+
+- All `subject` and `object` values must be INDIVIDUAL, specific, named concepts that represent an instance of one of the biomedical entities listed above.
+- The `subject_entity` and `object_entity` values must be exactly one of the biomedical entities listed above (e.g. "pathway" or "disease"), and they must describe the entity associated with the specific `subject` and `object`, repsectively.
+- All `predicate` values must be EXACTLY equivalent to one of the provided predicates (e.g. "causes" or "participates in"); do not use predicates outside of this list.
+- Assume that "NGLY1 deficiency" is associated with any entities discussed where context does not dictate otherwise, as is this is the primary subject of the article.
+- Extract as many relations as possible; do not ignore any of them that match the criteria provided.
+- Include the CSV headers in the response.
+- If there are no relations to extract in the text, return only the CSV headers.
+
+Here is an example response with illustrative data that demonstrates the desired result format:
+--- BEGIN EXAMPLE ---
+subject|subject_entity|predicate|object|object_entity
+Hutchinson-Gilford progeria syndrome|disease|has phenotype|osteolysis|phenotype
+--- END EXAMPLE ---
+
+Report only the relation records without explanation or other text of any kind.
+
+Extracted relation records:
+INFO:ngly1_gpt.llm:Response:
+subject|subject_entity|predicate|object|object_entity
+ERAD pathway|pathway|responsible for|translocation of misfolded proteins|biological process
+ERAD pathway|pathway|part of|NGLY1 deficiency|disease
+N-glycanase 1|protein|involved in|ERAD dysfunction|biological process
+NGLY1 deficiency|disease|causes|global developmental delay|phenotype
+NGLY1 deficiency|disease|causes|movement disorder|phenotype
+NGLY1 deficiency|disease|causes|hypotonia|phenotype
+NGLY1 deficiency|disease|associated with|hypo- or alacrima|phenotype
+NGLY1 deficiency|disease|associated with|elevated liver transaminases|phenotype
+NGLY1 deficiency|disease|associated with|microcephaly|phenotype
+NGLY1 deficiency|disease|associated with|diminished reflexes|phenotype
+NGLY1 deficiency|disease|associated with|hepatocyte cytoplasmic storage material or vacuolization|phenotype
+NGLY1 deficiency|disease|associated with|seizures|phenotype
+c.1201A>T (p.R401X)|genetic variant|part of|NGLY1 deficiency|disease
+NGLY1 deficiency|disease|associated with|neurological dysfunction|phenotype
+NGLY1 deficiency|disease|associated with|abnormal tear production|phenotype
+NGLY1 deficiency|disease|associated with|liver disease|phenotype
+c.1201A>T (p.R401X)|genetic variant|associated with|severe disease|phenotype
+
+
+ 15%|█▌        | 2/13 [00:31<03:11, 17.37s/it][AINFO:ngly1_gpt.llm:Prompt (temperature=0.0, model=gpt-4):
+Text will be provided that contains information from a published, biomedical research article about NGLY1 deficiency. Extract subject-predicate-object relations from this text.
+
+Types of subjects and objects to extract:
+- assay
+- biological process
+- cell type
+- cellular component
+- chemical substance
+- clinical trial
+- disease
+- drug
+- gene
+- gene family 
+- genetic variant
+- genotype
+- macromolecular complex
+- metabolite
+- molecular activity
+- organism
+- organization
+- pathway
+- phenotype
+- protein
+- protein variant
+- symptom
+- tissue
+- transcript variant
+- <other>
+
+Predicates to extract:
+- affects risk for
+- associated with
+- capable of
+- caused by
+- causes
+- colocalizes with
+- contributes to
+- correlated with
+- decreases abundance of
+- decreases activity of
+- derives from
+- disrupts
+- enables
+- exact match
+- expressed in
+- expresses
+- genetically interacts with
+- has affected feature
+- has attribute
+- has gene product
+- has genotype
+- has metabolite
+- has output
+- has participant
+- has phenotype
+- has role
+- in 1 to 1 orthology relationship with
+- in orthology relationship with
+- in paralogy relationship with
+- in taxon
+- in xenology relationship with
+- increases abundance of
+- increases activity of
+- instance of
+- interacts with
+- involved in
+- is allele of
+- is marker for
+- is model of
+- is part of
+- located in
+- location of
+- manifestation of
+- molecularly interacts with
+- negatively correlated with
+- negatively regulates
+- occurs in
+- part of
+- participates in
+- pathogenic for condition
+- positively correlated with
+- positively regulates
+- precedes
+- prevents
+- produced by
+- produces
+- regulates
+- treats
+- <other>
+
+Here is the text to extract relations from: 
+--- BEGIN TEXT ---
+Keywords
+NGLY1; alacrima; choreoathetosis; seizures; liver disease
+--- END TEXT ---
+
+Report each relation record on a separate line in CSV format using a pipe (i.e. "|") delimiter with the column headers: `subject`, `subject_entity`, `predicate`, `object`, `object_entity`.
+
+Requirements for extracted relations:
+
+- All `subject` and `object` values must be INDIVIDUAL, specific, named concepts that represent an instance of one of the biomedical entities listed above.
+- The `subject_entity` and `object_entity` values must be exactly one of the biomedical entities listed above (e.g. "pathway" or "disease"), and they must describe the entity associated with the specific `subject` and `object`, repsectively.
+- All `predicate` values must be EXACTLY equivalent to one of the provided predicates (e.g. "causes" or "participates in"); do not use predicates outside of this list.
+- Assume that "NGLY1 deficiency" is associated with any entities discussed where context does not dictate otherwise, as is this is the primary subject of the article.
+- Extract as many relations as possible; do not ignore any of them that match the criteria provided.
+- Include the CSV headers in the response.
+- If there are no relations to extract in the text, return only the CSV headers.
+
+Here is an example response with illustrative data that demonstrates the desired result format:
+--- BEGIN EXAMPLE ---
+subject|subject_entity|predicate|object|object_entity
+Hutchinson-Gilford progeria syndrome|disease|has phenotype|osteolysis|phenotype
+--- END EXAMPLE ---
+
+Report only the relation records without explanation or other text of any kind.
+
+Extracted relation records:
+INFO:ngly1_gpt.llm:Response:
+subject|subject_entity|predicate|object|object_entity
+NGLY1 deficiency|disease|has phenotype|alacrima|phenotype
+NGLY1 deficiency|disease|has phenotype|choreoathetosis|phenotype
+NGLY1 deficiency|disease|has phenotype|seizures|phenotype
+NGLY1 deficiency|disease|has phenotype|liver disease|phenotype
+
+
+ 23%|██▎       | 3/13 [00:37<02:04, 12.43s/it][AINFO:ngly1_gpt.llm:Prompt (temperature=0.0, model=gpt-4):
+Text will be provided that contains information from a published, biomedical research article about NGLY1 deficiency. Extract subject-predicate-object relations from this text.
+
+Types of subjects and objects to extract:
+- assay
+- biological process
+- cell type
+- cellular component
+- chemical substance
+- clinical trial
+- disease
+- drug
+- gene
+- gene family 
+- genetic variant
+- genotype
+- macromolecular complex
+- metabolite
+- molecular activity
+- organism
+- organization
+- pathway
+- phenotype
+- protein
+- protein variant
+- symptom
+- tissue
+- transcript variant
+- <other>
+
+Predicates to extract:
+- affects risk for
+- associated with
+- capable of
+- caused by
+- causes
+- colocalizes with
+- contributes to
+- correlated with
+- decreases abundance of
+- decreases activity of
+- derives from
+- disrupts
+- enables
+- exact match
+- expressed in
+- expresses
+- genetically interacts with
+- has affected feature
+- has attribute
+- has gene product
+- has genotype
+- has metabolite
+- has output
+- has participant
+- has phenotype
+- has role
+- in 1 to 1 orthology relationship with
+- in orthology relationship with
+- in paralogy relationship with
+- in taxon
+- in xenology relationship with
+- increases abundance of
+- increases activity of
+- instance of
+- interacts with
+- involved in
+- is allele of
+- is marker for
+- is model of
+- is part of
+- located in
+- location of
+- manifestation of
+- molecularly interacts with
+- negatively correlated with
+- negatively regulates
+- occurs in
+- part of
+- participates in
+- pathogenic for condition
+- positively correlated with
+- positively regulates
+- precedes
+- prevents
+- produced by
+- produces
+- regulates
+- treats
+- <other>
+
+Here is the text to extract relations from: 
+--- BEGIN TEXT ---
+INTRODUCTION
+ The enzyme N-glycanase 1 (NGLY1), also known as peptide:N-glycanase (PNGase, EC 3.5.1.52), catalyzes protein deglycosylation by cleaving the -aspartyl glycosylamine bond of N-linked glycoproteins with the subsequent release of intact N-glycan species [1]. NGLY1 activity was first described in almond seeds [1], but is ubiquitously present across a wide range of species, including bacteria [2], yeast [3–5], amoeba [6], fish [7], and mammals [8,9]. Evidence suggests that NGLY1 participates as a key cytoplasmic component of the endoplasmic reticulum-associated degradation (ERAD) machinery along with the AAA ATPase complex p97 [10,11]. The ERAD pathway is a mechanism for identifying and degrading misfolded glycoproteins. N-glycans that are high in mannose content act as quality control tags for proteins in the early stages of the secretory pathway [12,13]. Misfolded glycoproteins are detected by ER luminal lectins and are then translocated to the cytosol via the ERAD machinery, to be subsequently degraded by cytosolic enzymes including NGLY1 [14].
+ To date, a single patient with NGLY1 deficiency has been reported as part of a whole-exome sequencing (WES) study focusing on the utility of this technology to detect the underlying genetic etiology of disorders affecting patients with previously undiagnosed or unresolved genetic conditions [15]. Need et al. described a 3-year-old boy with compound heterozygous inactivating mutations in NGLY1 and suggested that this could be a new disorder. The initial patient had a clinical phenotype suggestive of a congenital disorder of glycosylation, although repeated transferrin isoelectric focusing and N-glycan analyses were normal. Liver biopsy showed accumulation of an amorphous unidentified substance throughout the cytoplasm, a finding likely consistent with NGLY1 dysfunction, which would be expected to result in abnormal accumulation of misfolded glycoproteins because of impaired cytosolic degradation [15]. We now report clinical and molecular findings present in seven newly diagnosed patients with mutations in NGLY1, and further details related to the original case. These observations confirm NGLY1 deficiency as an inherited disorder associated with the ERAD process and document its clinical presentation.
+--- END TEXT ---
+
+Report each relation record on a separate line in CSV format using a pipe (i.e. "|") delimiter with the column headers: `subject`, `subject_entity`, `predicate`, `object`, `object_entity`.
+
+Requirements for extracted relations:
+
+- All `subject` and `object` values must be INDIVIDUAL, specific, named concepts that represent an instance of one of the biomedical entities listed above.
+- The `subject_entity` and `object_entity` values must be exactly one of the biomedical entities listed above (e.g. "pathway" or "disease"), and they must describe the entity associated with the specific `subject` and `object`, repsectively.
+- All `predicate` values must be EXACTLY equivalent to one of the provided predicates (e.g. "causes" or "participates in"); do not use predicates outside of this list.
+- Assume that "NGLY1 deficiency" is associated with any entities discussed where context does not dictate otherwise, as is this is the primary subject of the article.
+- Extract as many relations as possible; do not ignore any of them that match the criteria provided.
+- Include the CSV headers in the response.
+- If there are no relations to extract in the text, return only the CSV headers.
+
+Here is an example response with illustrative data that demonstrates the desired result format:
+--- BEGIN EXAMPLE ---
+subject|subject_entity|predicate|object|object_entity
+Hutchinson-Gilford progeria syndrome|disease|has phenotype|osteolysis|phenotype
+--- END EXAMPLE ---
+
+Report only the relation records without explanation or other text of any kind.
+
+Extracted relation records:

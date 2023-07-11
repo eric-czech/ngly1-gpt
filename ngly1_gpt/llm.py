@@ -12,12 +12,20 @@ logger = logging.getLogger(__name__)
 DEFAULT_MODEL = "gpt-4"
 
 
-def _run_completion(prompt_template: str, model=DEFAULT_MODEL, **kwargs: Any) -> str:
+def _run_completion(
+    prompt_template: str,
+    model=DEFAULT_MODEL,
+    temperature: float | None = None,
+    **kwargs: Any,
+) -> str:
     with (utils.paths.prompts / prompt_template).open("r", encoding="utf-8") as f:
         prompt = f.read().strip().format(**kwargs)
-    logger.info(f"Prompt:\n{prompt}")
+    logger.info(f"Prompt (temperature={temperature}, model={model}):\n{prompt}")
+    args = {}
+    if temperature is not None:
+        args["temperature"] = temperature
     chat_completion = openai.ChatCompletion.create(
-        model=model, messages=[{"role": "user", "content": prompt}]
+        model=model, messages=[{"role": "user", "content": prompt}], **args
     )
     response = chat_completion.choices[0].message.content
     logger.info(f"Response:\n{response}")
