@@ -1,0 +1,20 @@
+Define categories that best describe this list of human phenotypes associated with a disease:
+
+--- BEGIN PHENOTYPE LIST ---
+{phenotypes}
+--- END PHENOTYPE LIST ---
+
+Requirements:
+
+- Define exactly {n_categories} categories that split these terms into roughly equally-sized groups
+- Use an "Other" category for terms that do not fit well into a more specific group
+- Report results in pipe (i.e. "|") delimited CSV format 
+- Ensure that every single phenotype is included in the result and mapped to exactly one category
+- Include two columns in the result: 
+    - `phenotype_id`: Integer ID associated with each term in the provided list 
+    - `category`: Name of category
+- Include the headers in the result
+- Ensure that the final result does not contain more than {n_categories} distinct category names
+- Report only the CSV content and do not include explanation of any other kind
+
+Phenotype category CSV:
