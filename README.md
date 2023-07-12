@@ -4,7 +4,7 @@ This repository contains several experiments that attempt to automate aspects of
 
 This is heavily inspired by [Structured reviews for data and knowledge-driven research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7153956/#sec8) (2020).
 
-More details and results can be seen in https://github.com/eric-czech/ngly1-gpt/issues/1.
+More details and results can be seen in [Summarize proof of concept analyses (#1)](https://github.com/eric-czech/ngly1-gpt/issues/1).
 
 ## Setup
 
