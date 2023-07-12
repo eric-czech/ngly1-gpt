@@ -1,6 +1,10 @@
-# NGLY1 Review Automation
+# NGLY1 Information Extraction Automation
 
-WIP
+This repository contains several experiments that attempt to automate aspects of information extraction related to rare disease biology literature through the use of large language models (GPT4 primarily).
+
+This is heavily inspired by [Structured reviews for data and knowledge-driven research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7153956/#sec8) (2020).
+
+More details and results can be seen in https://github.com/eric-czech/ngly1-gpt/issues/1.
 
 ## Setup
 
