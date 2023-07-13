@@ -38,6 +38,12 @@ def extract_relations(text: str, disease: str, **kwargs: Any) -> str:
     )
 
 
+def extract_patients(text: str, disease: str, **kwargs: Any) -> str:
+    return chat_completion(
+        "patient_extraction_1.txt", text=text, disease=disease, **kwargs
+    )
+
+
 def extract_graph_description(text: str, disease: str, **kwargs: Any) -> str:
     return chat_completion(
         "graph_extraction_1.txt", text=text, disease=disease, **kwargs
