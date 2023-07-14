@@ -51,7 +51,7 @@ def get_colormap(values: Sequence[Hashable], cmap: str) -> dict[Hashable, str]:
 T = TypeVar("T")
 
 
-@retry(stop=stop_after_attempt(10), wait=wait_exponential(multiplier=1, min=1, max=180))
+@retry(stop=stop_after_attempt(10), wait=wait_exponential(multiplier=1, min=1, max=180))  # type: ignore[misc]
 def call_with_retry(fn: Callable[[], T]) -> T:
     return fn()
 

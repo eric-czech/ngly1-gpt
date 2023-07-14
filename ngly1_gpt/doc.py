@@ -18,6 +18,10 @@ def encoding(model: str) -> tiktoken.core.Encoding:
     return tiktoken.encoding_for_model(model)
 
 
+def tokens(text: str, model: str) -> list[int]:
+    return encoding(model).encode(text)  # type: ignore[no-any-return]
+
+
 @dataclass
 class Chunk:
     segment: spacy.tokens.doc.Doc

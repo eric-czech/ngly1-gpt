@@ -14,7 +14,7 @@ DEFAULT_MODEL = "gpt-4"
 
 def chat_completion(
     prompt_template: str,
-    model=DEFAULT_MODEL,
+    model: str = DEFAULT_MODEL,
     temperature: float | None = None,
     **kwargs: Any,
 ) -> str:
@@ -27,7 +27,7 @@ def chat_completion(
     chat_completion = openai.ChatCompletion.create(
         model=model, messages=[{"role": "user", "content": prompt}], **args
     )
-    response = chat_completion.choices[0].message.content
+    response = str(chat_completion.choices[0].message.content)
     logger.info(f"Response:\n{response}")
     return response
 

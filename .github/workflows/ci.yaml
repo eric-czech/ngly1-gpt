@@ -1,0 +1,25 @@
+on:
+  push:
+  pull_request:
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Create environment
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        mamba-version: "*"
+        channels: conda-forge
+        auto-activate-base: false
+        activate-environment: ngly1-gpt
+        environment-file: environment.yaml
+    - name: Run pre-commit
+      uses: pre-commit/action@v3.0.0
+    - name: Run tests
+      run: PYTHONPATH="${PYTHONPATH}:$(pwd)" pytest --color=yes ngly1_gpt/

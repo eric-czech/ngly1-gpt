@@ -53,10 +53,10 @@ def _run_extraction(
 class Commands:
     def extract_relations(
         self,
-        model=llm.DEFAULT_MODEL,
+        model: str = llm.DEFAULT_MODEL,
         max_chunk_tokens: int = 2000,
         output_filename: str = "relations.tsv",
-    ):
+    ) -> None:
         logger.info(
             f"Starting relation extraction (model={model}, max_chunk_tokens={max_chunk_tokens}, output_filename={output_filename})"
         )
@@ -71,10 +71,10 @@ class Commands:
 
     def extract_patients(
         self,
-        model=llm.DEFAULT_MODEL,
+        model: str = llm.DEFAULT_MODEL,
         max_chunk_tokens: int = 2000,
         output_filename: str = "patients.tsv",
-    ):
+    ) -> None:
         logger.info(
             f"Starting patient extraction (model={model}, max_chunk_tokens={max_chunk_tokens}, output_filename={output_filename})"
         )

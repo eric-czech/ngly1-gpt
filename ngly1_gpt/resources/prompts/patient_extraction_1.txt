@@ -23,4 +23,4 @@ Requirements:
 - Do NOT include explanation of any kind in the results; report only the CSV content
 
 
-Patient details CSV:
+Patient details pipe-delimited CSV:
