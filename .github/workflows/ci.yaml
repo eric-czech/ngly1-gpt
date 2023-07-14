@@ -18,6 +18,7 @@ jobs:
         channels: conda-forge
         auto-activate-base: false
         activate-environment: ngly1-gpt
+        init-shell: bash
         environment-file: environment.yaml
     - name: Run pre-commit
       uses: pre-commit/action@v3.0.0
