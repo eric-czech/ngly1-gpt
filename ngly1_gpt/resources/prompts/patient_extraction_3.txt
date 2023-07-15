@@ -1,0 +1,23 @@
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+{details}
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+{schema}
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create only one record per patient based on the `patient_accession` field
+  - Extract ALL details into the provided schema unless any one piece of information has no suitable destination field in the schema
+  - If the provided `patient_accession` is "ALL", merge the associated details with EVERY other patient record; do not create a resulting RECORD where `patient_accession` is "ALL" unless no details are provided with more specific patient identifiers
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not wrap the results as a single JSON list or object
+- Do NOT include explanation of any kind; report only the JSON content
+
+Patient JSON records:

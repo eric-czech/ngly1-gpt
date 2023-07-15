@@ -1,0 +1,45 @@
+The following list of details contains specific characteristics of rare disease patients:
+
+--- BEGIN DETAILS LIST ---
+{details}
+--- END DETAILS LIST ---
+
+Define a schema that would best model the properties of these patients. 
+
+This schema should include properties related to genotypes, mutations, phenotypes, physical or behavioral traits, demographics, scores, lab measurements, treatments, family histories or anything else of clinical, biological, experimental or administrative relevance.
+
+Requirements for the resulting schema:
+- Describe this schema using the JSON Schema specification for Python, as implemented by the `jsonschema` library
+- Include `doc_id` and `patient_accession` fields using the definition provided in the stub schema below
+- Include a `category` property for each field that appropriately groups similar fields, e.g. "identifiers", "demographics" or "mutations"
+- Use snake case for ALL field names, with only lower case, alphanumeric characters and underscores
+- Assume that fields with a plural connotation should be represented as an array, e.g. if there are multiple such values likely to exist, have been measured, or be true/false for a single patient
+- Do not include `description` properties for the fields
+- Do NOT include explanation of any kind in the results; report only the JSON schema content
+
+Here is a stub for this schema with some details filled in:
+
+```
+{{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {{
+    "doc_id": {{
+      "type": "string",
+      "category": "identifiers"
+    }},
+    "patient_accession": {{
+      "type": "string",
+      "category": "identifiers"
+    }},
+    ...
+  }},
+}}
+```
+
+Complete this schema with all relevant fields contained in the provided DETAILS LIST.
+
+JSON Schema:

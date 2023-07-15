@@ -38,12 +38,6 @@ def extract_relations(text: str, disease: str, **kwargs: Any) -> str:
     )
 
 
-def extract_patients(text: str, disease: str, **kwargs: Any) -> str:
-    return chat_completion(
-        "patient_extraction_1.txt", text=text, disease=disease, **kwargs
-    )
-
-
 def extract_graph_description(text: str, disease: str, **kwargs: Any) -> str:
     return chat_completion(
         "graph_extraction_1.txt", text=text, disease=disease, **kwargs
@@ -75,3 +69,19 @@ def convert_graph_json(graph_json: str, disease: str) -> nx.MultiDiGraph:
             ):
                 G.add_edge(primary_node, node, type="associated with")
     return G
+
+
+def extract_patients(text: str, disease: str, **kwargs: Any) -> str:
+    return chat_completion(
+        "patient_extraction_1.txt", text=text, disease=disease, **kwargs
+    )
+
+
+def create_patient_schema(details: str, **kwargs: Any) -> str:
+    return chat_completion("patient_extraction_2.txt", details=details, **kwargs)
+
+
+def extract_patient_json(details: str, schema: str, **kwargs: Any) -> str:
+    return chat_completion(
+        "patient_extraction_3.txt", details=details, schema=schema, **kwargs
+    )

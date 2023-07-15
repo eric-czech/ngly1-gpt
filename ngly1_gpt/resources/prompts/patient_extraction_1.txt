@@ -10,9 +10,10 @@ Requirements:
 - Extract as much information as possible about each patient including associated genotypes, phenotypes, physical or behavioral traits, demographics, lab measurements, treatments, family histories or anything else of clinical and/or biological relevance.
 - Extract this information in CSV format with the following headers:
   - `patient_id`: Identifying information for the patient within the context of the article
-    - When a single patient is unambiguously referenced by an identifier, this must be equal to that identifier; typically an integer or anonymized name like "Patient 1" or other arbitrary string 
+    - When a single patient is unambiguously referenced by an identifier, this must be equal to that identifier; typically an integer, anonymized name or database identifier
     - When ALL patients are referenced without individual attribution (i.e. a specific `patient_id` is not clear), use the value "ALL" for this field
     - When SOME patients are referenced without individual attribution (i.e. a specific `patient_id` is not clear), use the value "SOME" for this field
+  - `patient_accession`: The `patient_id` value normalized/standardized such than any likely superfluous characters (e.g. "#" or parentheses) or strings (e.g. "Patient") are removed, i.e. the most essential part of a patient identifier
   - `external_study`: If context implies that the patient being referenced is from another study, include any identifying information for that study/reference in this field (e.g. citation numbers or author names); if no such distinction is made, assume it is from the current study and report only the value "NA"
   - `details`: A free-text description of the information discussed for the patient that includes as much detail as possible
 - If multiple patient identifiers are referenced at once, repeat the information for them on separate CSV lines with one of those identifiers used in each line (in `patient_id`)
@@ -20,7 +21,7 @@ Requirements:
 - Report results using a pipe (i.e. "|") delimiter 
 - Include the CSV headers in the result
 - If the text contains no patient information, report only the CSV headers
+- Do not include backticks (i.e. "`") in any of the header names
 - Do NOT include explanation of any kind in the results; report only the CSV content
-
 
 Patient details pipe-delimited CSV:
