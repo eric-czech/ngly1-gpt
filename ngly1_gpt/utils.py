@@ -8,9 +8,6 @@ from typing import TypeVar
 
 import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
-from tenacity import retry
-from tenacity import stop_after_attempt
-from tenacity import wait_exponential
 
 
 @dataclass
@@ -49,11 +46,6 @@ def get_colormap(values: Sequence[Hashable], cmap: str) -> dict[Hashable, str]:
 
 
 T = TypeVar("T")
-
-
-@retry(stop=stop_after_attempt(10), wait=wait_exponential(multiplier=1, min=1, max=180))  # type: ignore[misc]
-def call_with_retry(fn: Callable[[], T]) -> T:
-    return fn()
 
 
 def apply(obj: T, fn: Callable[[T], None]) -> T:

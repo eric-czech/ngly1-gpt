@@ -6,14 +6,15 @@ The following list of details contains specific characteristics of rare disease 
 
 Define a schema that would best model the properties of these patients. 
 
-This schema should include properties related to genotypes, mutations, phenotypes, physical or behavioral traits, demographics, scores, lab measurements, treatments, family histories or anything else of clinical, biological, experimental or administrative relevance.
+This schema should include, but not be limited to, properties like genotypes, mutations, assays, sequencing centers/platforms, phenotypes, symptoms, comorbitities, diseases, physical or behavioral traits, demographics, scores, lab measurements, treatments, family histories or anything else of clinical, biological, experimental or administrative relevance.
 
 Requirements for the resulting schema:
 - Describe this schema using the JSON Schema specification for Python, as implemented by the `jsonschema` library
-- Include `doc_id` and `patient_accession` fields using the definition provided in the stub schema below
-- Include a `category` property for each field that appropriately groups similar fields, e.g. "identifiers", "demographics" or "mutations"
+- Include `doc_id`, `patient_accession` and `extra_info` fields using the definition provided in the stub schema below
 - Use snake case for ALL field names, with only lower case, alphanumeric characters and underscores
 - Assume that fields with a plural connotation should be represented as an array, e.g. if there are multiple such values likely to exist, have been measured, or be true/false for a single patient
+- Attempt to merge highly similar fields into nested object/array fields when the number of such highly similar fields exceeds roughly 3
+- Ensure that every single piece of information provided in the details is accounted for in the schema; do NOT assume that `extra_info` will apply to rare values/fields
 - Do not include `description` properties for the fields
 - Do NOT include explanation of any kind in the results; report only the JSON schema content
 
@@ -28,12 +29,16 @@ Here is a stub for this schema with some details filled in:
   "type": "object",
   "properties": {{
     "doc_id": {{
-      "type": "string",
-      "category": "identifiers"
+      "type": "string"
     }},
     "patient_accession": {{
-      "type": "string",
-      "category": "identifiers"
+      "type": "string"
+    }},
+    "extra_info": {{
+      "type": "array",
+      "items": {{
+        "type": "string"
+      }}
     }},
     ...
   }},

@@ -144,3 +144,78 @@ White matter lesions were seen in two of eleven individuals. A shows multiple le
 
 Figure 4: Eye findings.
 Right eye close-up showing conjunctival injection, limbal neovascularization, and corneal scarring in an NGLY1 patient. Findings caused by severe dry eyes and lagophthalmous.
+
+Table S2: Seizure and EEG Findings in NGLY1-CDDG
+			Seizures					Electroencephalogram	
+Patient #	Age of onset ( y )	Initial Type	Туре	Number per Day	Medsa	Epileptiform Discharge Localizationª	Background Slowing	PDR ( Hertz )	Anterior / Posterior Gradient Present
+1	0.7	Infantile; Spasms		0	Levetiracetam		No	7	Yes
+2	0.2-0.7	Infantile; Spasms		0	Valproate	Multifocal	Mild	5-6	Poorly formed
+3	Never			0			No	11-12	Yes
+4	Never		0	0		ND	ND	ND	ND
+5	0.7	Drop	Drop; myoclonic	Few	Valproate; Clobazam	Multifocal to Diffuse	Mild	8-9	Yes
+6	1	Drop; myoclonic	Myoclonus; staring; gelastic; drop	Several	Valproate; Lamotrigine	Multifocal to Diffuse	Mild	5-6	Day - Poorly formed; Night - Yes
+7	6	Absence	Staring	100s	Lamotrigine; Topiramate	Generalized	Mild	7-8	Yes
+8	Never			0	Levetiracetam	Generalized	No	9-10	Yes
+9	1	Tonic; myoclonic	Tonic; myoclonic	0-3	Levetiracetam	Multifocal	Mild to Moderate	10-11	Yes
+10	Never			0			Mild	0	Yes
+11	10	Absence	Head bobbing	Few - 100s	Levetiracetam	Multifocal	Mild	9	Yes
+12	Never			0		No	Mild	11	Yes
+Abbreviations: ND, not determined; PDR, posterior dominant rhythm.
+
+Table S3: CSF Laboratory Values for 9 Individuals with NGLY1-CDDG
+Patient #	Protein (mg/dL)	Albumin (mg/dL)	CSF/serum Albumin (quotient)	5HIAA (nM)	HVA (nM)	Neopterin (nM)	BH4 (nM)	Lactate (mM)	Amino acids
+1	19	10	2.9	146	234	21	9	0.9	Normal
+2	8	5	1.6	194	316	22	8	1.7	Glu
+3	12	8	2.4	83	206	17	8	1.3	Gly
+5	11	6	2.1	115	316	11	10	ND	Normal
+6	5	3	0.9	163	385	14	10	1.2	Normal
+7	13	9	2.5	169	327	17	13	1.3	Gln
+8	40	24	7.1	195	376	12	18	1.1	Normal
+11	11	9	3.3	32	38	14	6	1.8	Normal
+12	9	6	1.9	32	39	13	5	1.7	Ala
+Mean	11	9	3	125	249	16	10	1	-
+SEM	1	2	1	21	44	1	1	0	-
+Normal	15-45	12-33	3.2-9.0	74-345	233-928	7-65	18-50	0.8-2.4	-
+Abbreviations: 5HIAA, 5-Hydroxyindoleacetic acid; HVA, Homovanillic acid; BH4, Tetrahydrobiopterin; Glu, Glutamic acid; Gly, Glycine; Gln, Glutamine; Ala, alanine; ND, Not determined.
+
+
+Table S4: Nerve Conduction Study (NCS), Electromyogram (EMG), and Quantitative Sweat Analysis (QSWEAT) results
+	NCS Findings			EMG Findings	QSWEAT Findings	
+Patient #	Sensory	Motor	CV		Arm	Ankle
+1	PN	NI	Slow	Normal	Present	Present
+2	PN	PN	Demyelinative	Chronic neurogenic changes in limbs	Absent	Absent
+3	PN	PN	Demyelinative	Active denervation leg and arm	Present	Absent
+4	ND	ND	ND	ND	ND	ND
+5	PN	PN	Demyelinative	Mild chronic neurogenic changes in leg muscles		Absent
+6	PN	PN	Demyelinative	Normal - 1 arm muscle, noted to have chronic neurogenic changes one year later		Absent
+7	NI	NI	Borderline Slow	Normal	Present	Present
+8	NI	NI	Borderline Slow	Mild chronic neurogenic findings	Present	Present
+9	PN	PN	Demyelinative	Chronic neurogenic and active denervation in limbs	Present	Absent
+10	PN	PN	Not recordable	Chronic neurogenic change in limbs	Present	Absent
+11	PN	PN	Demyelinative	Chronic neurogenic; distal leg active denervation	Present	
+12	PN	PN	Not recordable	Connective tissue replacement of muscle, some active and chronic neurogenic findings	Present	Absent
+Abbreviations: NCS, nerve conduction study; EMG, electromyelogram; QSWEAT, quantitative sweat analysis, CV, conduction velocity finding pattern; Nl, normal; PN, peripheral neuropathy; ND, not determined.
+
+Table S5: Ophthalmologic Findings in 11 Individuals with NGLY1-CDDG
+Patient #	Schirmera (mm in 5 minutes)	Ptosis / Lagophthalmous	Nystagmus / Strabismus	Cornea	Retina	Optic Atrophy	Refraction
+1	3 ; 1	+/	- / Ortho	Normal	Blonde periphery; pigment granularity	-	Hyperopia
+2	0 ; 1	+ / +	+ / XT	NV; pannus	Normal	-	Hyperopia; Myopia
+3	0 ; 0	- / +	- / Ortho	Scarring; NV	Pigmentary retinopathy	+	Hyperopia
+5	0 ; 0	- / +	- / Ortho	Normal	Pigmentary changes	-	ND
+6	4 ; 6	- / +	- / XT	Scarring	Pigmentary changes; Cone Dystrophy	+	Hyperopia
+7	7 ; 3	- / +	+ (endgaze) / Ortho	Normal	Blonde periphery	-	Normal
+8	3 ; 0	+/	- / Ortho	ND	Blonde periphery	-	Hyperopia
+9	5 ; 6	+ / +	- / ET	NV; pannus	Blonde periphery; pigmentary changes	+	Myopia
+10	ND	- / +	- / XT	pannus	Normal	+	Hyperopia
+11	0 ; 0	+ / +	-	Scarring; NV	No view (corneal scar)	+	ND
+12	5 ; 5	- / +	- / XT	Scarring; NV	Normal	+	Myopia
+Abbrevations: ND, not determined. ET, esotropia; XT, exotropia; Ortho, orthotropia (no misalignment); NV, corneal neovascularization; +, present; -, not present.
+
+SUPPLEMENTARY MOVIE TITLE AND LEGEND
+Movie S1: Movement Disorder and Seizure: This movie is of selected portions of the neurological examinations individuals #1, 2, 6, 7, 9, and 12.
+Individual #1: Rapid and mostly distal brief adventitious movements of the hands with irregular and somewhat random frequency. The movements are most consistent with action “minipolymyoclonus” which can be easily confused for chorea and/or dysmetria. 
+Individual #2: Random multifocal irregular adventitious movements of all four extremities are induced by voluntary movements and or posture. Head and trunk titubation during the crawling position or during supported gait may reflect axial cerebellar dysfunction and/or associated negative motor phenomena (negative myoclonus) leading to sudden brief loss of postural muscle tone. 
+Individual #6: Gaze is conjugate and the visual pursuit and saccade generation appear intact. He has evidence of poor head control and axial hypotonia. Reaching movements are associated with distal irregular myoclonic twitching. 
+Individual #7: Handwriting elicits jerky irregular hand movements. Finger-nose-finger testing is accomplished with an irregular tremulous trajectory. During this phase of the exam, a brief seizure is captured with associated behavioral arrest and tonic upward deviation of her eyes lasting a few seconds. Rapid finger movements are slow and irregular but her gait is not ataxic. Myoclonus (positive and negative) are evident when holding her arms against gravity. 
+Individual #9: Distal upper and lower extremities have developed a flexion contracture at the hands and feet. Irregular action-induced jerking movements are elicited while reaching. Gaze is conjugate. Visual pursuit is normal and there is generalized arreflexia. Muscle wasting notable throughout, especially in the lower extremities likely secondary to peripheral neuropathy. 
+Individual #12: Distal muscle wasting and finger contractures are noted. There are irregular brief adventitious movements of the hands worsened by action or posture. While some of the movements are reminiscent of cerebellar dysfunction, her gait assisted by a walker, demonstrates a narrow stance. While unable to articulate, she is able to express herself via a communication device and has a happy disposition.

@@ -1,4 +1,3 @@
-import functools
 import io
 import logging
 from pathlib import Path
@@ -33,14 +32,11 @@ def _run_extraction(
             encoding=doc.encoding(model),
         )
         for chunk in tqdm.tqdm(chunks):
-            response = utils.call_with_retry(
-                functools.partial(
-                    extraction_fn,
-                    text=chunk.text,
-                    disease=utils.NGLY1_DEFICIENCY,
-                    model=model,
-                    temperature=0.0,
-                )
+            response = llm.retry(extraction_fn)(
+                text=chunk.text,
+                disease=utils.NGLY1_DEFICIENCY,
+                model=model,
+                temperature=0,
             )
             results.append(
                 pd.read_csv(io.StringIO(response), sep="|").assign(
@@ -85,7 +81,123 @@ class Commands:
         )
         logger.info("Patient extraction complete")
 
+    def infer_patients_schema(
+        self,
+        model: str = llm.DEFAULT_MODEL,
+        sampling_rate: float = 0.75,
+        input_filename: str = "patients.tsv",
+        output_filename: str = "patients.schema.json",
+    ) -> None:
+        logger.info(
+            f"Starting patient schema inference (model={model}, input_filename={input_filename}, output_filename={output_filename})"
+        )
+        patients = pd.read_csv(utils.get_paths().output_data / input_filename, sep="\t")
+        details = (
+            patients.pipe(
+                lambda df: df[
+                    pd.to_numeric(df["patient_accession"], errors="coerce").notnull()
+                ]
+            )["details"]
+            .dropna()
+            .drop_duplicates()
+            .sample(frac=sampling_rate, random_state=0, replace=False)
+        )
+        logger.info("Example patient details:\n%s", details.sample(10, random_state=0))
+        details_list = "\n".join("- " + details)
+        schema = llm.retry(llm.create_patient_schema)(
+            details=details_list, temperature=0
+        )
+        path = utils.get_paths().output_data / output_filename
+        with open(path, "w") as f:
+            f.write(schema)
+        logger.info(f"Patient schema inference complete ({path})")
+
+    def export_patients(
+        self,
+        model: str = llm.DEFAULT_MODEL,
+        batch_size: int = 3,
+        input_data_filename: str = "patients.tsv",
+        input_schema_filename: str = "patients.schema.json",
+        output_filename: str = "patients.json",
+    ) -> None:
+        logger.info(
+            f"Starting patient export (model={model}, input_data_filename={input_data_filename}, input_schema_filename={input_schema_filename}, output_filename={output_filename})"
+        )
+        patients = pd.read_csv(
+            utils.get_paths().output_data / input_data_filename, sep="\t"
+        )
+
+        with open(utils.get_paths().output_data / input_schema_filename, "r") as f:
+            schema = f.read()
+
+        logger.info(
+            "Identifier frequencies before filtering/aggregation:\n%s",
+            (
+                patients[["doc_id", "patient_id", "patient_accession"]]
+                .value_counts()
+                .reset_index()
+            ),
+        )
+
+        patient_details = (
+            patients[["doc_id", "patient_accession", "details"]]
+            .pipe(
+                lambda df: df[
+                    pd.to_numeric(df["patient_accession"], errors="coerce").notnull()
+                    | (df["patient_accession"] == "ALL")
+                ]
+            )
+            .sort_values(["doc_id", "patient_accession"])
+            .groupby(["doc_id", "patient_accession"])["details"]
+            .unique()
+            .reset_index()
+            .assign(
+                details=lambda df: df["details"].apply(
+                    lambda v: " ".join([f"{i+1}) {e}" for i, e in enumerate(v)])
+                )
+            )
+        )
+
+        logger.info(
+            "Identifier frequencies after filtering/aggregation:\n%s",
+            (
+                patient_details[["doc_id", "patient_accession"]]
+                .value_counts()
+                .reset_index()
+            ),
+        )
+
+        def to_records(df: pd.DataFrame) -> pd.DataFrame:
+            patient_csv = df.drop(columns="batch_id").to_csv(sep="|", index=False)
+            patient_json = llm.extract_patient_json(
+                details=patient_csv, schema=schema, temperature=0
+            )
+            try:
+                return pd.read_json(patient_json, lines=True)
+            except Exception as e:
+                logger.error("Got invalid JSON response:\n{patient_json}")
+                raise e
+
+        patient_records = (
+            patient_details.groupby("doc_id", group_keys=False)
+            .apply(
+                lambda g: g.assign(
+                    batch_id=g.reset_index(drop=True).index // batch_size
+                )
+            )
+            .groupby(["doc_id", "batch_id"], group_keys=False)
+            .apply(llm.retry(to_records))
+        )
+        logger.info("Patient record info:")
+        patient_records.info()
+        path = utils.get_paths().output_data / output_filename
+        patient_records.to_json(path, orient="records", lines=True, force_ascii=False)
+        logger.info(f"Patient export complete ({path})")
+
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s|%(levelname)s|%(module)s|%(funcName)s| %(message)s",
+    )
     fire.Fire(Commands())

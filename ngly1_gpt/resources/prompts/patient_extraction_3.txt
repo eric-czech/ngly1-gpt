@@ -12,12 +12,20 @@ Extract these details into individual records matching the following JSON Schema
 
 Requirements:
 
-- Create only one record per patient based on the `patient_accession` field
-  - Extract ALL details into the provided schema unless any one piece of information has no suitable destination field in the schema
-  - If the provided `patient_accession` is "ALL", merge the associated details with EVERY other patient record; do not create a resulting RECORD where `patient_accession` is "ALL" unless no details are provided with more specific patient identifiers
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
 - STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
 - Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
-- Do not wrap the results as a single JSON list or object
-- Do NOT include explanation of any kind; report only the JSON content
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{{"doc_id": "doc 1", "patient_accession": "1", ...}}
+{{"doc_id": "doc 1", "patient_accession": "2", ...}}
 
 Patient JSON records:
