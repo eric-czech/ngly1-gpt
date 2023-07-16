@@ -1,0 +1,1821 @@
+2023-07-15 13:29:55,016|INFO|cli|export_patients| Starting patient export (model=gpt-4, input_data_filename=patients.tsv, input_schema_filename=patients_2.schema.json, output_filename=patients_2.json)
+2023-07-15 13:29:55,024|INFO|cli|export_patients| Identifier frequencies before filtering/aggregation:
+        doc_id          patient_id patient_accession  count
+0   PMC7477955                 ALL               ALL     50
+1   PMC4243708                 ALL               ALL     11
+2   PMC7477955                SOME              SOME     11
+3   PMC4243708           Patient 3                 3      8
+4   PMC7477955                   6                 6      7
+5   PMC4243708           Patient 2                 2      6
+6   PMC7477955                  11                11      6
+7   PMC7477955                   7                 7      6
+8   PMC7477955                   2                 2      6
+9   PMC7477955                   8                 8      6
+10  PMC4243708           Patient 6                 6      6
+11  PMC4243708           Patient 7                 7      5
+12  PMC4243708           Patient 1                 1      5
+13  PMC7477955                   1                 1      5
+14  PMC4243708           Patient 4                 4      5
+15  PMC7477955                  12                12      5
+16  PMC4243708           Patient 5                 5      5
+17  PMC7477955                   3                 3      5
+18  PMC7477955                   5                 5      4
+19  PMC4243708           Patient 8                 8      4
+20  PMC7477955                   9                 9      4
+21  PMC7477955                  10                10      4
+22  PMC7477955                   4                 4      2
+23  PMC7477955       Individual #6                 6      2
+24  PMC7477955          Patient 10                10      1
+25  PMC7477955           Patient 9                 9      1
+26  PMC7477955           Patient 8                 8      1
+27  PMC7477955           Patient 7                 7      1
+28  PMC7477955           Patient 6                 6      1
+29  PMC7477955           Patient 5                 5      1
+30  PMC7477955           Patient 4                 4      1
+31  PMC7477955           Patient 3                 3      1
+32  PMC7477955           Patient 2                 2      1
+33  PMC7477955          Patient 12                12      1
+34  PMC7477955          Patient 11                11      1
+35  PMC7477955                 ONE               ONE      1
+36  PMC7477955           Patient 1                 1      1
+37  PMC7477955       Individual #9                 9      1
+38  PMC7477955       Individual #7                 7      1
+39  PMC7477955       Individual #2                 2      1
+40  PMC4243708    Patients 5 and 6                 5      1
+41  PMC7477955       Individual #1                 1      1
+42  PMC7477955          Index Case        Index Case      1
+43  PMC4243708    Patients 5 and 6                 6      1
+44  PMC4243708  Patient 3's father        3's father      1
+45  PMC4243708     Initial Patient   Initial Patient      1
+46  PMC4243708  Patient 3's mother        3's mother      1
+47  PMC7477955      Individual #12                12      1
+2023-07-15 13:29:55,040|INFO|cli|export_patients| Identifier frequencies after filtering/aggregation:
+        doc_id patient_accession  count
+0   PMC4243708                 1      1
+1   PMC4243708                 2      1
+2   PMC7477955                 9      1
+3   PMC7477955                 8      1
+4   PMC7477955                 7      1
+5   PMC7477955                 6      1
+6   PMC7477955                 5      1
+7   PMC7477955                 4      1
+8   PMC7477955                 3      1
+9   PMC7477955                 2      1
+10  PMC7477955                12      1
+11  PMC7477955                11      1
+12  PMC7477955                10      1
+13  PMC7477955                 1      1
+14  PMC4243708               ALL      1
+15  PMC4243708                 8      1
+16  PMC4243708                 7      1
+17  PMC4243708                 6      1
+18  PMC4243708                 5      1
+19  PMC4243708                 4      1
+20  PMC4243708                 3      1
+21  PMC7477955               ALL      1
+2023-07-15 13:29:55,049|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC4243708|1|1) Exome sequencing was performed using the Illumina HiSeq2000 platform and the Agilent SureSelect Human All Exon 50 Mb Kit. 2) Patient 1 is a 5 year old Caucasian male. He does not have consanguinity. His mutations are c.C1891del (p.Q631S)/c.1201A>T(p.R401X). He does not have IUGR. He has brain imaging abnormalities, global developmental delay, hypotonia, movement disorder, EEG abnormalities, decreased DTRs, seizures, alacrima/hypolacrima, corneal ulcerations/scarring, chalazions, neonatal jaundice, elevated liver transaminases, elevated AFP, liver fibrosis, liver storage or vacuolization, constipation, small hands/feet, and peripheral neuropathy. 3) A 5-year-old male who presented in the neonatal period with involuntary movements, including athetosis involving the trunk and extremities and constant lip smacking and pursing while awake. Pregnancy and birth history were unremarkable. He had mild neonatal jaundice requiring phototherapy, but otherwise appeared well. Global developmental delay, hypotonia, intractable multifocal epilepsy, consisting of myoclonic seizures, drop attacks, and staring or tonic episodes, and liver disease were present in infancy. He has cortical vision loss and congenital alacrima and corneal ulcerations with scarring were noted at age 4 years. Now, at age 5 years, the movement disorder has not abated and he has central hypotonia and global developmental delay. 4) For Patient 1, whole exome sequencing (WES) performed as part of a research protocol detected putative knock out mutations forming a compound heterozygote genotype in the NGLY1 gene (Maternal frameshift: Q631S. at cDNA level: C1891del in transcript ENST00000280700. EXON 12. Paternal nonsense: 3_25750426_A, which causes a nonsense mutation, R401X, in transcript ENST00000280700. At the cDNA level this is A1201T EXON 8). 5) Patient 1 has the c.1201A>T (p.R401X) mutation in a compound heterozygous state.
+PMC4243708|2|1) WES was performed on a clinical basis. 2) Patient 2 is a 20 year old Caucasian female. She has consanguinity. Her mutations are c.1370dupG(p.R458fs)/c.1370dupG(p.R458fs). She has IUGR, microcephaly, global developmental delay, hypotonia, movement disorder, EEG abnormalities, decreased DTRs, ocular apraxia, alacrima/hypolacrima, corneal ulcerations/scarring, elevated liver transaminases, liver storage or vacuolization, constipation, scoliosis, and peripheral neuropathy. 3) Patient 2, a now 20-year-old female, was born at 39 weeks of gestation via Cesarean section because of intrauterine growth retardation and an abnormal appearing placenta. At four months of age, hypotonia, developmental delay and elevated liver transaminases were noted. At approximately 4 years of age, a slight intention tremor and frequent involuntary movements of her neck, hands and arm were observed. At 5 years of age, she was noted to have ocular apraxia, distal tapering of hands and feet, and diminished deep tendon reflexes. She has cortical vision impairment, as well as alacrima and dry eyes that require lubrication, but has not developed corneal scarring. Presently, she has marked intellectual disabilities and requires total care. She has very little expressive speech and communicates through an electronic speech-generating device. She continues to ambulate with a walker. 4) Patient 2 did not carry the c.1201A>T (p.R401X) mutation and their clinical phenotype was relatively mild. 5) Patient 2 underwent Whole Exome Sequencing (WES) at Baylor College of Medicine Whole Genome Laboratory, which revealed a homozygous mutation in exon 9 of the NGLY1 gene, denoted as c.1370dupG or p.R458fs. Both parents were confirmed to be heterozygous carriers by Sanger sequencing. The mutation causes a frame shift in codon 458, causing insertion of 13 incorrect residues before a stop codon is introduced towards the end of exon 9. The mutation was not seen in any of 3321 other subjects sequenced at Duke, nor was it seen in 6503 subjects on the Exome Variant Server (NHLBI GO Exome Sequencing Project (ESP), Seattle, WA). 6) Patient 2 does not carry the c.1201A>T (p.R401X) mutation and appears to have a relatively mild phenotype.
+PMC4243708|3|1) The patient and parents were sequenced using both Illumina HiSeq2000 and Complete Genomics platforms. Variants in Illumina-sequenced reads were called using both the Hugeseq and Real Time Genomics pipelines and Complete Genomics variants were identified by their own variant callers. 2) DNA was capture- sequenced using a commercially developed capture reagent (VCRome2). Sequence data were generated on an Illumina HiSeq2000 producing an average coverage of 80× with >90% of targeted bases at 20× coverage or higher. 3) Patient 3 is a 4 year old Caucasian female. She does not have consanguinity. Her mutations are c.1205_1207del(p.402_403del)/c.1570C>(p. R524X). She does not have IUGR. She has brain imaging abnormalities, microcephaly, global developmental delay, hypotonia, movement disorder, EEG abnormalities, ocular apraxia, alacrima/hypolacrima, chalazions, neonatal jaundice, elevated liver transaminases, liver storage or vacuolization, constipation, and small hands/feet. 4) Patient 3 is a 4-year-old girl who was born via Cesarean section at term due to a non-reassuring fetal heart tracing. She was monitored in the NICU due to poor feeding and lethargy. Her pregnancy was complicated by a positive second trimester screen noting increased risk for Smith-Lemli Opitz syndrome (SLOS) and trisomy 18, but karyotype on amniocentesis was normal. As a neonate, she had hyperbilirubinemia that was treated with phototherapy and was noted to have elevated liver transaminases and transient thrombocytopenia. In infancy, she was noted to have global developmental delay, acquired microcephaly, bilateral exotropia, hypotonia, constipation, and intermittent mild lactic acidemia. At approximately age 1 year, the parents noticed that she did not make tears when crying, although she had adequate tear production to keep her eyes moist. She has had intermittent chalazions, but no corneal scarring. She also developed staring spells, lasting up to 15 seconds, at approximately age 1 year; these episodes occur about once daily and can be interrupted by gentle contact. By age 17 months she had developed an extrapyramidal movement disorder consisting of asynchronous myoclonic jerks of the limbs and shoulders and subtle choreoathetotic movements of the hands and fingers. At 4 years she can ambulate unassisted, although her gait is unsteady, and communicates with vocalizations, gestures and use of a speech-generating device. 5) Patient 3 did not carry the c.1201A>T (p.R401X) mutation and their clinical phenotype was relatively mild. 6) WES and whole-genome sequencing were performed using research protocols at Baylor College of Medicine and Stanford University. Mutations in NGLY1 that followed a compound heterozygous inheritance pattern were identified. A stop gain mutation caused by a G>A mutation at position 3:25761670 (hg19) resulting in p.R542X was identified in both the father and daughter. A 3 base pair in-frame deletion TCC> beginning at position 3:25775416 (hg19) was identified in both the mother and daughter. An additional G>T mutation resulting in a heterozygous SMP at position 3:25777564 was identified in the daughter, mother and father. This mutation was not previously observed in 1000 genomes and is a coding region; however, it is present in heterozygous form in all three individuals. 7) A moderate reduction in mitochondrial DNA content was identified in a liver sample from Patient 3. 8) Patient 3 does not carry the c.1201A>T (p.R401X) mutation and appears to have a relatively mild phenotype.
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:31:42,606|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC4243708", "patient_accession": "1", "extra_info": ["Exome sequencing performed using Illumina HiSeq2000", "Agilent SureSelect Human All Exon 50 Mb Kit used", "No IUGR", "Neonatal jaundice required phototherapy", "Liver disease present in infancy", "Cortical vision loss noted at age 4", "Movement disorder not abated at age 5", "Central hypotonia and global developmental delay at age 5", "Whole exome sequencing performed as part of research protocol", "Putative knock out mutations detected in NGLY1 gene", "Maternal frameshift: Q631S", "Paternal nonsense: 3_25750426_A"], "age": 5, "gender": "male", "race": "Caucasian", "consanguinity": false, "mutations": ["c.C1891del (p.Q631S)", "c.1201A>T(p.R401X)"], "phenotypes": ["brain imaging abnormalities", "global developmental delay", "hypotonia", "movement disorder", "EEG abnormalities", "decreased DTRs", "seizures", "alacrima/hypolacrima", "corneal ulcerations/scarring", "chalazions", "elevated liver transaminases", "elevated AFP", "liver fibrosis", "liver storage or vacuolization", "constipation", "small hands/feet", "peripheral neuropathy"], "neuropathy": {}, "seizure_info": {}, "lab_measurements": {}, "family_history": [], "scores": {}, "sequencing_info": {"sequencing_center": "Research protocol", "sequencing_platform": "Illumina HiSeq2000", "coverage": "Not specified"}, "disease_info": {"disease_name": "Not specified", "allele_1_mutation": "c.C1891del (p.Q631S)", "allele_2_mutation": "c.1201A>T(p.R401X)"}}
+{"doc_id": "PMC4243708", "patient_accession": "2", "extra_info": ["WES performed on a clinical basis", "Born at 39 weeks of gestation via Cesarean section", "Intrauterine growth retardation and abnormal appearing placenta", "Hypotonia, developmental delay and elevated liver transaminases noted at 4 months", "Intention tremor and involuntary movements of neck, hands and arm observed at 4 years", "Ocular apraxia, distal tapering of hands and feet, and diminished deep tendon reflexes noted at 5 years", "Marked intellectual disabilities and requires total care", "Communicates through an electronic speech-generating device", "Ambulates with a walker", "Whole Exome Sequencing performed at Baylor College of Medicine Whole Genome Laboratory", "Homozygous mutation in exon 9 of the NGLY1 gene", "Mutation causes a frame shift in codon 458", "Mutation not seen in any of 3321 other subjects sequenced at Duke", "Mutation not seen in 6503 subjects on the Exome Variant Server"], "age": 20, "gender": "female", "race": "Caucasian", "consanguinity": true, "mutations": ["c.1370dupG(p.R458fs)", "c.1370dupG(p.R458fs)"], "phenotypes": ["IUGR", "microcephaly", "global developmental delay", "hypotonia", "movement disorder", "EEG abnormalities", "decreased DTRs", "ocular apraxia", "alacrima/hypolacrima", "corneal ulcerations/scarring", "elevated liver transaminases", "liver storage or vacuolization", "constipation", "scoliosis", "peripheral neuropathy"], "neuropathy": {}, "seizure_info": {}, "lab_measurements": {}, "family_history": [], "scores": {}, "sequencing_info": {"sequencing_center": "Baylor College of Medicine Whole Genome Laboratory", "sequencing_platform": "Not specified", "coverage": "Not specified"}, "disease_info": {"disease_name": "Not specified", "allele_1_mutation": "c.1370dupG(p.R458fs)", "allele_2_mutation": "c.1370dupG(p.R458fs)"}}
+{"doc_id": "PMC4243708", "patient_accession": "3", "extra_info": ["Sequenced using both Illumina HiSeq2000 and Complete Genomics platforms", "Variants in Illumina-sequenced reads were called using both the Hugeseq and Real Time Genomics pipelines", "Complete Genomics variants were identified by their own variant callers", "DNA was capture- sequenced using a commercially developed capture reagent (VCRome2)", "Average coverage of 80× with >90% of targeted bases at 20× coverage or higher", "No IUGR", "Born via Cesarean section at term due to a non-reassuring fetal heart tracing", "Monitored in the NICU due to poor feeding and lethargy", "Pregnancy complicated by a positive second trimester screen noting increased risk for Smith-Lemli Opitz syndrome (SLOS) and trisomy 18", "Karyotype on amniocentesis was normal", "Hyperbilirubinemia treated with phototherapy", "Elevated liver transaminases and transient thrombocytopenia as a neonate", "Global developmental delay, acquired microcephaly, bilateral exotropia, hypotonia, constipation, and intermittent mild lactic acidemia in infancy", "Parents noticed that she did not make tears when crying at age 1", "Intermittent chalazions, but no corneal scarring", "Staring spells lasting up to 15 seconds at approximately age 1 year", "Extrapyramidal movement disorder consisting of asynchronous myoclonic jerks of the limbs and shoulders and subtle choreoathetotic movements of the hands and fingers developed by age 17 months", "Ambulates unassisted at 4 years", "Communicates with vocalizations, gestures and use of a speech-generating device", "WES and whole-genome sequencing performed using research protocols at Baylor College of Medicine and Stanford University", "Mutations in NGLY1 that followed a compound heterozygous inheritance pattern were identified", "Stop gain mutation caused by a G>A mutation at position 3:25761670 (hg19) resulting in p.R542X was identified in both the father and daughter", "3 base pair in-frame deletion TCC> beginning at position 3:25775416 (hg19) was identified in both the mother and daughter", "Additional G>T mutation resulting in a heterozygous SMP at position 3:25777564 was identified in the daughter, mother and father", "Moderate reduction in mitochondrial DNA content was identified in a liver sample"], "age": 4, "gender": "female", "race": "Caucasian", "consanguinity": false, "mutations": ["c.1205_1207del(p.402_403del)", "c.1570C>(p. R524X)"], "phenotypes": ["brain imaging abnormalities", "microcephaly", "global developmental delay", "hypotonia", "movement disorder", "EEG abnormalities", "ocular apraxia", "alacrima/hypolacrima", "chalazions", "neonatal jaundice", "elevated liver transaminases", "liver storage or vacuolization", "constipation", "small hands/feet"], "neuropathy": {}, "seizure_info": {}, "lab_measurements": {}, "family_history": [], "scores": {}, "sequencing_info": {"sequencing_center": "Baylor College of Medicine and Stanford University", "sequencing_platform": "Illumina HiSeq2000 and Complete Genomics", "coverage": "80× with >90% of targeted bases at 20× coverage or higher"}, "disease_info": {"disease_name": "Not specified", "allele_1_mutation": "c.1205_1207del(p.402_403del)", "allele_2_mutation": "c.1570C>(p. R524X)"}}
+2023-07-15 13:31:42,618|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC4243708|4|1) Sanger sequencing of NGLY1 was performed and results were confirmed by a clinical laboratory (GeneDx, Gaithersburg, Maryland). 2) Patient 4 is a 2 year old Caucasian male. He does not have consanguinity. His mutations are c.1201A>T(p. R401X)c.1201A>T(pR401X). He has IUGR, brain imaging abnormalities, global developmental delay, hypotonia, movement disorder, EEG abnormalities, decreased DTRs, seizures, alacrima/hypolacrima, corneal ulcerations/scarring, chalazions, neonatal jaundice, elevated liver transaminases, elevated AFP, liver fibrosis, constipation, dysmorphic features, scoliosis, and small hands/feet. 3) A 2-year-old boy, delivered by Cesarean section at 38 weeks of gestation after fetal distress was noted on cardiotocography. Pregnancy history was positive for intrauterine growth restriction (IUGR) and oligohydramnios. He had mild hyperbilirubinemia, but otherwise his neonatal course was unremarkable and he was discharged on day of life three. Intermittent head flexion was noted at 6 months, and an EEG at 8 months showed generalized poly-spike discharges. Soon thereafter, mild tonic seizures with head and body flexion started, and evolved to single, symmetric spasms with bilateral arm extension. Involuntary movements of the upper extremities were also noted at this time. In addition, global developmental delay, bilateral ptosis, abnormal tear production, elevated liver transaminases (3 to 4 times upper limit of normal), and constipation were noted in infancy. He has had recurrent episodes of keratoconjunctivitis and poor lid closure during sleep with resultant corneal scarring. 4) Sanger sequencing (Duke University) detected a homozygous nonsense mutation, p.R401X, at position 3:25775422 (hg19) in transcript ENST00000280700. At the cDNA level this is c.1201A>T in exon 8 of NGLY1. This finding was confirmed in a CLIA- certified laboratory (GeneDx). 5) Patient 4 has the c.1201A>T (p.R401X) mutation in a homozygous state. This mutation is associated with a severe phenotype, with outcomes ranging from early demise to living into teenage years.
+PMC4243708|5|1) Exome sequencing was performed using the Illumina HiSeq2000 platform and the Agilent SureSelect Human All Exon 50 Mb Kit. 2) Patient 5 is a 0.5 year old Caucasian male. He does not have consanguinity. His mutations are c.1201A>T(p. R401X)/c.1201A>T(p.R401X). He has IUGR, brain imaging abnormalities, microcephaly, global developmental delay, hypotonia, movement disorder, EEG abnormalities, seizures, alacrima/hypolacrima, neonatal jaundice, elevated liver transaminases, elevated AFP, liver storage or vacuolization, constipation, dysmorphic features, and scoliosis. 3) Patient 5, a boy, died at the age of 5 years. He was born at term following a pregnancy that was complicated by a positive second trimester serum screening for trisomy 18 and Smith- Lemli-Opitz syndrome (SLOS). Cytogenetic analysis of cultured amniocytes showed a normal male karyotype and measurement of 7-dehydrocholesterol in amniotic fluid excluded SLOS. He was delivered by Cesarean section at 36 weeks of gestation due to concerns for IUGR and a non-reassuring stress test. He had mild flexion contractures of both knees, but had an uneventful neonatal period. He had global developmental delay and constant movements of his arms and legs since early infancy and developed head bobbing at 7 months. At 8 months, liver transaminase elevations (approximately 1.5 times the upper limit of normal) were noted, and the elevations persisted until age 3 1⁄2 years. His reflexes appeared normal in infancy, but were diminished by age 2 years and at 38 months could no longer be elicited. During the second year of life, he was noted to have dry eyes that were treated with lubricant drops at bedtime, and microcephaly was present by 16 months. At 2 1⁄2 years, he developed myoclonic seizures that became intractable despite numerous therapeutic trials. Between the ages of 10 months and five years, he showed slow developmental progress, but regressed during the last year. He died at age 5 years following a viral illness and a prolonged seizure. 4) Patient 5 has a homozygous single nucleotide variant T> A at position 3:25775422 (hg19) in NGLY1, which was validated by Sanger sequencing. This variant causes a nonsense mutation, R401X. The variant was also present in the mother’s exome as a heterozygous call. 5) Significant brain disease was noted on autopsy in Patient 5 who was found to have pathological changes consistent with hypoxic-ischemic encephalopathy (HIE). 6) Patient 5 has the c.1201A>T (p.R401X) mutation in a homozygous state. This mutation is associated with a severe phenotype, with outcomes ranging from early demise to living into teenage years.
+PMC4243708|6|1) Exome sequencing was performed using the Illumina HiSeq2000 platform and the Agilent SureSelect Human All Exon 50 Mb Kit. 2) WES was performed on a clinical basis. 3) Patient 6 is a 0.9 month old Caucasian female. She does not have consanguinity. Her mutations are c.1201A>T(p. R401X)/c.1201A>T(p.R401X). She has IUGR, brain imaging abnormalities, microcephaly, global developmental delay, hypotonia, movement disorder, EEG abnormalities, decreased DTRs, alacrima/hypolacrima, elevated liver transaminases, liver storage or vacuolization, and constipation. 4) Patient 6 is the younger sister of Subject 5. The pregnancy was complicated by a positive second trimester serum screen for trisomy 18 and SLOS (AFP 0.87 MoM, uE3 0.31 MoM, hCG 0.57 MoM). Cytogenetic analysis of cultured amniocytes showed a normal female karyotype. She was delivered by Cesarean section at 35 weeks of gestation following an ultrasound that was concerning for IUGR. She had jaundice requiring phototherapy, but her course in the nursery was otherwise uneventful. By age 9 months, developmental delay was apparent and she had developed hypotonia, microcephaly, a mildly myopathic- appearing face and constant involuntary movements with a tendency to hyperextend her arms and close her fists. At 9 1⁄2 months of age, she died unexpectedly in her sleep and the cause of death remains unknown. 5) Patient 6 has a homozygous single nucleotide variant T> A at position 3:25775422 (hg19) in NGLY1, which was validated by Sanger sequencing. This variant causes a nonsense mutation, R401X. The variant was also present in the mother’s exome as a heterozygous call. 6) Significant brain disease was noted on autopsy in Patient 6 who was found to have pathological changes consistent with hypoxic-ischemic encephalopathy (HIE). 7) Patient 6 has the c.1201A>T (p.R401X) mutation in a homozygous state. This mutation is associated with a severe phenotype, with outcomes ranging from early demise to living into teenage years.
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:33:00,950|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC4243708", "patient_accession": "4", "extra_info": ["Delivered by Cesarean section at 38 weeks", "Positive pregnancy history for IUGR and oligohydramnios", "Mild hyperbilirubinemia at birth", "Discharged on day of life three", "Intermittent head flexion noted at 6 months", "EEG at 8 months showed generalized poly-spike discharges", "Involuntary movements of upper extremities noted", "Recurrent episodes of keratoconjunctivitis", "Poor lid closure during sleep", "Corneal scarring due to poor lid closure"], "age": 2, "gender": "male", "race": "Caucasian", "consanguinity": false, "mutations": ["c.1201A>T(p. R401X)c.1201A>T(pR401X)"], "phenotypes": ["IUGR", "brain imaging abnormalities", "global developmental delay", "hypotonia", "movement disorder", "EEG abnormalities", "decreased DTRs", "seizures", "alacrima/hypolacrima", "corneal ulcerations/scarring", "chalazions", "neonatal jaundice", "elevated liver transaminases", "elevated AFP", "liver fibrosis", "constipation", "dysmorphic features", "scoliosis", "small hands/feet"], "sequencing_info": {"sequencing_center": "GeneDx, Gaithersburg, Maryland", "sequencing_platform": "Sanger sequencing"}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T(p.R401X)", "allele_2_mutation": "c.1201A>T(p.R401X)"}}
+{"doc_id": "PMC4243708", "patient_accession": "5", "extra_info": ["Born at term following complicated pregnancy", "Positive second trimester serum screening for trisomy 18 and SLOS", "Delivered by Cesarean section at 36 weeks", "Mild flexion contractures of both knees at birth", "Global developmental delay and constant movements since early infancy", "Head bobbing developed at 7 months", "Liver transaminase elevations noted at 8 months", "Reflexes diminished by age 2 years", "Dry eyes treated with lubricant drops at bedtime", "Microcephaly present by 16 months", "Intractable myoclonic seizures developed at 2 1⁄2 years", "Slow developmental progress between 10 months and five years", "Regression during last year of life", "Died at age 5 years following viral illness and prolonged seizure", "Significant brain disease noted on autopsy", "Pathological changes consistent with hypoxic-ischemic encephalopathy (HIE)"], "age": 0.5, "gender": "male", "race": "Caucasian", "consanguinity": false, "mutations": ["c.1201A>T(p. R401X)/c.1201A>T(p.R401X)"], "phenotypes": ["IUGR", "brain imaging abnormalities", "microcephaly", "global developmental delay", "hypotonia", "movement disorder", "EEG abnormalities", "seizures", "alacrima/hypolacrima", "neonatal jaundice", "elevated liver transaminases", "elevated AFP", "liver storage or vacuolization", "constipation", "dysmorphic features", "scoliosis"], "sequencing_info": {"sequencing_center": "Illumina HiSeq2000 platform and the Agilent SureSelect Human All Exon 50 Mb Kit", "sequencing_platform": "Exome sequencing"}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T(p.R401X)", "allele_2_mutation": "c.1201A>T(p.R401X)"}}
+{"doc_id": "PMC4243708", "patient_accession": "6", "extra_info": ["Younger sister of Subject 5", "Pregnancy complicated by positive second trimester serum screen for trisomy 18 and SLOS", "Delivered by Cesarean section at 35 weeks", "Jaundice requiring phototherapy at birth", "Developmental delay apparent by age 9 months", "Hypotonia, microcephaly, mildly myopathic-appearing face and constant involuntary movements developed", "Tendency to hyperextend arms and close fists", "Died unexpectedly in sleep at 9 1⁄2 months", "Cause of death remains unknown", "Significant brain disease noted on autopsy", "Pathological changes consistent with hypoxic-ischemic encephalopathy (HIE)"], "age": 0.9, "gender": "female", "race": "Caucasian", "consanguinity": false, "mutations": ["c.1201A>T(p. R401X)/c.1201A>T(p.R401X)"], "phenotypes": ["IUGR", "brain imaging abnormalities", "microcephaly", "global developmental delay", "hypotonia", "movement disorder", "EEG abnormalities", "decreased DTRs", "alacrima/hypolacrima", "elevated liver transaminases", "liver storage or vacuolization", "constipation"], "sequencing_info": {"sequencing_center": "Illumina HiSeq2000 platform and the Agilent SureSelect Human All Exon 50 Mb Kit", "sequencing_platform": "Exome sequencing"}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T(p.R401X)", "allele_2_mutation": "c.1201A>T(p.R401X)"}}
+2023-07-15 13:33:00,957|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC4243708|7|1) WES was performed on a clinical basis. 2) Patient 7 is a 3 year old Caucasian female. She does not have consanguinity. Her mutations are c.1201A>Y(p. R401X)/c.1201A>T(p.R401X). She does not have IUGR. She has global developmental delay, microcephaly, hypotonia, movement disorder, EEG abnormalities, decreased DTRs, ocular apraxia, alacrima/hypolacrima, neonatal jaundice, elevated liver transaminases, lactic acidosis, constipation, dysmorphic features, and chalazions. 3) Patient 7 is a 3-year-old girl, born at term via scheduled Cesarean section. She had mild jaundice at birth but no other neonatal complications. Prenatal screen showed an increased risk for trisomy 21. In infancy, she was noted to have strabismus, hypotonia, athetoid arm and hand movements, clasped hands, and elevated liver transaminases (approximately 3 times upper limit of normal). Microcephaly was present by age 2 years. Severe developmental delay was present, but she has shown slow progress without regression. She learned to sit alone and started to crawl at 2 years, but had no words. 4) Patient 7 has a homozygous nonsense mutation, R401X, at position 3:25775422 (hg19) in transcript ENST00000280700. At the cDNA level this is c.1201A>T in exon 8 of NGLY1. 5) Patient 7 has the c.1201A>T (p.R401X) mutation in a homozygous state. This mutation is associated with a severe phenotype, with outcomes ranging from early demise to living into teenage years.
+PMC4243708|8|1) Patient 8 is a 16 year old Caucasian female. She does not have consanguinity. Her mutations are c1201A>T(p. R401X)/c.1201A>T(p.R401X). She has IUGR, brain imaging abnormalities, microcephaly, global developmental delay, hypotonia, movement disorder, EEG abnormalities, decreased DTRs, seizures, ocular apraxia, alacrima/hypolacrima, corneal ulcerations/scarring, constipation, dysmorphic features, scoliosis, and small hands/feet. 2) Patient 8, a now 16-year-old girl, is the older sister of Subject 7. She was born at term via Cesarean section for decreased fetal movement and bradycardia. Prenatal history was significant for IUGR. She had cyanosis at birth and required resuscitation. Anal stenosis requiring dilatation was noted in the first week of life, but she did not have further neonatal problems and was discharged home on day of life 7. She was noted to have hypotonia, a movement disorder consisting of head bobbing and extremity athetosis, and developmental delay in early infancy. At 3 years, she could stand unsupported, ambulate with a walker, and started to babble. Seizures developed at age 11 years and she lost all mobility. Other medical history includes acquired microcephaly, an inability to close her eyes completely during sleep, chronic conjunctivitis, corneal clouding, hypolacrima, strabismus, hearing impairment, gastro-esophageal reflux, chronic constipation, severe scoliosis and talipes equinovarus. 3) Patient 8 has a homozygous nonsense mutation, R401X, at position 3:25775422 (hg19) in transcript ENST00000280700. At the cDNA level this is c.1201A>T in exon 8 of NGLY1. 4) Patient 8 has the c.1201A>T (p.R401X) mutation in a homozygous state. This mutation is associated with a severe phenotype, with outcomes ranging from early demise to living into teenage years.
+PMC4243708|ALL|1) All patients had global developmental delay, a movement disorder, and hypotonia. Other common findings included hypo- or alacrima (7/8), elevated liver transaminases (6/7), microcephaly (6/8), diminished reflexes (6/8), hepatocyte cytoplasmic storage material or vacuolization (5/6), and seizures (4/8). The nonsense mutation c.1201A>T (p.R401X) was the most common deleterious allele. NGLY1 deficiency is a novel autosomal recessive disorder of the ERAD pathway associated with neurological dysfunction, abnormal tear production, and liver disease. The majority of patients detected to date carry a specific nonsense mutation that appears to be associated with severe disease. 2) Seven newly diagnosed patients with mutations in NGLY1. These observations confirm NGLY1 deficiency as an inherited disorder associated with the ERAD process and document its clinical presentation. 3) All patients had global developmental delay, a movement disorder, and hypotonia. Other common findings included hypo- or alacrima (7/8), abnormal brain imaging (7/8), EEG abnormalities (7/8), elevated liver transaminases (6/7), microcephaly (6/8), diminished reflexes (6/8), hepatocyte cytoplasmic storage material or vacuolization (5/6), seizures (4/8), and abnormal nerve conduction (3/3). Two of the patients died prematurely at 9 months and 5 years of age. 4) The nonsense mutation c.1201A>T (p.R401X) was the most common deleterious allele identified, present in homozygous state in 5 of 8 cases and in compound heterozygous state in one case. 5) Patients have a striking clinical triad consisting of abnormal tear production, choreoathetosis and liver disease. In addition, global developmental delay, acquired microcephaly, hypotonia, EEG abnormalities with or without overt seizures, brain imaging abnormalities, a peripheral neuropathy, constipation and a history of IUGR were common findings. Some patients were noted to have dysmorphic features, but overall these were not considered to be particularly prominent. Low uE3 was present in three patients, including in two children who died and were found to have significant adrenal cortex vacuolation. Although adrenal function was not specifically evaluated in our patients, some degree of dysfunction remains possible. 6) Patients in this cohort were initially suspected to have congenital disorders of glycosylation (CDGs) due to multisystem disease involving the central nervous system, heart, liver and gastrointestinal tract, and endocrine system. However, unlike CDGs, NGLY1 deficiency in these patients was not associated with cerebellar atrophy, lipodystrophy, or significant heart manifestations. Common findings in these patients included abnormalities detected on brain imaging, but these were typically mild and non-specific. The combination of hypo- or alacrima and a movement disorder consisting of tremulousness and varying degrees of choreoathetosis appear to be pathognomonic for NGLY1 deficiency in these patients. Mitochondrial disorders were also considered as diagnostic possibilities. Lactic acidemia was variably present, but tended to be mild; chronic elevations were not noted in any patient. 7) Patients with autosomal recessive mutations in ERLIN2 present profound intellectual disability, developmental regression and multiple contractures. Despite the severity of the intellectual disability and neuromuscular findings, the results of brain imaging, electromyography and muscle biopsy appeared normal in these patients. 8) A family was found to have a homozygous null mutation in ERLIN2, with affected individuals presenting with a hereditary spastic paraplegia phenotype. 9) Three patients showed accumulation of an amorphous substance in the liver, which is supportive of the role of NGLY1 and may help explain the liver disease noted in these patients. The undefined stored substance likely represents accumulation of misfolded glycoproteins in the cytoplasm that have been retrotranslocated from the ER but cannot undergo further processing. Two other patients showed vacuolization consistent with storage. Transferrin isoelectric focusing or mass spectrometry studies in NGLY1-deficient patients have been normal or only subtly abnormal. 10) Patients have axonal loss and gliosis in the brains suggestive of HIE, indicating that NGLY1 plays a role in maintaining central nervous system integrity. They also seem to have peripheral neuropathy that is relatively common in NGLY1 deficiency. Further studies are needed to determine the underlying pathogenesis of both central and peripheral nervous system abnormalities found in these patients. 11) NGLY1 deficiency is characterized by a constellation of unique features including elevation of AFP and liver enzymes in infancy with relative normalization in early childhood, accumulation of a substance with staining properties similar to glycogen in hepatocyte cytoplasm, absent tears resulting in blepharitis and corneal ulceration, a movement disorder and peripheral neuropathy. The transient nature of the AFP and liver transaminase elevation may make older or more mildly affected individuals difficult to detect.
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:34:17,123|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC4243708", "patient_accession": "7", "extra_info": ["Born at term via scheduled Cesarean section", "Prenatal screen showed increased risk for trisomy 21", "Learned to sit alone and started to crawl at 2 years", "No words"], "age": 3, "gender": "female", "race": "Caucasian", "consanguinity": false, "mutations": ["c.1201A>Y(p. R401X)", "c.1201A>T(p.R401X)"], "phenotypes": ["global developmental delay", "microcephaly", "hypotonia", "movement disorder", "EEG abnormalities", "decreased DTRs", "ocular apraxia", "alacrima/hypolacrima", "neonatal jaundice", "elevated liver transaminases", "lactic acidosis", "constipation", "dysmorphic features", "chalazions"], "neuropathy": {}, "seizure_info": {}, "lab_measurements": {}, "family_history": [], "scores": {}, "sequencing_info": {}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>Y(p. R401X)", "allele_2_mutation": "c.1201A>T(p.R401X)"}}
+{"doc_id": "PMC4243708", "patient_accession": "8", "extra_info": ["Older sister of Subject 7", "Born at term via Cesarean section for decreased fetal movement and bradycardia", "Prenatal history was significant for IUGR", "Cyanosis at birth and required resuscitation", "Anal stenosis requiring dilatation was noted in the first week of life", "Seizures developed at age 11 years and she lost all mobility", "Inability to close her eyes completely during sleep", "Chronic conjunctivitis", "Corneal clouding", "Hypolacrima", "Strabismus", "Hearing impairment", "Gastro-esophageal reflux", "Chronic constipation", "Severe scoliosis", "Talipes equinovarus"], "age": 16, "gender": "female", "race": "Caucasian", "consanguinity": false, "mutations": ["c1201A>T(p. R401X)", "c.1201A>T(p.R401X)"], "phenotypes": ["IUGR", "brain imaging abnormalities", "microcephaly", "global developmental delay", "hypotonia", "movement disorder", "EEG abnormalities", "decreased DTRs", "seizures", "ocular apraxia", "alacrima/hypolacrima", "corneal ulcerations/scarring", "constipation", "dysmorphic features", "scoliosis", "small hands/feet"], "neuropathy": {}, "seizure_info": {}, "lab_measurements": {}, "family_history": [], "scores": {}, "sequencing_info": {}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c1201A>T(p. R401X)", "allele_2_mutation": "c.1201A>T(p.R401X)"}}
+{"doc_id": "PMC4243708", "patient_accession": "ALL", "extra_info": ["All patients had global developmental delay, a movement disorder, and hypotonia", "NGLY1 deficiency is a novel autosomal recessive disorder of the ERAD pathway associated with neurological dysfunction, abnormal tear production, and liver disease", "The nonsense mutation c.1201A>T (p.R401X) was the most common deleterious allele", "Patients have a striking clinical triad consisting of abnormal tear production, choreoathetosis and liver disease", "Patients in this cohort were initially suspected to have congenital disorders of glycosylation (CDGs) due to multisystem disease involving the central nervous system, heart, liver and gastrointestinal tract, and endocrine system", "Patients have axonal loss and gliosis in the brains suggestive of HIE, indicating that NGLY1 plays a role in maintaining central nervous system integrity", "NGLY1 deficiency is characterized by a constellation of unique features including elevation of AFP and liver enzymes in infancy with relative normalization in early childhood, accumulation of a substance with staining properties similar to glycogen in hepatocyte cytoplasm, absent tears resulting in blepharitis and corneal ulceration, a movement disorder and peripheral neuropathy"], "age": null, "gender": null, "race": null, "consanguinity": null, "mutations": ["c.1201A>T (p.R401X)"], "phenotypes": ["global developmental delay", "movement disorder", "hypotonia", "hypo- or alacrima", "abnormal brain imaging", "EEG abnormalities", "elevated liver transaminases", "microcephaly", "diminished reflexes", "hepatocyte cytoplasmic storage material or vacuolization", "seizures", "abnormal nerve conduction"], "neuropathy": {}, "seizure_info": {}, "lab_measurements": {}, "family_history": [], "scores": {}, "sequencing_info": {}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T (p.R401X)", "allele_2_mutation": "c.1201A>T (p.R401X)"}}
+2023-07-15 13:34:17,141|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC7477955|1|1) 3 year old male with NGLY1 deficiency. Allele 1 mutation: c.953T>C (p.L318P). Allele 2 mutation: c.1169G>C (p.R390P). Nijmegen score: 14. IQ or DQ: Not determined. Vineland score: 62. 2) Individual #1 had slight cerebellar atrophy. 3) Patient 1 had onset of seizures at 0.7 years with initial type being Infantile Spasms. No seizures per day were reported. The patient was on Levetiracetam medication. No epileptiform discharge localization was observed. Background slowing was present with a PDR of 7 Hertz. Anterior/Posterior gradient was present. 4) Patient 1 has Protein level of 19 mg/dL, Albumin level of 10 mg/dL, CSF/serum Albumin quotient of 2.9, 5HIAA level of 146 nM, HVA level of 234 nM, Neopterin level of 21 nM, BH4 level of 9 nM, Lactate level of 0.9 mM, and normal Amino acids. 5) Patient 1 has peripheral neuropathy (PN) in sensory and motor nerves, slow conduction velocity (CV), normal electromyogram (EMG) findings in the arm, and present quantitative sweat analysis (QSWEAT) findings in both arm and ankle. 6) Schirmera: 3 ; 1, Ptosis / Lagophthalmous: +/, Nystagmus / Strabismus: - / Ortho, Cornea: Normal, Retina: Blonde periphery; pigment granularity, Optic Atrophy: -, Refraction: Hyperopia 7) Rapid and mostly distal brief adventitious movements of the hands with irregular and somewhat random frequency. The movements are most consistent with action “minipolymyoclonus” which can be easily confused for chorea and/or dysmetria.
+PMC7477955|10|1) 17 year old female with NGLY1 deficiency. Allele 1 mutation: c.1201A>T (p.R401*). Allele 2 mutation: c.1201A>T (p.R401*). Nijmegen score: 25. IQ or DQ: 16. Vineland score: 42. 2) Individual #10 had slight cerebellar atrophy. 3) Patient 10 never had seizures. Mild background slowing was present with a PDR of 0 Hertz. Anterior/Posterior gradient was present. 4) Patient 10 has peripheral neuropathy (PN) in sensory and motor nerves, not recordable conduction velocity (CV), chronic neurogenic changes in limbs, and present QSWEAT findings in arm but absent in ankle. 5) Schirmera: ND, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / XT, Cornea: pannus, Retina: Normal, Optic Atrophy: +, Refraction: Hyperopia
+PMC7477955|11|1) Sibling of patient 3, has confirmed biallelic mutations in NGLY1, included in previous clinical publications. 2) 18 year old female with NGLY1 deficiency. Allele 1 mutation: c.1201A>T (p.R401*). Allele 2 mutation: c.1201A>T (p.R401*). Nijmegen score: 52. IQ or DQ: 2. Vineland score: 24. 3) In one teenager (#11) follow-up imaging showed atrophy measurably worse after a 20-month interval (net loss of 34 cm3 relative to expected). 4) Patient 11 had onset of seizures at 10 years with initial type being Absence. The patient experienced few to 100s of head bobbing seizures per day. The patient was on Levetiracetam medication. Multifocal epileptiform discharge localization was observed. Mild background slowing was present with a PDR of 9 Hertz. Anterior/Posterior gradient was present. 5) Patient 11 has Protein level of 11 mg/dL, Albumin level of 9 mg/dL, CSF/serum Albumin quotient of 3.3, 5HIAA level of 32 nM, HVA level of 38 nM, Neopterin level of 14 nM, BH4 level of 6 nM, Lactate level of 1.8 mM, and normal Amino acids. 6) Patient 11 has peripheral neuropathy (PN) in sensory and motor nerves, demyelinative conduction velocity (CV), chronic neurogenic and distal leg active denervation, and present QSWEAT findings. 7) Schirmera: 0 ; 0, Ptosis / Lagophthalmous: + / +, Nystagmus / Strabismus: -, Cornea: Scarring; NV, Retina: No view (corneal scar), Optic Atrophy: +, Refraction: ND
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:35:28,539|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC7477955", "patient_accession": "1", "extra_info": ["Slight cerebellar atrophy", "No epileptiform discharge localization", "Anterior/Posterior gradient present", "Action minipolymyoclonus observed"], "age": 3, "gender": "male", "mutations": ["c.953T>C (p.L318P)", "c.1169G>C (p.R390P)"], "phenotypes": ["NGLY1 deficiency"], "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "slow", "emg_findings": "normal", "qsweat_findings": "present in both arm and ankle"}, "seizure_info": {"onset_age": 0.7, "initial_type": "Infantile Spasms", "frequency": "0 per day", "medication": "Levetiracetam", "background_slowing": "present", "pdr": "7 Hertz"}, "lab_measurements": {"protein_level": "19 mg/dL", "albumin_level": "10 mg/dL", "csf_serum_albumin_quotient": 2.9, "5hiaa_level": "146 nM", "hva_level": "234 nM", "neopterin_level": "21 nM", "bh4_level": "9 nM", "lactate_level": "0.9 mM", "amino_acids": "normal"}, "scores": {"nijmegen_score": 14, "vineland_score": 62}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.953T>C (p.L318P)", "allele_2_mutation": "c.1169G>C (p.R390P)"}}
+{"doc_id": "PMC7477955", "patient_accession": "10", "extra_info": ["Slight cerebellar atrophy", "No seizures", "Anterior/Posterior gradient present", "Chronic neurogenic changes in limbs"], "age": 17, "gender": "female", "mutations": ["c.1201A>T (p.R401*)", "c.1201A>T (p.R401*)"], "phenotypes": ["NGLY1 deficiency"], "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "not recordable", "qsweat_findings": "present in arm but absent in ankle"}, "seizure_info": {"background_slowing": "mild", "pdr": "0 Hertz"}, "scores": {"nijmegen_score": 25, "iq_dq": 16, "vineland_score": 42}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T (p.R401*)", "allele_2_mutation": "c.1201A>T (p.R401*)"}}
+{"doc_id": "PMC7477955", "patient_accession": "11", "extra_info": ["Sibling of patient 3", "Included in previous clinical publications", "Atrophy measurably worse after 20-month interval", "Chronic neurogenic and distal leg active denervation"], "age": 18, "gender": "female", "mutations": ["c.1201A>T (p.R401*)", "c.1201A>T (p.R401*)"], "phenotypes": ["NGLY1 deficiency"], "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "demyelinative", "qsweat_findings": "present"}, "seizure_info": {"onset_age": 10, "initial_type": "Absence", "frequency": "few to 100s of head bobbing per day", "medication": "Levetiracetam", "epileptiform_discharge_localization": "multifocal", "background_slowing": "mild", "pdr": "9 Hertz"}, "lab_measurements": {"protein_level": "11 mg/dL", "albumin_level": "9 mg/dL", "csf_serum_albumin_quotient": 3.3, "5hiaa_level": "32 nM", "hva_level": "38 nM", "neopterin_level": "14 nM", "bh4_level": "6 nM", "lactate_level": "1.8 mM", "amino_acids": "normal"}, "scores": {"nijmegen_score": 52, "iq_dq": 2, "vineland_score": 24}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T (p.R401*)", "allele_2_mutation": "c.1201A>T (p.R401*)"}}
+2023-07-15 13:35:28,547|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC7477955|12|1) Has confirmed biallelic mutations in NGLY1, included in previous clinical publications. 2) 21 year old female with NGLY1 deficiency. Allele 1 mutation: c.1370dupG (p.R458Kfs*14). Allele 2 mutation: c.1370dupG (p.R458Kfs*14). Nijmegen score: Not determined. IQ or DQ: Not determined. Vineland score: 37. 3) Patient 12 never had seizures. No epileptiform discharge localization was observed. Mild background slowing was present with a PDR of 11 Hertz. Anterior/Posterior gradient was present. 4) Patient 12 has Protein level of 9 mg/dL, Albumin level of 6 mg/dL, CSF/serum Albumin quotient of 1.9, 5HIAA level of 32 nM, HVA level of 39 nM, Neopterin level of 13 nM, BH4 level of 5 nM, Lactate level of 1.7 mM, and Alanine in Amino acids. 5) Patient 12 has peripheral neuropathy (PN) in sensory and motor nerves, not recordable conduction velocity (CV), connective tissue replacement of muscle, some active and chronic neurogenic findings, and present QSWEAT findings in arm but absent in ankle. 6) Schirmera: 5 ; 5, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / XT, Cornea: Scarring; NV, Retina: Normal, Optic Atrophy: +, Refraction: Myopia 7) Distal muscle wasting and finger contractures are noted. There are irregular brief adventitious movements of the hands worsened by action or posture. While some of the movements are reminiscent of cerebellar dysfunction, her gait assisted by a walker, demonstrates a narrow stance. While unable to articulate, she is able to express herself via a communication device and has a happy disposition.
+PMC7477955|2|1) Has confirmed biallelic mutations in NGLY1, included in previous clinical publications. 2) 4 year old male with NGLY1 deficiency. Allele 1 mutation: c.1201A>T (p.R401*). Allele 2 mutation: c.1201A>T (p.R401*). Nijmegen score: 33. IQ or DQ: 25. Vineland score: 52. 3) Individual #2 had slight cerebellar atrophy. 4) Patient 2 had onset of seizures between 0.2-0.7 years with initial type being Infantile Spasms. No seizures per day were reported. The patient was on Valproate medication. Multifocal epileptiform discharge localization was observed. Mild background slowing was present with a PDR of 5-6 Hertz. Anterior/Posterior gradient was poorly formed. 5) Patient 2 has Protein level of 8 mg/dL, Albumin level of 5 mg/dL, CSF/serum Albumin quotient of 1.6, 5HIAA level of 194 nM, HVA level of 316 nM, Neopterin level of 22 nM, BH4 level of 8 nM, Lactate level of 1.7 mM, and Glutamic acid in Amino acids. 6) Patient 2 has peripheral neuropathy (PN) in sensory and motor nerves, demyelinative conduction velocity (CV), chronic neurogenic changes in limbs, and absent quantitative sweat analysis (QSWEAT) findings in both arm and ankle. 7) Schirmera: 0 ; 1, Ptosis / Lagophthalmous: + / +, Nystagmus / Strabismus: + / XT, Cornea: NV; pannus, Retina: Normal, Optic Atrophy: -, Refraction: Hyperopia; Myopia 8) Random multifocal irregular adventitious movements of all four extremities are induced by voluntary movements and or posture. Head and trunk titubation during the crawling position or during supported gait may reflect axial cerebellar dysfunction and/or associated negative motor phenomena (negative myoclonus) leading to sudden brief loss of postural muscle tone.
+PMC7477955|3|1) Sibling of patient 11, has confirmed biallelic mutations in NGLY1, included in previous clinical publications. 2) 4 year old female with NGLY1 deficiency. Allele 1 mutation: c.1201A>T (p.R401*). Allele 2 mutation: c.1201A>T (p.R401*). Nijmegen score: 34. IQ or DQ: 5. Vineland score: 40. 3) Patient 3 never had seizures. No epileptiform discharge localization was observed. No background slowing was present with a PDR of 11-12 Hertz. Anterior/Posterior gradient was present. 4) Patient 3 has Protein level of 12 mg/dL, Albumin level of 8 mg/dL, CSF/serum Albumin quotient of 2.4, 5HIAA level of 83 nM, HVA level of 206 nM, Neopterin level of 17 nM, BH4 level of 8 nM, Lactate level of 1.3 mM, and Glycine in Amino acids. 5) Patient 3 has peripheral neuropathy (PN) in sensory and motor nerves, demyelinative conduction velocity (CV), active denervation in leg and arm, and present QSWEAT findings in arm but absent in ankle. 6) Schirmera: 0 ; 0, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / Ortho, Cornea: Scarring; NV, Retina: Pigmentary retinopathy, Optic Atrophy: +, Refraction: Hyperopia
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:36:47,249|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC7477955", "patient_accession": "12", "extra_info": ["Patient 12 never had seizures.", "Mild background slowing was present with a PDR of 11 Hertz.", "Anterior/Posterior gradient was present.", "Patient 12 has peripheral neuropathy (PN) in sensory and motor nerves.", "Not recordable conduction velocity (CV).", "Connective tissue replacement of muscle.", "Some active and chronic neurogenic findings.", "Present QSWEAT findings in arm but absent in ankle.", "Schirmera: 5 ; 5, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / XT, Cornea: Scarring; NV, Retina: Normal, Optic Atrophy: +, Refraction: Myopia", "Distal muscle wasting and finger contractures are noted.", "There are irregular brief adventitious movements of the hands worsened by action or posture.", "While some of the movements are reminiscent of cerebellar dysfunction, her gait assisted by a walker, demonstrates a narrow stance.", "While unable to articulate, she is able to express herself via a communication device and has a happy disposition."], "age": 21, "gender": "female", "mutations": ["c.1370dupG (p.R458Kfs*14)", "c.1370dupG (p.R458Kfs*14)"], "scores": {"nijmegen_score": null, "iq_dq": null, "vineland_score": 37}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1370dupG (p.R458Kfs*14)", "allele_2_mutation": "c.1370dupG (p.R458Kfs*14)"}, "lab_measurements": {"protein_level": "9 mg/dL", "albumin_level": "6 mg/dL", "csf_serum_albumin_quotient": 1.9, "5hiaa_level": "32 nM", "hva_level": "39 nM", "neopterin_level": "13 nM", "bh4_level": "5 nM", "lactate_level": "1.7 mM", "amino_acids": "Alanine"}}
+{"doc_id": "PMC7477955", "patient_accession": "2", "extra_info": ["Individual #2 had slight cerebellar atrophy.", "Patient 2 had onset of seizures between 0.2-0.7 years with initial type being Infantile Spasms.", "No seizures per day were reported.", "The patient was on Valproate medication.", "Multifocal epileptiform discharge localization was observed.", "Mild background slowing was present with a PDR of 5-6 Hertz.", "Anterior/Posterior gradient was poorly formed.", "Patient 2 has peripheral neuropathy (PN) in sensory and motor nerves.", "Demyelinative conduction velocity (CV).", "Chronic neurogenic changes in limbs.", "Absent quantitative sweat analysis (QSWEAT) findings in both arm and ankle.", "Schirmera: 0 ; 1, Ptosis / Lagophthalmous: + / +, Nystagmus / Strabismus: + / XT, Cornea: NV; pannus, Retina: Normal, Optic Atrophy: -, Refraction: Hyperopia; Myopia", "Random multifocal irregular adventitious movements of all four extremities are induced by voluntary movements and or posture.", "Head and trunk titubation during the crawling position or during supported gait may reflect axial cerebellar dysfunction and/or associated negative motor phenomena (negative myoclonus) leading to sudden brief loss of postural muscle tone."], "age": 4, "gender": "male", "mutations": ["c.1201A>T (p.R401*)", "c.1201A>T (p.R401*)"], "scores": {"nijmegen_score": 33, "iq_dq": 25, "vineland_score": 52}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T (p.R401*)", "allele_2_mutation": "c.1201A>T (p.R401*)"}, "lab_measurements": {"protein_level": "8 mg/dL", "albumin_level": "5 mg/dL", "csf_serum_albumin_quotient": 1.6, "5hiaa_level": "194 nM", "hva_level": "316 nM", "neopterin_level": "22 nM", "bh4_level": "8 nM", "lactate_level": "1.7 mM", "amino_acids": "Glutamic acid"}}
+{"doc_id": "PMC7477955", "patient_accession": "3", "extra_info": ["Sibling of patient 11.", "Patient 3 never had seizures.", "No epileptiform discharge localization was observed.", "No background slowing was present with a PDR of 11-12 Hertz.", "Anterior/Posterior gradient was present.", "Patient 3 has peripheral neuropathy (PN) in sensory and motor nerves.", "Demyelinative conduction velocity (CV).", "Active denervation in leg and arm.", "Present QSWEAT findings in arm but absent in ankle.", "Schirmera: 0 ; 0, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / Ortho, Cornea: Scarring; NV, Retina: Pigmentary retinopathy, Optic Atrophy: +, Refraction: Hyperopia"], "age": 4, "gender": "female", "mutations": ["c.1201A>T (p.R401*)", "c.1201A>T (p.R401*)"], "scores": {"nijmegen_score": 34, "iq_dq": 5, "vineland_score": 40}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1201A>T (p.R401*)", "allele_2_mutation": "c.1201A>T (p.R401*)"}, "lab_measurements": {"protein_level": "12 mg/dL", "albumin_level": "8 mg/dL", "csf_serum_albumin_quotient": 2.4, "5hiaa_level": "83 nM", "hva_level": "206 nM", "neopterin_level": "17 nM", "bh4_level": "8 nM", "lactate_level": "1.3 mM", "amino_acids": "Glycine"}}
+2023-07-15 13:36:47,261|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC7477955|4|1) 5 year old female with NGLY1 deficiency. Allele 1 mutation: c.931G>A (p.E311K). Allele 2 mutation: c.730T>C (p.W244R). Nijmegen score: 33. IQ or DQ: Not determined. Vineland score: Not determined. 2) Patient 4 never had seizures. No information on medication, epileptiform discharge localization, background slowing, PDR, and Anterior/Posterior gradient was determined. 3) Patient 4's nerve conduction study (NCS), electromyogram (EMG), and quantitative sweat analysis (QSWEAT) results were not determined (ND).
+PMC7477955|5|1) 6 year old male with NGLY1 deficiency. Allele 1 mutation: c.1604G>A (p.W535*). Allele 2 mutation: c.1910delT (p.L637*). Nijmegen score: 25. IQ or DQ: 8. Vineland score: 43. 2) Patient 5 had onset of seizures at 0.7 years with initial type being Drop. The patient experienced few Drop and Myoclonic seizures per day. The patient was on Valproate and Clobazam medication. Multifocal to Diffuse epileptiform discharge localization was observed. Mild background slowing was present with a PDR of 8-9 Hertz. Anterior/Posterior gradient was present. 3) Patient 5 has Protein level of 11 mg/dL, Albumin level of 6 mg/dL, CSF/serum Albumin quotient of 2.1, 5HIAA level of 115 nM, HVA level of 316 nM, Neopterin level of 11 nM, BH4 level of 10 nM, Lactate level not determined, and normal Amino acids. 4) Patient 5 has peripheral neuropathy (PN) in sensory and motor nerves, demyelinative conduction velocity (CV), mild chronic neurogenic changes in leg muscles, and absent QSWEAT findings. 5) Schirmera: 0 ; 0, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / Ortho, Cornea: Normal, Retina: Pigmentary changes, Optic Atrophy: -, Refraction: ND
+PMC7477955|6|1) Has confirmed biallelic mutations in NGLY1, included in previous clinical publications. 2) 7 year old male with NGLY1 deficiency. Allele 1 mutation: c.1891delC (p.Q631S). Allele 2 mutation: c.1201A>T (p.R401*). Nijmegen score: 36. IQ or DQ: 5. Vineland score: 37. 3) On overnight EEG, only one individual (#6) had active seizures recorded. 4) Individual #6 had slight cerebellar atrophy. 5) A single individual (#6) had a repeat study at one year, showing progression of the neuropathy. 6) Patient 6 had onset of seizures at 1 year with initial types being Drop and Myoclonic. The patient experienced several Myoclonus, staring, gelastic, and drop seizures per day. The patient was on Valproate and Lamotrigine medication. Multifocal to Diffuse epileptiform discharge localization was observed. Mild background slowing was present with a PDR of 5-6 Hertz. Anterior/Posterior gradient was poorly formed during the day and present during the night. 7) Patient 6 has Protein level of 5 mg/dL, Albumin level of 3 mg/dL, CSF/serum Albumin quotient of 0.9, 5HIAA level of 163 nM, HVA level of 385 nM, Neopterin level of 14 nM, BH4 level of 10 nM, Lactate level of 1.2 mM, and normal Amino acids. 8) Patient 6 has peripheral neuropathy (PN) in sensory and motor nerves, demyelinative conduction velocity (CV), normal findings in one arm muscle but noted to have chronic neurogenic changes one year later, and absent QSWEAT findings. 9) Schirmera: 4 ; 6, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / XT, Cornea: Scarring, Retina: Pigmentary changes; Cone Dystrophy, Optic Atrophy: +, Refraction: Hyperopia 10) Gaze is conjugate and the visual pursuit and saccade generation appear intact. He has evidence of poor head control and axial hypotonia. Reaching movements are associated with distal irregular myoclonic twitching.
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:38:25,551|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC7477955", "patient_accession": "4", "age": 5, "gender": "female", "mutations": ["c.931G>A (p.E311K)", "c.730T>C (p.W244R)"], "scores": {"nijmegen_score": 33}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.931G>A (p.E311K)", "allele_2_mutation": "c.730T>C (p.W244R)"}, "extra_info": ["Patient 4 never had seizures", "No information on medication, epileptiform discharge localization, background slowing, PDR, and Anterior/Posterior gradient was determined", "Patient 4's nerve conduction study (NCS), electromyogram (EMG), and quantitative sweat analysis (QSWEAT) results were not determined (ND)"]}
+{"doc_id": "PMC7477955", "patient_accession": "5", "age": 6, "gender": "male", "mutations": ["c.1604G>A (p.W535*)", "c.1910delT (p.L637*)"], "scores": {"nijmegen_score": 25, "iq_dq": 8, "vineland_score": 43}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1604G>A (p.W535*)", "allele_2_mutation": "c.1910delT (p.L637*)"}, "seizure_info": {"onset_age": 0.7, "initial_type": "Drop", "frequency": "few Drop and Myoclonic seizures per day", "medication": "Valproate and Clobazam", "epileptiform_discharge_localization": "Multifocal to Diffuse", "background_slowing": "Mild", "pdr": "8-9 Hertz", "anterior_posterior_gradient": "present"}, "lab_measurements": {"protein_level": "11 mg/dL", "albumin_level": "6 mg/dL", "csf_serum_albumin_quotient": 2.1, "5hiaa_level": "115 nM", "hva_level": "316 nM", "neopterin_level": "11 nM", "bh4_level": "10 nM", "lactate_level": "not determined", "amino_acids": "normal"}, "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "demyelinative", "emg_findings": "mild chronic neurogenic changes in leg muscles", "qsweat_findings": "absent"}, "extra_info": ["Schirmera: 0 ; 0, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / Ortho, Cornea: Normal, Retina: Pigmentary changes, Optic Atrophy: -, Refraction: ND"]}
+{"doc_id": "PMC7477955", "patient_accession": "6", "age": 7, "gender": "male", "mutations": ["c.1891delC (p.Q631S)", "c.1201A>T (p.R401*)"], "scores": {"nijmegen_score": 36, "iq_dq": 5, "vineland_score": 37}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.1891delC (p.Q631S)", "allele_2_mutation": "c.1201A>T (p.R401*)"}, "seizure_info": {"onset_age": 1, "initial_type": "Drop and Myoclonic", "frequency": "several Myoclonus, staring, gelastic, and drop seizures per day", "medication": "Valproate and Lamotrigine", "epileptiform_discharge_localization": "Multifocal to Diffuse", "background_slowing": "Mild", "pdr": "5-6 Hertz", "anterior_posterior_gradient": "poorly formed during the day and present during the night"}, "lab_measurements": {"protein_level": "5 mg/dL", "albumin_level": "3 mg/dL", "csf_serum_albumin_quotient": 0.9, "5hiaa_level": "163 nM", "hva_level": "385 nM", "neopterin_level": "14 nM", "bh4_level": "10 nM", "lactate_level": "1.2 mM", "amino_acids": "normal"}, "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "demyelinative", "emg_findings": "normal findings in one arm muscle but noted to have chronic neurogenic changes one year later", "qsweat_findings": "absent"}, "extra_info": ["Has confirmed biallelic mutations in NGLY1, included in previous clinical publications", "On overnight EEG, only one individual (#6) had active seizures recorded", "Individual #6 had slight cerebellar atrophy", "A single individual (#6) had a repeat study at one year, showing progression of the neuropathy", "Schirmera: 4 ; 6, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: - / XT, Cornea: Scarring, Retina: Pigmentary changes; Cone Dystrophy, Optic Atrophy: +, Refraction: Hyperopia", "Gaze is conjugate and the visual pursuit and saccade generation appear intact. He has evidence of poor head control and axial hypotonia. Reaching movements are associated with distal irregular myoclonic twitching"]}
+2023-07-15 13:38:25,558|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC7477955|7|1) Sibling of patient 8, has confirmed biallelic mutations in NGLY1. 2) 8 year old female with NGLY1 deficiency. Allele 1 mutation: c.622C>T (p.Q208*). Allele 2 mutation: c.930C>T (p.G310G (splice site)). Nijmegen score: 10. IQ or DQ: 74. Vineland score: 98. 3) Individual 7 with a private cryptic splice site mutation (c.930C>T) and a private nonsense mutation (c.622C>T) exhibited relatively mild impairment in all domains. 4) Patient 7 had onset of seizures at 6 years with initial type being Absence. The patient experienced 100s of staring seizures per day. The patient was on Lamotrigine and Topiramate medication. Generalized epileptiform discharge localization was observed. Mild background slowing was present with a PDR of 7-8 Hertz. Anterior/Posterior gradient was present. 5) Patient 7 has Protein level of 13 mg/dL, Albumin level of 9 mg/dL, CSF/serum Albumin quotient of 2.5, 5HIAA level of 169 nM, HVA level of 327 nM, Neopterin level of 17 nM, BH4 level of 13 nM, Lactate level of 1.3 mM, and Glutamine in Amino acids. 6) Patient 7 has normal sensory and motor nerves, borderline slow conduction velocity (CV), normal electromyogram (EMG) findings, and present quantitative sweat analysis (QSWEAT) findings in both arm and ankle. 7) Schirmera: 7 ; 3, Ptosis / Lagophthalmous: - / +, Nystagmus / Strabismus: + (endgaze) / Ortho, Cornea: Normal, Retina: Blonde periphery, Optic Atrophy: -, Refraction: Normal 8) Handwriting elicits jerky irregular hand movements. Finger-nose-finger testing is accomplished with an irregular tremulous trajectory. During this phase of the exam, a brief seizure is captured with associated behavioral arrest and tonic upward deviation of her eyes lasting a few seconds. Rapid finger movements are slow and irregular but her gait is not ataxic. Myoclonus (positive and negative) are evident when holding her arms against gravity.
+PMC7477955|8|1) Sibling of patient 7, has confirmed biallelic mutations in NGLY1. 2) 10 year old male with NGLY1 deficiency. Allele 1 mutation: c.622C>T (p.Q208*). Allele 2 mutation: c.930C>T (p.G310G (splice site)). Nijmegen score: 9. IQ or DQ: 81. Vineland score: 94. 3) Individual 8 with a private cryptic splice site mutation (c.930C>T) and a private nonsense mutation (c.622C>T) exhibited relatively mild impairment in all domains. 4) Patient 8 never had seizures. The patient was on Levetiracetam medication. Generalized epileptiform discharge localization was observed. No background slowing was present with a PDR of 9-10 Hertz. Anterior/Posterior gradient was present. 5) Patient 8 has Protein level of 40 mg/dL, Albumin level of 24 mg/dL, CSF/serum Albumin quotient of 7.1, 5HIAA level of 195 nM, HVA level of 376 nM, Neopterin level of 12 nM, BH4 level of 18 nM, Lactate level of 1.1 mM, and normal Amino acids. 6) Patient 8 has normal sensory and motor nerves, borderline slow conduction velocity (CV), mild chronic neurogenic findings, and present quantitative sweat analysis (QSWEAT) findings in both arm and ankle. 7) Schirmera: 3 ; 0, Ptosis / Lagophthalmous: +/, Nystagmus / Strabismus: - / Ortho, Cornea: ND, Retina: Blonde periphery, Optic Atrophy: -, Refraction: Hyperopia
+PMC7477955|9|1) Has confirmed biallelic mutations in NGLY1, included in previous clinical publications. 2) 16 year old male with NGLY1 deficiency. Allele 1 mutation: c.347C>G (p.S116*). Allele 2 mutation: c.881+5G>T (IVS5+5G>T). Nijmegen score: 32. IQ or DQ: 2. Vineland score: 28. 3) Patient 9 had onset of seizures at 1 year with initial types being Tonic and Myoclonic. The patient experienced 0-3 Tonic and Myoclonic seizures per day. The patient was on Levetiracetam medication. Multifocal epileptiform discharge localization was observed. Mild to Moderate background slowing was present with a PDR of 10-11 Hertz. Anterior/Posterior gradient was present. 4) Patient 9 has peripheral neuropathy (PN) in sensory and motor nerves, demyelinative conduction velocity (CV), chronic neurogenic and active denervation in limbs, and present QSWEAT findings in arm but absent in ankle. 5) Schirmera: 5 ; 6, Ptosis / Lagophthalmous: + / +, Nystagmus / Strabismus: - / ET, Cornea: NV; pannus, Retina: Blonde periphery; pigmentary changes, Optic Atrophy: +, Refraction: Myopia 6) Distal upper and lower extremities have developed a flexion contracture at the hands and feet. Irregular action-induced jerking movements are elicited while reaching. Gaze is conjugate. Visual pursuit is normal and there is generalized arreflexia. Muscle wasting notable throughout, especially in the lower extremities likely secondary to peripheral neuropathy.
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:39:54,909|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC7477955", "patient_accession": "7", "extra_info": ["Sibling of patient 8", "Has private cryptic splice site mutation (c.930C>T) and a private nonsense mutation (c.622C>T)", "Handwriting elicits jerky irregular hand movements", "Finger-nose-finger testing is accomplished with an irregular tremulous trajectory", "During this phase of the exam, a brief seizure is captured with associated behavioral arrest and tonic upward deviation of her eyes lasting a few seconds", "Rapid finger movements are slow and irregular but her gait is not ataxic", "Myoclonus (positive and negative) are evident when holding her arms against gravity"], "age": 8, "gender": "female", "mutations": ["c.622C>T (p.Q208*)", "c.930C>T (p.G310G (splice site))"], "phenotypes": ["NGLY1 deficiency"], "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "borderline slow", "emg_findings": "normal", "qsweat_findings": "present in both arm and ankle"}, "seizure_info": {"onset_age": 6, "initial_type": "Absence", "frequency": "100s of staring seizures per day", "medication": "Lamotrigine and Topiramate", "epileptiform_discharge_localization": "Generalized", "background_slowing": "Mild", "pdr": "7-8 Hertz", "anterior_posterior_gradient": "present"}, "lab_measurements": {"protein_level": "13 mg/dL", "albumin_level": "9 mg/dL", "csf_serum_albumin_quotient": 2.5, "5hiaa_level": "169 nM", "hva_level": "327 nM", "neopterin_level": "17 nM", "bh4_level": "13 nM", "lactate_level": "1.3 mM", "amino_acids": "Glutamine"}, "scores": {"nijmegen_score": 10, "iq_dq": 74, "vineland_score": 98}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.622C>T (p.Q208*)", "allele_2_mutation": "c.930C>T (p.G310G (splice site))"}}
+{"doc_id": "PMC7477955", "patient_accession": "8", "extra_info": ["Sibling of patient 7", "Has private cryptic splice site mutation (c.930C>T) and a private nonsense mutation (c.622C>T)"], "age": 10, "gender": "male", "mutations": ["c.622C>T (p.Q208*)", "c.930C>T (p.G310G (splice site))"], "phenotypes": ["NGLY1 deficiency"], "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "borderline slow", "emg_findings": "mild chronic neurogenic", "qsweat_findings": "present in both arm and ankle"}, "seizure_info": {"onset_age": null, "initial_type": null, "frequency": "never had seizures", "medication": "Levetiracetam", "epileptiform_discharge_localization": "Generalized", "background_slowing": "No", "pdr": "9-10 Hertz", "anterior_posterior_gradient": "present"}, "lab_measurements": {"protein_level": "40 mg/dL", "albumin_level": "24 mg/dL", "csf_serum_albumin_quotient": 7.1, "5hiaa_level": "195 nM", "hva_level": "376 nM", "neopterin_level": "12 nM", "bh4_level": "18 nM", "lactate_level": "1.1 mM", "amino_acids": "normal"}, "scores": {"nijmegen_score": 9, "iq_dq": 81, "vineland_score": 94}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.622C>T (p.Q208*)", "allele_2_mutation": "c.930C>T (p.G310G (splice site))"}}
+{"doc_id": "PMC7477955", "patient_accession": "9", "extra_info": ["Included in previous clinical publications", "Distal upper and lower extremities have developed a flexion contracture at the hands and feet", "Irregular action-induced jerking movements are elicited while reaching", "Gaze is conjugate", "Visual pursuit is normal and there is generalized arreflexia", "Muscle wasting notable throughout, especially in the lower extremities likely secondary to peripheral neuropathy"], "age": 16, "gender": "male", "mutations": ["c.347C>G (p.S116*)", "c.881+5G>T (IVS5+5G>T)"], "phenotypes": ["NGLY1 deficiency"], "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "demyelinative", "emg_findings": "chronic neurogenic and active denervation in limbs", "qsweat_findings": "present in arm but absent in ankle"}, "seizure_info": {"onset_age": 1, "initial_type": "Tonic and Myoclonic", "frequency": "0-3 Tonic and Myoclonic seizures per day", "medication": "Levetiracetam", "epileptiform_discharge_localization": "Multifocal", "background_slowing": "Mild to Moderate", "pdr": "10-11 Hertz", "anterior_posterior_gradient": "present"}, "lab_measurements": null, "scores": {"nijmegen_score": 32, "iq_dq": 2, "vineland_score": 28}, "disease_info": {"disease_name": "NGLY1 deficiency", "allele_1_mutation": "c.347C>G (p.S116*)", "allele_2_mutation": "c.881+5G>T (IVS5+5G>T)"}}
+2023-07-15 13:39:54,925|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|patient_accession|details
+PMC7477955|ALL|1) 12 individuals ages 2 to 21 years with confirmed, biallelic, pathogenic NGLY1 mutations were studied. They exhibited previously unreported clinical features, including optic atrophy and retinal pigmentary changes/cone dystrophy, delayed bone age, joint hypermobility, and lower than predicted resting energy expenditure. Laboratory findings include low CSF total protein and albumin, and unusually high antibody titers towards rubella and/or rubeola following vaccination. Confirmed and further quantified previously reported findings noting that decreased tear production, transient transaminitis, small feet, a complex hyperkinetic movement disorder, and varying degrees of global developmental delay with relatively preserved socialization are the most consistent features. 2) NGLY1 deficiency was first reported in 2012 by Need et al., who, through exome sequencing, identified biallelic mutations in the NGLY1 gene as the cause of disease in one child. 3) Seven additional affected individuals identified through a social media campaign. Most common findings in these eight known NGLY1-CDDG patients were highlighted in a retrospective chart review. 4) 12 affected individuals were part of a natural history study of the disorder. Comprehensive, prospective, clinical, molecular, radiologic, and laboratory investigations were performed. 5) Clinical studies were designed to detail the phenotypic features of NGLY1-CDDG. Blood, urine, cerebral spinal fluid (CSF), lymphoblasts, and primary dermal fibroblasts were collected, analyzed, and stored. Studies included brain magnetic resonance imaging and spectroscopy (MRI and MRS), routine and overnight electroencephalograms (EEGs) with a limited montage performed during a sleep study, electromyogram (EMG) and nerve conduction studies (NCS), indirect calorimetry, awake and sedated eye examination with Schirmer II testing, optical coherence tomography scans and electroretinography, behavioral determination of pure tone thresholds, tympanometry, distortion product otoacoustic emissions, auditory brainstem evoked potentials (ABR), quantitative sweat analysis autonomic testing (QSWEAT), gastric aspiration, swallow study, skeletal survey, bone age, dual X-ray absorptiometry (DEXA), abdominal ultrasound, vibration controlled transient elastography (Fibroscan), echocardiogram, and electrocardiogram. Consultations included clinical neurology, audiology, nutrition, ophthalmology, hepatology, growth, puberty and hormonal studies, allergy and immunology, genetic counseling, physiatry, and speech, occupational, and physical therapy. Eleven individuals underwent developmental psychological evaluations, consisting of at least the Vineland Adaptive Behavior Scales, 2nd edition. Cognitive function was assessed with testing specific for age and developmental level that provided either an intelligence quotient (IQ) or developmental quotient (DQ) score. In addition, the Nijmegen pediatric CDG rating scale, a measure of clinical disease progression developed for CDG, was applied to all affected individuals younger than 18 years. 6) Twelve individuals from ten families, six female and six male, all white, aged 2.5– 21.3 years, with 13 different mutations in NGLY1. The most common mutation was c.1201A>T (p.R401*), occurring in seven alleles. The mutations were widely dispersed along the gene with no obvious hotspot. Only four of the mutations lay within the catalytic domain. 7) Most affected individuals had hypotonic facies, and the features of older individuals reflected their low weight, with thin facies, hollowed cheeks, and visible zygomatic arches. Eye measurements, performed on 10 subjects, varied broadly and revealed no consistent abnormality. 8) Ten of twelve subjects were born at term; two were born at 36 and 34 weeks, respectively. In the majority of individuals, birth weight, length, and occipital-frontal circumference (OFC) were appropriate for gestational age. 9) Individuals grew poorly after mid-childhood, with weight affected more than height. Acquired microcephaly was documented in the four oldest subjects. 10) The total foot length was < 3rd percentile in all 12 individuals. 11) 11 individuals under age 18 years were evaluated using the Nijmegen Pediatric CDG Severity scale. Total Nijmegen scores ranged from 9 (mild) to 52 (severe), with a mean of 28 ± 4 (SEM); the median was 32. 12) All five individuals carrying the common mutation c.1201A>T were either moderately or severely impaired; those carrying at least one copy had a higher mean score (36) than those without this mutation (20.5). 13) There was no significant difference in disease severity of males compared to females. 14) All twelve subjects had at least some developmental delay or intellectual disability, with a broad range of severity. IQ was below average (n=2) or in the range of intellectual disability (n=9) for the entire group; seven individuals had profound intellectual disability. The two individuals with IQ below average were verbally fluent; the remainder were nonverbal (n=7) or used only single words (n=1) or phrase speech (n=1). On the Vineland Adaptive Behavior Scales, Second Edition, composite scores ranged from 24 to 98 with a mean of 51 (SEM = 7). There was a consistent profile characterized by relatively strong Socialization scores, followed by Communication, and Daily Living Skills. Motor deficits were also reflected in impaired Daily Living Skills scores. Vineland scores were higher than cognitive scores for all subjects. No cross-sectional relationship was found between age and Vineland Adaptive Behavior Composite. 15) Seven of twelve subjects had clinical seizures, and one had subclinical seizures recognized on previous EEG. There were no age or genotype differences between individuals having seizures and those without. In each sibling pair, one had seizures and the other did not. 16) All twelve individuals exhibited hyperkinetic movement disorders that included choreiform, athetoid, dystonic, myoclonic, action tremor, and dysmetric movements and were more severe in the younger individuals. 17) Eleven individuals underwent MRI and MRS of the brain. Clinical assessment of the images was not striking. Delayed myelination was present in three of the four youngest individuals, but all the older individuals had complete myelination. 18) Increased atrophy correlated with worsening of all functional measurements, including IQ or DQ, Vineland assessments, and Nijmegen scores. Brain volume also directly correlated with CSF levels of 5-HIAA, tetrahydrobiopterin, and 5-HVA. 19) Compared to the reference population, N-acetylaspartylglutamate + N-acetylaspartate (NAA) was lower than normal in the left centrum semiovale (LCSO) (p=0.004), the midline parietal grey matter (PGM) (p=0.02), and superior cerebellar vermis (SVERM) (p<0.0001). There was a deficit of glutamine + glutamate + gamma-aminobutyric acid (Glx) in the PGM (p=0.03), LCSO (p=0.01), and pons (p=0.0002). Choline was higher than expected for age only in the LCSO (p=0.0097), and myo-inositol was higher than expected for age in the pons (p=0.002). Multiple correlations between these MRS-measured metabolites and age, functional assessments, brain volume, and neurotransmitters in the CSF were found. The general trend showed that the differences noted above became more pronounced with increasing age, worsening function, and lower brain volume. MRS metabolite measurements did not correlate with total CSF protein, CSF albumin, or CSF/serum albumin ratio. There was a weak correlation (p=0.09) between atrophy and total CSF protein, but not CSF albumin or CSF/serum albumin ratio. 20) Nine subjects underwent lumbar puncture. CSF total protein and albumin concentrations, as well as the CSF/serum albumin ratios, were low in nearly all individuals. There was no correlation between age and CSF protein or albumin levels. In the two oldest subjects, CSF 5-hydroxyindolacetic acid (5-HIAA) and homovanillic acid (HVA) were decreased, suggesting neuronal loss. Neopterin levels were normal but decreased with age, and CSF tetrahydrobiopterin (BH4) levels were below the lower limit of normal in all but one subject tested; however, there was no correlation with age. CSF 5-HIAA, HVA, and BH4 levels strongly and directly correlated with brain atrophy. CSF lactate and amino acid levels were essentially normal. CSF leucocyte counts (0–4; normal 0–5), glucose concentrations (54–72 mg/dL; normal 40–70), 3-O-methyldopa concentrations (12–28 nM; normal <150) and 5-methyltetrahydrofolate concentrations (45– 85 nmol/L; normal 40–150) were unremarkable. 21) Nerve conduction studies were performed in 11 individuals. The predominant finding was an axonal sensorimotor polyneuropathy (n=8) with additional demyelinative features (n=6). Results of neurophysiological testing demonstrated a length- dependent, progressive loss of sensory and motor axons and sympathetic nerve function, apparently static abnormalities in myelination of peripheral nerves, and possible motor neuron degeneration. 22) QSWEATs, performed in 11 individuals, were abnormal in the same 8 individuals who had axonal sensorimotor neuropathies. The distal lower extremity QSWEAT was more frequently absent (7/11) compared to the forearm (1/11), consistent with a length dependent neuropathy. There was a trend to greater severity of neuropathy in the older individuals, with an inverse correlation between tibial motor amplitude and age (p = 0.002, r2 = 0.799); the amplitude decreased by −0.3 mV per year (normal, >+2.5mV per year). 23) Awake and sedated ophthalmic examinations were performed on 11 study participants. Observed conditions include Lagophthalmous, ptosis, exotropia and/or esotropia, corneal neovascularization, pannus formation or scarring, optic nerve pallor or atrophy, retinal. 24) All individuals had evidence of hypo- or complete alacrima on Schirmer II testing. Tear production did not correlate with age. Pigmentary changes including pigment granularity and pigmentary retinopathy or pigmentary changes, blonde or poorly pigmented retinal periphery, and refractive errors were observed. 25) Audiologic assessments were conducted on 11 subjects. Behavioral hearing thresholds could be established reliably in only three subjects and all had normal hearing sensitivity. Tympanometry was unremarkable. Most remarkable was the dyssynchronous and/or absent transmission through the auditory brainstem and/or 8th nerve in most individuals. The severity of the transmission abnormality through the auditory brainstem increased with increasing age, and the eighth nerve was bilaterally involved the 4 oldest individuals. 26) Clinical feeding and modified barium swallow assessments were performed on 11 subjects. Oral motor deficits, including persistent nutritive suckle swallow and poor oral bolus formation, were present in 10 of 11. Premature spillage and pharyngeal swallow response delays remained the primary deficits of all subjects. No aspiration or laryngeal penetration for any textures were observed in the swallow studies. Developmental delays in mastication were evident and characterized by munching patterns without matured rotary chewing of solid textures. Generalized weakness of the lips and tongue was observed in all individuals during cranial nerve assessments. Dystonic movements of the tongue and persistent oral reflexes of suckling and suck/swallows were seen in the majority of individuals. 27) Echocardiograms were unremarkable for all subjects (n=12). Electrocardiograms showed heart rates in the low 100s in all subjects (n=12), with two individuals having QTcB >440 ms, but a normal QTcF. 28) Gastric pH was assessed after H2 blockers and osmotic pump inhibitors had been discontinued for 5 days. Gastric pH was appropriately acidic in all individuals tested except one, whose pH was 7.25. 29) Laboratory values reflecting gastrointestinal and hepatic function were essentially normal at the time of the NIH evaluation. 30) One individual had undergone liver transplantation for presumed hepatocellular carcinoma. 31) These transaminase levels normalized around age 4. 32) Circulating proteins were normal or borderline low in all individuals. 33) Total cholesterol, LDL, and triglycerides were also low. 34) Hematologic profiles showed unremarkable complete blood counts with the exception of one subject with lymphoblasts, subsequently diagnosed with acute lymphocytic leukemia. Coagulation studies showed normal prothrombin time (PT), partial thromboplastin time (PTT), and international normalized ratio (INR), but low protein C activity (n=6), Factor II activity (n=1), Factor IX (n=2), Factor XI (n=2), and fibrinogen (n=5). On average, all factors except for Antithrombin III were lower in individuals with the c.1201A>T mutation; for Factor II, Factor IX, and Factor XI, the differences were significant at p<0.05 using the two sample t-test. 35) Seven of 11 individuals tested exhibited out of range elevations in antibody titers towards rubella and/or rubeola following MMR vaccination. Biochemical markers known to be abnormal in mitochondropathies and hypoglycosylation disorders showed inconsistent results. 36) Bone age was delayed in eight of the 11 subjects tested without any consistent abnormalities of the endocrine system: the somatotropic axis and thyroid function were normal in all studied individuals. 37) Femoral bone density was low in all nine individuals who underwent DEXA scanning (mean, SEM z-scores for 8 patients < 21 years adjacent to the growth plate = −3, 0.4; metaphysis-diaphysis = −2.2, 0.6, and diaphysis = −1.8, 0.5). 38) All subjects had joint hypermobility except the older ones, who had contractures in both small and large joints. 39) Complete skeletal surveys were performed on 11 individuals; abnormalities included coxa valga (n=11), scoliosis (n=6), growth arrest lines or metaphyseal banding without palmidronate treatment (n=4), dislocations or subluxations involving the hips and shoulder joints (n=3), and sclerosis of the phalanges or tarsal bones (n=2). 40) Findings noted only once included flexion deformity of the fingers, hallux valgus, sclerotic lesion of the distal femur, thinning of the fibulas, prominent apophyseal bone formation in the ileac crests and ischia, ulnar bowing, expansion of the cortexes in the proximal and middle phalanges in digits 2–4, widened phalanges, and shortened and widened metatarsals. 41) Our prospective investigations into NGLY1-CDDG revealed several new discoveries associated with this disorder. These included low CSF total protein and albumin, optic atrophy and retinal pigmentary changes/cone dystrophy, poor weight gain starting in mid- childhood, lower than predicted resting energy expenditure, central and obstructive sleep apnea, delayed bone age, joint hypermobility, progressive brain atrophy, abnormalities in brain MRS-measured metabolites, various abnormalities on skeletal survey, high antibody titers after rubella and rubeola vaccination, and low levels of several pro- and anti- coagulation factors. Echocardiograms, electrocardiograms, and CSF lactate levels were normal. 42) Patients have global developmental delay, movement disorder, frequent seizure disorder, hypotonia, hypolacrima or alacrima, corneal disease, ptosis, lagophthalmous, strabismus, peripheral neuropathy and occasional diminished reflexes, hypohidrosis, auditory brainstem response abnormalities, abnormal brain imaging, scoliosis, acquired microcephaly, small hands and feet, dysmorphic features, constipation, elevated liver enzymes present only early in childhood, osteopenia, and hypocholesterolemia associated with NGLY1-CDDG. Transient elastography results showed minimal if any fibrosis. No abnormal storage material was found in the three liver biopsy specimens analyzed, nor was ocular apraxia observed, despite performing detailed ophthalmologic evaluations that involved some subjects previously reported to have ocular apraxia. 43) Patients considered for NGLY1-CDDG diagnosis present with developmental delay/intellectual disability, hyperkinetic movement disorder, hypolacrima, and a history of elevated transaminases during early childhood. 44) Patients have auditory neural pathway dysfunction without peripheral hearing loss, resembling auditory neuropathy. They experience difficulty hearing in the presence of background noise and benefit from quiet listening environments. If hypohidrosis is detected, preventative measures against situations that cause dangerous core body hyperthermia can be taken. It is important to aggressively manage hypo-lacrima with artificial tears and bland ointment to prevent secondary complications that can impact vision. They have disordered mastication for solids but a functional ability to swallow, suggesting the need for oral motor and swallowing therapies to facilitate better control and chewing maturation. 45) Patients have low Motor Skills scores and Daily Living Skills scores, indicating significant motor involvement required for daily tasks. They have a hyperkinetic movement disorder associated with NGLY1-CDDG. Potential contributors to this movement disorder include myoclonic seizures, neurotransmitter deficiency, and/or peripheral neuropathy manifesting as sensory ataxia. 46) As functional impairment worsened and age increased in patients, NAA decreased, while choline, myo-inositol and creatine increased. Creatine and myoinositol were inversely correlated, and NAA directly correlated, with neurotransmitter levels (5-HIAA, 5-HVA, 3-OMD, and neopterin). There is a relative abundance of glial cells compared to neurons in the brain of NGLY1-CDDG individuals, possibly due to loss of neurons, and that the degree of this imbalance contributes significantly to the severity of the phenotype. 47) Individuals with NGLY1-CDDG share phenotypic features of low cholesterol, hepatopathy, peripheral neuropathy, retinal and optic nerve abnormalities, seizures, developmental delay with socialization as a relative strength, and delayed bone age. They also exhibit hypolacrima, a feature shared with O-linked glycosylation disorders. N-glycanase 1, which is impaired in NGLY1-CDDG, catalyzes the cleavage of the amide bond between the proximal N-acetylglucosamine residue of glycans and the asparagine residue of the protein, potentially leading to hypoglycosylation. Subtle abnormalities in transferrin and ApoC-III glycosylation were observed in these individuals. 48) NGLY1-CDDG is a progressive disorder. The Nijmegen severity scores and Vineland scores indicated worsening function with age. Also progressive were the peripheral neuropathy, auditory neural dysfunction, scoliosis, inability to maintain weight, brain atrophy on MRI, abnormalities in brain metabolites measured on MRS, and CSF neurotransmitter levels. Hypolacrima occurred at all ages, and the hepatopathy and hyperkinetic movement disorder appeared to improve with age. 49) Individuals with NGLY1-CDDG have facial features that include upturned nasal tip, hypotonic facies, ptosis, brachycephaly, thinned facies, hollowed cheeks, and visible zygomatic arches. Their interpupillary distance ranged from the 13–95 centiles with the mean at the 66th centile, and SEM of 8. Horizontal fissure length ranged from 3–70 centiles with mean at the 20th centile, and SEM of 1. Inner canthal distance ranged from 3–100 centiles with the mean at the 59th centile and SEM of 10. Outer canthal distance ranged from 6–81 centile with mean at the 43 centile and SEM of 7. Canthal index ranged from −2 to +2 SD from the normal mean. 50) Right eye close-up showing conjunctival injection, limbal neovascularization, and corneal scarring in an NGLY1 patient. Findings caused by severe dry eyes and lagophthalmous.
+
+--- END PATIENT DETAILS ---
+
+Extract these details into individual records matching the following JSON Schema:
+
+--- BEGIN JSON SCHEMA ---
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
+--- END JSON SCHEMA ---
+
+Requirements:
+
+- Create exactly one output record for every input record
+- Extract ALL details for each patient into the provided schema 
+- If any one piece of information for a patient does not apply to a field in the schema well, summarize that information concisely and add it as an element in the `extra_info` field
+  - Each element in `extra_info` must be no more than 10 words
+  - There must be no more than 30 elements in `extra_info` for a given record
+  - Avoid using `extra_info` as much as possible; prioritize the more structured fields instead
+- STANDARDIZE the values of fields as much as possible such that they are consistent and directly comparable between patients
+- Report the results in JSON lines format, i.e. as individual JSON objects on separate lines
+- Do not format the JSON objects for display purposes; ensure that they containing no breaking whitespace and that each result is reported on only ONE line
+- Do NOT include any text in the response that cannot be parsed as valid JSON
+- Do NOT include explanation or other text of any kind
+
+Example response:  
+{"doc_id": "doc 1", "patient_accession": "1", ...}
+{"doc_id": "doc 1", "patient_accession": "2", ...}
+
+Patient JSON records:
+2023-07-15 13:40:51,649|INFO|llm|chat_completion| Response:
+{"doc_id": "PMC7477955", "patient_accession": "ALL", "extra_info": ["First reported in 2012", "Identified through social media campaign", "Part of a natural history study", "Clinical studies designed to detail phenotypic features", "Most common mutation was c.1201A>T", "No significant difference in disease severity of males compared to females", "All subjects had joint hypermobility", "Echocardiograms were unremarkable for all subjects", "Gastric pH was appropriately acidic in all individuals tested except one", "Circulating proteins were normal or borderline low in all individuals", "Total cholesterol, LDL, and triglycerides were also low", "Hematologic profiles showed unremarkable complete blood counts", "Bone age was delayed in eight of the 11 subjects tested", "Femoral bone density was low in all nine individuals who underwent DEXA scanning", "All subjects had joint hypermobility except the older ones", "Complete skeletal surveys were performed on 11 individuals", "Our prospective investigations into NGLY1-CDDG revealed several new discoveries associated with this disorder", "Patients have global developmental delay, movement disorder, frequent seizure disorder, hypotonia, hypolacrima or alacrima, corneal disease, ptosis, lagophthalmous, strabismus, peripheral neuropathy and occasional diminished reflexes, hypohidrosis, auditory brainstem response abnormalities, abnormal brain imaging, scoliosis, acquired microcephaly, small hands and feet, dysmorphic features, constipation, elevated liver enzymes present only early in childhood, osteopenia, and hypocholesterolemia associated with NGLY1-CDDG", "Patients considered for NGLY1-CDDG diagnosis present with developmental delay/intellectual disability, hyperkinetic movement disorder, hypolacrima, and a history of elevated transaminases during early childhood", "Patients have auditory neural pathway dysfunction without peripheral hearing loss, resembling auditory neuropathy", "Patients have low Motor Skills scores and Daily Living Skills scores", "Individuals with NGLY1-CDDG share phenotypic features of low cholesterol, hepatopathy, peripheral neuropathy, retinal and optic nerve abnormalities, seizures, developmental delay with socialization as a relative strength, and delayed bone age", "Individuals with NGLY1-CDDG have facial features that include upturned nasal tip, hypotonic facies, ptosis, brachycephaly, thinned facies, hollowed cheeks, and visible zygomatic arches"], "age": 21, "gender": "Mixed", "race": "White", "consanguinity": false, "mutations": ["NGLY1 mutations"], "phenotypes": ["Optic atrophy", "Retinal pigmentary changes", "Cone dystrophy", "Delayed bone age", "Joint hypermobility", "Lower than predicted resting energy expenditure", "Decreased tear production", "Transient transaminitis", "Small feet", "Complex hyperkinetic movement disorder", "Global developmental delay with relatively preserved socialization"], "neuropathy": {"sensory_nerves": true, "motor_nerves": true, "conduction_velocity": "Not provided", "emg_findings": "Not provided", "qsweat_findings": "Abnormal"}, "seizure_info": {"onset_age": null, "initial_type": "Not provided", "frequency": "Not provided", "medication": "Not provided", "epileptiform_discharge_localization": "Not provided", "background_slowing": "Not provided", "pdr": "Not provided", "anterior_posterior_gradient": "Not provided"}, "lab_measurements": {"protein_level": "Low", "albumin_level": "Low", "csf_serum_albumin_quotient": null, "5hiaa_level": "Decreased", "hva_level": "Decreased", "neopterin_level": "Normal", "bh4_level": "Below normal", "lactate_level": "Normal", "amino_acids": "Normal"}, "family_history": ["Not provided"], "scores": {"nijmegen_score": 32, "iq_dq": null, "vineland_score": 51}, "sequencing_info": {"sequencing_center": "Not provided", "sequencing_platform": "Not provided", "coverage": "Not provided"}, "disease_info": {"disease_name": "NGLY1-CDDG", "allele_1_mutation": "c.1201A>T", "allele_2_mutation": "Not provided"}}
+2023-07-15 13:40:51,684|INFO|cli|export_patients| Patient record info:
+<class 'pandas.core.frame.DataFrame'>
+Index: 22 entries, 0 to 0
+Data columns (total 16 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   doc_id             22 non-null     object 
+ 1   patient_accession  22 non-null     object 
+ 2   extra_info         22 non-null     object 
+ 3   age                21 non-null     float64
+ 4   gender             21 non-null     object 
+ 5   race               9 non-null      object 
+ 6   consanguinity      9 non-null      object 
+ 7   mutations          22 non-null     object 
+ 8   phenotypes         16 non-null     object 
+ 9   neuropathy         15 non-null     object 
+ 10  seizure_info       15 non-null     object 
+ 11  lab_measurements   16 non-null     object 
+ 12  family_history     7 non-null      object 
+ 13  scores             19 non-null     object 
+ 14  sequencing_info    10 non-null     object 
+ 15  disease_info       22 non-null     object 
+dtypes: float64(1), object(15)
+memory usage: 2.9+ KB
+> [0;32m/Users/eczech/repos/misc/ngly1-gpt/ngly1_gpt/cli.py[0m(197)[0;36mexport_patients[0;34m()[0m
+[0;32m    196 [0;31m[0;34m[0m[0m
+[0m[0;32m--> 197 [0;31m[0;34m[0m[0m
+[0m[0;32m    198 [0;31m[0;32mif[0m [0m__name__[0m [0;34m==[0m [0;34m"__main__"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m
+ipdb> 2023-07-15 13:44:32,764|INFO|cli|export_patients| Patient export complete (/Users/eczech/repos/misc/ngly1-gpt/data/output/patients_2.json)

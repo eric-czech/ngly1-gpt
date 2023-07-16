@@ -1,0 +1,176 @@
+```
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/patient.schema.json",
+  "title": "Patient",
+  "description": "A rare disease patient",
+  "type": "object",
+  "properties": {
+    "doc_id": {
+      "type": "string"
+    },
+    "patient_accession": {
+      "type": "string"
+    },
+    "extra_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "race": {
+      "type": "string"
+    },
+    "consanguinity": {
+      "type": "boolean"
+    },
+    "mutations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phenotypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "neuropathy": {
+      "type": "object",
+      "properties": {
+        "sensory_nerves": {
+          "type": "boolean"
+        },
+        "motor_nerves": {
+          "type": "boolean"
+        },
+        "conduction_velocity": {
+          "type": "string"
+        },
+        "emg_findings": {
+          "type": "string"
+        },
+        "qsweat_findings": {
+          "type": "string"
+        }
+      }
+    },
+    "seizure_info": {
+      "type": "object",
+      "properties": {
+        "onset_age": {
+          "type": "number"
+        },
+        "initial_type": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "medication": {
+          "type": "string"
+        },
+        "epileptiform_discharge_localization": {
+          "type": "string"
+        },
+        "background_slowing": {
+          "type": "string"
+        },
+        "pdr": {
+          "type": "string"
+        },
+        "anterior_posterior_gradient": {
+          "type": "string"
+        }
+      }
+    },
+    "lab_measurements": {
+      "type": "object",
+      "properties": {
+        "protein_level": {
+          "type": "string"
+        },
+        "albumin_level": {
+          "type": "string"
+        },
+        "csf_serum_albumin_quotient": {
+          "type": "number"
+        },
+        "5hiaa_level": {
+          "type": "string"
+        },
+        "hva_level": {
+          "type": "string"
+        },
+        "neopterin_level": {
+          "type": "string"
+        },
+        "bh4_level": {
+          "type": "string"
+        },
+        "lactate_level": {
+          "type": "string"
+        },
+        "amino_acids": {
+          "type": "string"
+        }
+      }
+    },
+    "family_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "nijmegen_score": {
+          "type": "integer"
+        },
+        "iq_dq": {
+          "type": "integer"
+        },
+        "vineland_score": {
+          "type": "integer"
+        }
+      }
+    },
+    "sequencing_info": {
+      "type": "object",
+      "properties": {
+        "sequencing_center": {
+          "type": "string"
+        },
+        "sequencing_platform": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        }
+      }
+    },
+    "disease_info": {
+      "type": "object",
+      "properties": {
+        "disease_name": {
+          "type": "string"
+        },
+        "allele_1_mutation": {
+          "type": "string"
+        },
+        "allele_2_mutation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+```
