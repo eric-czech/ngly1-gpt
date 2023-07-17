@@ -51,3 +51,11 @@ T = TypeVar("T")
 def apply(obj: T, fn: Callable[[T], None]) -> T:
     fn(obj)
     return obj
+
+
+def study_style(study: str) -> str:
+    if "PMC4243708" in study:
+        return "background-color: #1f77b4; color: white"
+    if "PMC7477955" in study:
+        return "background-color: #ff7f0e; color: white"
+    return "background-color: grey; color: white"

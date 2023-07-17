@@ -114,3 +114,9 @@ def extract_patient_json(details: str, schema: str, **kwargs: Any) -> str:
     return chat_completion_from_template(
         "patient_extraction_3.txt", details=details, schema=schema, **kwargs
     )
+
+
+def calculate_phenotype_frequencies(details: str, **kwargs: Any) -> str:
+    return chat_completion_from_template(
+        "patient_extraction_4.txt", details=details, **kwargs
+    )

@@ -1,0 +1,478 @@
+2023-07-16 23:43:07,372|INFO|cli|calculate_phenotype_frequency| Starting phenotype frequency calculation (model=gpt-4, input_patient_details_filename=patients.tsv, input_patient_records_filename=patients.json, output_filename=phenotype_frequencies.tsv)
+2023-07-16 23:43:07,396|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|details
+PMC7477955|Seven of twelve subjects had clinical seizures, and one had subclinical seizures recognized on previous EEG. There were no age or genotype differences between individuals having seizures and those without. In each sibling pair, one had seizures and the other did not.
+PMC4243708|8 patients have the following phenotype: hypotonia 
+PMC4243708|All patients had global developmental delay, a movement disorder, and hypotonia. Other common findings included hypo- or alacrima (7/8), abnormal brain imaging (7/8), EEG abnormalities (7/8), elevated liver transaminases (6/7), microcephaly (6/8), diminished reflexes (6/8), hepatocyte cytoplasmic storage material or vacuolization (5/6), seizures (4/8), and abnormal nerve conduction (3/3). Two of the patients died prematurely at 9 months and 5 years of age.
+PMC7477955|Hematologic profiles showed unremarkable complete blood counts with the exception of one subject with lymphoblasts, subsequently diagnosed with acute lymphocytic leukemia. Coagulation studies showed normal prothrombin time (PT), partial thromboplastin time (PTT), and international normalized ratio (INR), but low protein C activity (n=6), Factor II activity (n=1), Factor IX (n=2), Factor XI (n=2), and fibrinogen (n=5). On average, all factors except for Antithrombin III were lower in individuals with the c.1201A>T mutation; for Factor II, Factor IX, and Factor XI, the differences were significant at p<0.05 using the two sample t-test.
+PMC7477955|Individuals with NGLY1-CDDG share phenotypic features of low cholesterol, hepatopathy, peripheral neuropathy, retinal and optic nerve abnormalities, seizures, developmental delay with socialization as a relative strength, and delayed bone age. They also exhibit hypolacrima, a feature shared with O-linked glycosylation disorders. N-glycanase 1, which is impaired in NGLY1-CDDG, catalyzes the cleavage of the amide bond between the proximal N-acetylglucosamine residue of glycans and the asparagine residue of the protein, potentially leading to hypoglycosylation. Subtle abnormalities in transferrin and ApoC-III glycosylation were observed in these individuals.
+PMC4243708|3 patients have the following phenotype: elevated AFP 
+PMC7477955|Twelve individuals from ten families, six female and six male, all white, aged 2.5– 21.3 years, with 13 different mutations in NGLY1. The most common mutation was c.1201A>T (p.R401*), occurring in seven alleles. The mutations were widely dispersed along the gene with no obvious hotspot. Only four of the mutations lay within the catalytic domain.
+PMC4243708|8 patients have the following phenotype: constipation 
+PMC7477955|In the two subjects with the lowest cholesterol levels, high density lipoprotein, low density lipoprotein, and very low density lipoprotein particle number and sizes were normal.
+PMC7477955|Patients have low Motor Skills scores and Daily Living Skills scores, indicating significant motor involvement required for daily tasks. They have a hyperkinetic movement disorder associated with NGLY1-CDDG. Potential contributors to this movement disorder include myoclonic seizures, neurotransmitter deficiency, and/or peripheral neuropathy manifesting as sensory ataxia.
+PMC7477955|Total cholesterol, LDL, and triglycerides were also low.
+PMC4243708|8 patients have the following phenotype: movement disorder 
+PMC7477955|Two of eleven individuals showed white matter lesions in their brain MRI findings. One had multiple lesions in the periventricular white matter, some of which were confluent. The other had a single lesion in the periventricular white matter. Both showed cerebral atrophy and were performed using T2-weighting. Sulci are slightly prominent in both, and prominent ventricles are visible in one. Another individual illustrated high position of the cerebellar tonsils, and large foramen of Magendie and cisterna magna.
+PMC7477955|Seven additional affected individuals identified through a social media campaign. Most common findings in these eight known NGLY1-CDDG patients were highlighted in a retrospective chart review.
+PMC4243708|A family was found to have a homozygous null mutation in ERLIN2, with affected individuals presenting with a hereditary spastic paraplegia phenotype.
+
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
+2023-07-16 23:43:24,415|INFO|llm|chat_completion| Response:
+doc_id|phenotype|n_patients
+PMC7477955|clinical seizures|7
+PMC7477955|subclinical seizures|1
+PMC4243708|hypotonia|8
+PMC4243708|global developmental delay|8
+PMC4243708|movement disorder|8
+PMC4243708|hypo- or alacrima|7
+PMC4243708|abnormal brain imaging|7
+PMC4243708|EEG abnormalities|7
+PMC4243708|elevated liver transaminases|6
+PMC4243708|microcephaly|6
+PMC4243708|diminished reflexes|6
+PMC4243708|hepatocyte cytoplasmic storage material or vacuolization|5
+PMC4243708|seizures|4
+PMC4243708|abnormal nerve conduction|3
+PMC4243708|elevated AFP|3
+PMC4243708|constipation|8
+PMC4243708|movement disorder|8
+PMC7477955|white matter lesions in brain MRI|2
+PMC7477955|cerebral atrophy|2
+PMC7477955|prominent ventricles|1
+PMC7477955|high position of the cerebellar tonsils|1
+PMC7477955|large foramen of Magendie and cisterna magna|1
+PMC4243708|hereditary spastic paraplegia|1
+2023-07-16 23:43:24,420|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|details
+PMC7477955|The atrophy tended to be greater in the older individuals.
+PMC7477955|Three individuals scored in the mild range, two in the moderate range, and six in the severe range.
+PMC7477955|There was no significant difference in disease severity of males compared to females.
+PMC7477955|Nine subjects underwent lumbar puncture. CSF total protein and albumin concentrations, as well as the CSF/serum albumin ratios, were low in nearly all individuals. There was no correlation between age and CSF protein or albumin levels. In the two oldest subjects, CSF 5-hydroxyindolacetic acid (5-HIAA) and homovanillic acid (HVA) were decreased, suggesting neuronal loss. Neopterin levels were normal but decreased with age, and CSF tetrahydrobiopterin (BH4) levels were below the lower limit of normal in all but one subject tested; however, there was no correlation with age. CSF 5-HIAA, HVA, and BH4 levels strongly and directly correlated with brain atrophy. CSF lactate and amino acid levels were essentially normal. CSF leucocyte counts (0–4; normal 0–5), glucose concentrations (54–72 mg/dL; normal 40–70), 3-O-methyldopa concentrations (12–28 nM; normal <150) and 5-methyltetrahydrofolate concentrations (45– 85 nmol/L; normal 40–150) were unremarkable.
+PMC4243708|Three patients showed accumulation of an amorphous substance in the liver, which is supportive of the role of NGLY1 and may help explain the liver disease noted in these patients. The undefined stored substance likely represents accumulation of misfolded glycoproteins in the cytoplasm that have been retrotranslocated from the ER but cannot undergo further processing. Two other patients showed vacuolization consistent with storage. Transferrin isoelectric focusing or mass spectrometry studies in NGLY1-deficient patients have been normal or only subtly abnormal.
+PMC7477955|Gastric pH was assessed after H2 blockers and osmotic pump inhibitors had been discontinued for 5 days. Gastric pH was appropriately acidic in all individuals tested except one, whose pH was 7.25.
+PMC7477955|Our prospective investigations into NGLY1-CDDG revealed several new discoveries associated with this disorder. These included low CSF total protein and albumin, optic atrophy and retinal pigmentary changes/cone dystrophy, poor weight gain starting in mid- childhood, lower than predicted resting energy expenditure, central and obstructive sleep apnea, delayed bone age, joint hypermobility, progressive brain atrophy, abnormalities in brain MRS-measured metabolites, various abnormalities on skeletal survey, high antibody titers after rubella and rubeola vaccination, and low levels of several pro- and anti- coagulation factors. Echocardiograms, electrocardiograms, and CSF lactate levels were normal.
+PMC4243708|The nonsense mutation c.1201A>T (p.R401X) was the most common deleterious allele identified, present in homozygous state in 5 of 8 cases and in compound heterozygous state in one case.
+PMC4243708|5 patients have the following phenotype: liver storage or vacuolization 
+PMC7477955|Abdominal ultrasounds were normal in six of 12 individuals. Abnormalities in abdominal ultrasound included splenomegaly, steatosis, coarse or inhomogeneous liver texture, or hepatomegaly.
+PMC7477955|Laboratory values reflecting gastrointestinal and hepatic function were essentially normal at the time of the NIH evaluation.
+PMC4243708|Patients with autosomal recessive mutations in ERLIN2 present profound intellectual disability, developmental regression and multiple contractures. Despite the severity of the intellectual disability and neuromuscular findings, the results of brain imaging, electromyography and muscle biopsy appeared normal in these patients.
+PMC7477955|6 patients have the following phenotype: NGLY1 deficiency 
+PMC4243708|6 patients have the following phenotype: decreased DTRs 
+PMC4243708|8 patients have the following phenotype: alacrima/hypolacrima 
+
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
+2023-07-16 23:43:40,792|INFO|llm|chat_completion| Response:
+doc_id|phenotype|n_patients
+PMC7477955|mild range|3
+PMC7477955|moderate range|2
+PMC7477955|severe range|6
+PMC7477955|lumbar puncture|9
+PMC4243708|liver storage|3
+PMC4243708|vacuolization|2
+PMC7477955|acidic gastric pH|5
+PMC4243708|c.1201A>T (p.R401X) mutation|5
+PMC4243708|liver storage or vacuolization|5
+PMC7477955|normal abdominal ultrasounds|6
+PMC4243708|profound intellectual disability|8
+PMC4243708|developmental regression|8
+PMC4243708|multiple contractures|8
+PMC7477955|NGLY1 deficiency|6
+PMC4243708|decreased DTRs|6
+PMC4243708|alacrima/hypolacrima|8
+2023-07-16 23:43:40,795|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|details
+PMC7477955|Complete skeletal surveys were performed on 11 individuals; abnormalities included coxa valga (n=11), scoliosis (n=6), growth arrest lines or metaphyseal banding without palmidronate treatment (n=4), dislocations or subluxations involving the hips and shoulder joints (n=3), and sclerosis of the phalanges or tarsal bones (n=2).
+PMC4243708|4 patients have the following phenotype: corneal ulcerations/scarring 
+PMC4243708|1 patients have the following phenotype: lactic acidosis 
+PMC4243708|2 patients have the following phenotype: peripheral neuropathy 
+PMC7477955|These transaminase levels normalized around age 4.
+PMC7477955|All twelve individuals exhibited hyperkinetic movement disorders that included choreiform, athetoid, dystonic, myoclonic, action tremor, and dysmetric movements and were more severe in the younger individuals.
+PMC7477955|Ten of twelve subjects were born at term; two were born at 36 and 34 weeks, respectively. In the majority of individuals, birth weight, length, and occipital-frontal circumference (OFC) were appropriate for gestational age.
+PMC7477955|Seven of 11 individuals tested exhibited out of range elevations in antibody titers towards rubella and/or rubeola following MMR vaccination. Biochemical markers known to be abnormal in mitochondropathies and hypoglycosylation disorders showed inconsistent results.
+PMC7477955|Patients have global developmental delay, movement disorder, frequent seizure disorder, hypotonia, hypolacrima or alacrima, corneal disease, ptosis, lagophthalmous, strabismus, peripheral neuropathy and occasional diminished reflexes, hypohidrosis, auditory brainstem response abnormalities, abnormal brain imaging, scoliosis, acquired microcephaly, small hands and feet, dysmorphic features, constipation, elevated liver enzymes present only early in childhood, osteopenia, and hypocholesterolemia associated with NGLY1-CDDG. Transient elastography results showed minimal if any fibrosis. No abnormal storage material was found in the three liver biopsy specimens analyzed, nor was ocular apraxia observed, despite performing detailed ophthalmologic evaluations that involved some subjects previously reported to have ocular apraxia.
+PMC4243708|8 patients have the following phenotype: EEG abnormalities 
+PMC4243708|Seven newly diagnosed patients with mutations in NGLY1. These observations confirm NGLY1 deficiency as an inherited disorder associated with the ERAD process and document its clinical presentation.
+PMC7477955|Findings noted only once included flexion deformity of the fingers, hallux valgus, sclerotic lesion of the distal femur, thinning of the fibulas, prominent apophyseal bone formation in the ileac crests and ischia, ulnar bowing, expansion of the cortexes in the proximal and middle phalanges in digits 2–4, widened phalanges, and shortened and widened metatarsals.
+PMC7477955|Sleep studies (n=9) identified evidence of obstructive sleep apnea (n=2), central sleep apnea (n=1), and combined obstructive and central sleep apnea (n=2). Five individuals had frequent periodic limb movements. There were no associations between age and either sleep apnea or frequent periodic limb movements.
+PMC7477955|Echocardiograms were unremarkable for all subjects (n=12). Electrocardiograms showed heart rates in the low 100s in all subjects (n=12), with two individuals having QTcB >440 ms, but a normal QTcF.
+PMC4243708|Patients have a striking clinical triad consisting of abnormal tear production, choreoathetosis and liver disease. In addition, global developmental delay, acquired microcephaly, hypotonia, EEG abnormalities with or without overt seizures, brain imaging abnormalities, a peripheral neuropathy, constipation and a history of IUGR were common findings. Some patients were noted to have dysmorphic features, but overall these were not considered to be particularly prominent. Low uE3 was present in three patients, including in two children who died and were found to have significant adrenal cortex vacuolation. Although adrenal function was not specifically evaluated in our patients, some degree of dysfunction remains possible.
+
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
+2023-07-16 23:43:57,690|INFO|llm|chat_completion| Response:
+doc_id|phenotype|n_patients
+PMC7477955|coxa valga|11
+PMC7477955|scoliosis|6
+PMC7477955|growth arrest lines or metaphyseal banding without palmidronate treatment|4
+PMC7477955|dislocations or subluxations involving the hips and shoulder joints|3
+PMC7477955|sclerosis of the phalanges or tarsal bones|2
+PMC4243708|corneal ulcerations/scarring|4
+PMC4243708|lactic acidosis|1
+PMC4243708|peripheral neuropathy|2
+PMC7477955|out of range elevations in antibody titers towards rubella and/or rubeola following MMR vaccination|7
+PMC4243708|EEG abnormalities|8
+PMC7477955|obstructive sleep apnea|2
+PMC7477955|central sleep apnea|1
+PMC7477955|combined obstructive and central sleep apnea|2
+PMC7477955|frequent periodic limb movements|5
+PMC7477955|heart rates in the low 100s|12
+PMC7477955|QTcB >440 ms|2
+2023-07-16 23:43:57,694|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|details
+PMC7477955|Clinical studies were designed to detail the phenotypic features of NGLY1-CDDG. Blood, urine, cerebral spinal fluid (CSF), lymphoblasts, and primary dermal fibroblasts were collected, analyzed, and stored. Studies included brain magnetic resonance imaging and spectroscopy (MRI and MRS), routine and overnight electroencephalograms (EEGs) with a limited montage performed during a sleep study, electromyogram (EMG) and nerve conduction studies (NCS), indirect calorimetry, awake and sedated eye examination with Schirmer II testing, optical coherence tomography scans and electroretinography, behavioral determination of pure tone thresholds, tympanometry, distortion product otoacoustic emissions, auditory brainstem evoked potentials (ABR), quantitative sweat analysis autonomic testing (QSWEAT), gastric aspiration, swallow study, skeletal survey, bone age, dual X-ray absorptiometry (DEXA), abdominal ultrasound, vibration controlled transient elastography (Fibroscan), echocardiogram, and electrocardiogram. Consultations included clinical neurology, audiology, nutrition, ophthalmology, hepatology, growth, puberty and hormonal studies, allergy and immunology, genetic counseling, physiatry, and speech, occupational, and physical therapy. Eleven individuals underwent developmental psychological evaluations, consisting of at least the Vineland Adaptive Behavior Scales, 2nd edition. Cognitive function was assessed with testing specific for age and developmental level that provided either an intelligence quotient (IQ) or developmental quotient (DQ) score. In addition, the Nijmegen pediatric CDG rating scale, a measure of clinical disease progression developed for CDG, was applied to all affected individuals younger than 18 years.
+PMC7477955|Most affected individuals had hypotonic facies, and the features of older individuals reflected their low weight, with thin facies, hollowed cheeks, and visible zygomatic arches. Eye measurements, performed on 10 subjects, varied broadly and revealed no consistent abnormality.
+PMC7477955|Clinical feeding and modified barium swallow assessments were performed on 11 subjects. Oral motor deficits, including persistent nutritive suckle swallow and poor oral bolus formation, were present in 10 of 11. Premature spillage and pharyngeal swallow response delays remained the primary deficits of all subjects. No aspiration or laryngeal penetration for any textures were observed in the swallow studies. Developmental delays in mastication were evident and characterized by munching patterns without matured rotary chewing of solid textures. Generalized weakness of the lips and tongue was observed in all individuals during cranial nerve assessments. Dystonic movements of the tongue and persistent oral reflexes of suckling and suck/swallows were seen in the majority of individuals.
+PMC7477955|All individuals had evidence of hypo- or complete alacrima on Schirmer II testing. Tear production did not correlate with age. Pigmentary changes including pigment granularity and pigmentary retinopathy or pigmentary changes, blonde or poorly pigmented retinal periphery, and refractive errors were observed.
+PMC4243708|Patients in this cohort were initially suspected to have congenital disorders of glycosylation (CDGs) due to multisystem disease involving the central nervous system, heart, liver and gastrointestinal tract, and endocrine system. However, unlike CDGs, NGLY1 deficiency in these patients was not associated with cerebellar atrophy, lipodystrophy, or significant heart manifestations. Common findings in these patients included abnormalities detected on brain imaging, but these were typically mild and non-specific. The combination of hypo- or alacrima and a movement disorder consisting of tremulousness and varying degrees of choreoathetosis appear to be pathognomonic for NGLY1 deficiency in these patients. Mitochondrial disorders were also considered as diagnostic possibilities. Lactic acidemia was variably present, but tended to be mild; chronic elevations were not noted in any patient.
+PMC4243708|6 patients have the following phenotype: microcephaly 
+PMC7477955|All subjects had joint hypermobility except the older ones, who had contractures in both small and large joints.
+PMC4243708|All patients had global developmental delay, a movement disorder, and hypotonia. Other common findings included hypo- or alacrima (7/8), elevated liver transaminases (6/7), microcephaly (6/8), diminished reflexes (6/8), hepatocyte cytoplasmic storage material or vacuolization (5/6), and seizures (4/8). The nonsense mutation c.1201A>T (p.R401X) was the most common deleterious allele. NGLY1 deficiency is a novel autosomal recessive disorder of the ERAD pathway associated with neurological dysfunction, abnormal tear production, and liver disease. The majority of patients detected to date carry a specific nonsense mutation that appears to be associated with severe disease.
+PMC7477955|Nerve conduction studies were performed in 11 individuals. The predominant finding was an axonal sensorimotor polyneuropathy (n=8) with additional demyelinative features (n=6). Results of neurophysiological testing demonstrated a length- dependent, progressive loss of sensory and motor axons and sympathetic nerve function, apparently static abnormalities in myelination of peripheral nerves, and possible motor neuron degeneration.
+PMC7477955|Eleven individuals underwent MRI and MRS of the brain. Clinical assessment of the images was not striking. Delayed myelination was present in three of the four youngest individuals, but all the older individuals had complete myelination.
+PMC7477955|One individual had undergone liver transplantation for presumed hepatocellular carcinoma.
+PMC7477955|12 individuals ages 2 to 21 years with confirmed, biallelic, pathogenic NGLY1 mutations were studied. They exhibited previously unreported clinical features, including optic atrophy and retinal pigmentary changes/cone dystrophy, delayed bone age, joint hypermobility, and lower than predicted resting energy expenditure. Laboratory findings include low CSF total protein and albumin, and unusually high antibody titers towards rubella and/or rubeola following vaccination. Confirmed and further quantified previously reported findings noting that decreased tear production, transient transaminitis, small feet, a complex hyperkinetic movement disorder, and varying degrees of global developmental delay with relatively preserved socialization are the most consistent features.
+PMC7477955|On needle EMG, neurogenic findings were noted in 9 subjects with varying degrees of acute and chronic changes consistent with the NCS results.
+PMC7477955|All five individuals carrying the common mutation c.1201A>T were either moderately or severely impaired; those carrying at least one copy had a higher mean score (36) than those without this mutation (20.5).
+PMC7477955|Circulating proteins were normal or borderline low in all individuals.
+
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
+2023-07-16 23:44:39,465|INFO|llm|chat_completion| Response:
+doc_id|phenotype|n_patients
+PMC7477955|NGLY1-CDDG|11
+PMC7477955|hypotonic facies|11
+PMC7477955|low weight|11
+PMC7477955|thin facies|11
+PMC7477955|hollowed cheeks|11
+PMC7477955|visible zygomatic arches|11
+PMC7477955|Oral motor deficits|10
+PMC7477955|persistent nutritive suckle swallow|10
+PMC7477955|poor oral bolus formation|10
+PMC7477955|Premature spillage|11
+PMC7477955|pharyngeal swallow response delays|11
+PMC7477955|Generalized weakness of the lips and tongue|11
+PMC7477955|Dystonic movements of the tongue|11
+PMC7477955|persistent oral reflexes of suckling and suck/swallows|11
+PMC7477955|hypo- or complete alacrima|11
+PMC7477955|Pigmentary changes|11
+PMC7477955|pigment granularity|11
+PMC7477955|pigmentary retinopathy or pigmentary changes|11
+PMC7477955|blonde or poorly pigmented retinal periphery|11
+PMC7477955|refractive errors|11
+PMC4243708|microcephaly|6
+PMC7477955|joint hypermobility|11
+PMC4243708|global developmental delay|8
+PMC4243708|movement disorder|8
+PMC4243708|hypotonia|8
+PMC4243708|hypo- or alacrima|7
+PMC4243708|elevated liver transaminases|6
+PMC4243708|diminished reflexes|6
+PMC4243708|hepatocyte cytoplasmic storage material or vacuolization|5
+PMC4243708|seizures|4
+PMC7477955|axonal sensorimotor polyneuropathy|8
+PMC7477955|demyelinative features|6
+PMC7477955|Delayed myelination|3
+PMC7477955|optic atrophy and retinal pigmentary changes/cone dystrophy|12
+PMC7477955|delayed bone age|12
+PMC7477955|joint hypermobility|12
+PMC7477955|lower than predicted resting energy expenditure|12
+PMC7477955|decreased tear production|12
+PMC7477955|transient transaminitis|12
+PMC7477955|small feet|12
+PMC7477955|complex hyperkinetic movement disorder|12
+PMC7477955|global developmental delay with relatively preserved socialization|12
+PMC7477955|neurogenic findings|9
+PMC7477955|common mutation c.1201A>T|5
+PMC7477955|Circulating proteins were normal or borderline low|11
+2023-07-16 23:44:39,469|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|details
+PMC4243708|NGLY1 deficiency is characterized by a constellation of unique features including elevation of AFP and liver enzymes in infancy with relative normalization in early childhood, accumulation of a substance with staining properties similar to glycogen in hepatocyte cytoplasm, absent tears resulting in blepharitis and corneal ulceration, a movement disorder and peripheral neuropathy. The transient nature of the AFP and liver transaminase elevation may make older or more mildly affected individuals difficult to detect.
+PMC7477955|Increased atrophy correlated with worsening of all functional measurements, including IQ or DQ, Vineland assessments, and Nijmegen scores. Brain volume also directly correlated with CSF levels of 5-HIAA, tetrahydrobiopterin, and 5-HVA.
+PMC4243708|8 patients have the following phenotype: global developmental delay 
+PMC7477955|Bone age was delayed in eight of the 11 subjects tested without any consistent abnormalities of the endocrine system: the somatotropic axis and thyroid function were normal in all studied individuals.
+PMC4243708|6 patients have the following phenotype: brain imaging abnormalities 
+PMC7477955|Compared to the reference population, N-acetylaspartylglutamate + N-acetylaspartate (NAA) was lower than normal in the left centrum semiovale (LCSO) (p=0.004), the midline parietal grey matter (PGM) (p=0.02), and superior cerebellar vermis (SVERM) (p<0.0001). There was a deficit of glutamine + glutamate + gamma-aminobutyric acid (Glx) in the PGM (p=0.03), LCSO (p=0.01), and pons (p=0.0002). Choline was higher than expected for age only in the LCSO (p=0.0097), and myo-inositol was higher than expected for age in the pons (p=0.002). Multiple correlations between these MRS-measured metabolites and age, functional assessments, brain volume, and neurotransmitters in the CSF were found. The general trend showed that the differences noted above became more pronounced with increasing age, worsening function, and lower brain volume. MRS metabolite measurements did not correlate with total CSF protein, CSF albumin, or CSF/serum albumin ratio. There was a weak correlation (p=0.09) between atrophy and total CSF protein, but not CSF albumin or CSF/serum albumin ratio.
+PMC4243708|4 patients have the following phenotype: neonatal jaundice 
+PMC7477955|12 affected individuals were part of a natural history study of the disorder. Comprehensive, prospective, clinical, molecular, radiologic, and laboratory investigations were performed.
+PMC4243708|5 patients have the following phenotype: IUGR 
+PMC7477955|Individuals grew poorly after mid-childhood, with weight affected more than height. Acquired microcephaly was documented in the four oldest subjects.
+PMC7477955|Six of nine individuals had qualitatively-evident cerebral atrophy that ranged from slight to moderate.
+PMC7477955|Elevations in aspartate aminotransferase (AST) and/or alanine transaminase (ALT) in all eight subjects that had these measured in their first two years of life.
+PMC4243708|4 patients have the following phenotype: seizures 
+PMC4243708|4 patients have the following phenotype: small hands/feet 
+PMC7477955|NGLY1-CDDG is a progressive disorder. The Nijmegen severity scores and Vineland scores indicated worsening function with age. Also progressive were the peripheral neuropathy, auditory neural dysfunction, scoliosis, inability to maintain weight, brain atrophy on MRI, abnormalities in brain metabolites measured on MRS, and CSF neurotransmitter levels. Hypolacrima occurred at all ages, and the hepatopathy and hyperkinetic movement disorder appeared to improve with age.
+
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
+2023-07-16 23:45:06,013|INFO|llm|chat_completion| Response:
+doc_id|phenotype|n_patients
+PMC4243708|global developmental delay|8
+PMC4243708|brain imaging abnormalities|6
+PMC4243708|neonatal jaundice|4
+PMC4243708|IUGR|5
+PMC4243708|seizures|4
+PMC4243708|small hands/feet|4
+PMC7477955|Bone age was delayed|8
+PMC7477955|N-acetylaspartylglutamate + N-acetylaspartate (NAA) was lower than normal|12
+PMC7477955|deficit of glutamine + glutamate + gamma-aminotransferase (Glx)|12
+PMC7477955|Choline was higher than expected for age|12
+PMC7477955|myo-inositol was higher than expected for age|12
+PMC7477955|Individuals grew poorly after mid-childhood|12
+PMC7477955|qualitatively-evident cerebral atrophy|6
+PMC7477955|Elevations in aspartate aminotransferase (AST) and/or alanine transaminase (ALT)|8
+PMC7477955|NGLY1-CDDG is a progressive disorder|12
+PMC7477955|peripheral neuropathy|12
+PMC7477955|auditory neural dysfunction|12
+PMC7477955|scoliosis|12
+PMC7477955|inability to maintain weight|12
+PMC7477955|brain atrophy on MRI|12
+PMC7477955|abnormalities in brain metabolites measured on MRS|12
+PMC7477955|CSF neurotransmitter levels|12
+PMC7477955|Hypolacrima|12
+PMC7477955|hepatopathy|12
+PMC7477955|hyperkinetic movement disorder|12
+2023-07-16 23:45:06,016|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|details
+PMC7477955|The total foot length was < 3rd percentile in all 12 individuals.
+PMC4243708|4 patients have the following phenotype: ocular apraxia 
+PMC7477955|Right eye close-up showing conjunctival injection, limbal neovascularization, and corneal scarring in an NGLY1 patient. Findings caused by severe dry eyes and lagophthalmous.
+PMC4243708|4 patients have the following phenotype: chalazions 
+PMC7477955|All twelve subjects had at least some developmental delay or intellectual disability, with a broad range of severity. IQ was below average (n=2) or in the range of intellectual disability (n=9) for the entire group; seven individuals had profound intellectual disability. The two individuals with IQ below average were verbally fluent; the remainder were nonverbal (n=7) or used only single words (n=1) or phrase speech (n=1). On the Vineland Adaptive Behavior Scales, Second Edition, composite scores ranged from 24 to 98 with a mean of 51 (SEM = 7). There was a consistent profile characterized by relatively strong Socialization scores, followed by Communication, and Daily Living Skills. Motor deficits were also reflected in impaired Daily Living Skills scores. Vineland scores were higher than cognitive scores for all subjects. No cross-sectional relationship was found between age and Vineland Adaptive Behavior Composite.
+PMC7477955|Awake and sedated ophthalmic examinations were performed on 11 study participants. Observed conditions include Lagophthalmous, ptosis, exotropia and/or esotropia, corneal neovascularization, pannus formation or scarring, optic nerve pallor or atrophy, retinal.
+PMC4243708|4 patients have the following phenotype: dysmorphic features 
+PMC7477955|Three of twelve had Fibroscan scores above 7 kPa, the upper limit of normal, indicating possible liver fibrosis.
+PMC7477955|Audiologic assessments were conducted on 11 subjects. Behavioral hearing thresholds could be established reliably in only three subjects and all had normal hearing sensitivity. Tympanometry was unremarkable. Most remarkable was the dyssynchronous and/or absent transmission through the auditory brainstem and/or 8th nerve in most individuals. The severity of the transmission abnormality through the auditory brainstem increased with increasing age, and the eighth nerve was bilaterally involved the 4 oldest individuals.
+PMC7477955|Patients have auditory neural pathway dysfunction without peripheral hearing loss, resembling auditory neuropathy. They experience difficulty hearing in the presence of background noise and benefit from quiet listening environments. If hypohidrosis is detected, preventative measures against situations that cause dangerous core body hyperthermia can be taken. It is important to aggressively manage hypo-lacrima with artificial tears and bland ointment to prevent secondary complications that can impact vision. They have disordered mastication for solids but a functional ability to swallow, suggesting the need for oral motor and swallowing therapies to facilitate better control and chewing maturation.
+PMC7477955|Femoral bone density was low in all nine individuals who underwent DEXA scanning (mean, SEM z-scores for 8 patients < 21 years adjacent to the growth plate = −3, 0.4; metaphysis-diaphysis = −2.2, 0.6, and diaphysis = −1.8, 0.5).
+PMC7477955|NGLY1 deficiency was first reported in 2012 by Need et al., who, through exome sequencing, identified biallelic mutations in the NGLY1 gene as the cause of disease in one child.
+PMC7477955|Individuals with NGLY1-CDDG have facial features that include upturned nasal tip, hypotonic facies, ptosis, brachycephaly, thinned facies, hollowed cheeks, and visible zygomatic arches. Their interpupillary distance ranged from the 13–95 centiles with the mean at the 66th centile, and SEM of 8. Horizontal fissure length ranged from 3–70 centiles with mean at the 20th centile, and SEM of 1. Inner canthal distance ranged from 3–100 centiles with the mean at the 59th centile and SEM of 10. Outer canthal distance ranged from 6–81 centile with mean at the 43 centile and SEM of 7. Canthal index ranged from −2 to +2 SD from the normal mean.
+PMC4243708|2 patients have the following phenotype: liver fibrosis 
+PMC7477955|QSWEATs, performed in 11 individuals, were abnormal in the same 8 individuals who had axonal sensorimotor neuropathies. The distal lower extremity QSWEAT was more frequently absent (7/11) compared to the forearm (1/11), consistent with a length dependent neuropathy. There was a trend to greater severity of neuropathy in the older individuals, with an inverse correlation between tibial motor amplitude and age (p = 0.002, r2 = 0.799); the amplitude decreased by −0.3 mV per year (normal, >+2.5mV per year).
+
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
+2023-07-16 23:45:33,221|INFO|llm|chat_completion| Response:
+doc_id|phenotype|n_patients
+PMC7477955|total foot length was < 3rd percentile|12
+PMC4243708|ocular apraxia|4
+PMC4243708|chalazions|4
+PMC4243708|dysmorphic features|4
+PMC7477955|developmental delay or intellectual disability|12
+PMC7477955|IQ below average|2
+PMC7477955|range of intellectual disability|9
+PMC7477955|nonverbal|7
+PMC7477955|used only single words|1
+PMC7477955|phrase speech|1
+PMC7477955|Lagophthalmous|11
+PMC7477955|ptosis|11
+PMC7477955|exotropia and/or esotropia|11
+PMC7477955|corneal neovascularization|11
+PMC7477955|pannus formation or scarring|11
+PMC7477955|optic nerve pallor or atrophy|11
+PMC7477955|retinal|11
+PMC7477955|Fibroscan scores above 7 kPa|3
+PMC7477955|normal hearing sensitivity|3
+PMC7477955|auditory neural pathway dysfunction without peripheral hearing loss|11
+PMC7477955|low femoral bone density|9
+PMC4243708|liver fibrosis|2
+PMC7477955|abnormal QSWEATs|8
+PMC7477955|axonal sensorimotor neuropathies|8
+2023-07-16 23:45:33,226|INFO|llm|chat_completion| Prompt (temperature=0, model=gpt-4):
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+doc_id|details
+PMC7477955|11 individuals under age 18 years were evaluated using the Nijmegen Pediatric CDG Severity scale. Total Nijmegen scores ranged from 9 (mild) to 52 (severe), with a mean of 28 ± 4 (SEM); the median was 32.
+PMC4243708|7 patients have the following phenotype: elevated liver transaminases 
+PMC4243708|Patients have axonal loss and gliosis in the brains suggestive of HIE, indicating that NGLY1 plays a role in maintaining central nervous system integrity. They also seem to have peripheral neuropathy that is relatively common in NGLY1 deficiency. Further studies are needed to determine the underlying pathogenesis of both central and peripheral nervous system abnormalities found in these patients.
+PMC4243708|4 patients have the following phenotype: scoliosis 
+PMC7477955|As functional impairment worsened and age increased in patients, NAA decreased, while choline, myo-inositol and creatine increased. Creatine and myoinositol were inversely correlated, and NAA directly correlated, with neurotransmitter levels (5-HIAA, 5-HVA, 3-OMD, and neopterin). There is a relative abundance of glial cells compared to neurons in the brain of NGLY1-CDDG individuals, possibly due to loss of neurons, and that the degree of this imbalance contributes significantly to the severity of the phenotype.
+PMC7477955|Patients considered for NGLY1-CDDG diagnosis present with developmental delay/intellectual disability, hyperkinetic movement disorder, hypolacrima, and a history of elevated transaminases during early childhood.
+PMC7477955|Resting energy expenditure was close to 100% of expected in three individuals, but ranged from 51% to 82% of predicted in the other 9.
+PMC7477955|Ten of twelve individuals had some degree of constipation.
+
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
+2023-07-16 23:45:51,356|INFO|llm|chat_completion| Response:
+doc_id|phenotype|n_patients
+PMC7477955|evaluated using the Nijmegen Pediatric CDG Severity scale|11
+PMC4243708|elevated liver transaminases|7
+PMC4243708|axonal loss and gliosis in the brains suggestive of HIE|1
+PMC4243708|peripheral neuropathy|1
+PMC4243708|scoliosis|4
+PMC7477955|developmental delay/intellectual disability|1
+PMC7477955|hyperkinetic movement disorder|1
+PMC7477955|hypolacrima|1
+PMC7477955|history of elevated transaminases during early childhood|1
+PMC7477955|Resting energy expenditure was close to 100% of expected|3
+PMC7477955|Resting energy expenditure ranged from 51% to 82% of predicted|9
+PMC7477955|constipation|10
+2023-07-16 23:45:51,397|INFO|cli|calculate_phenotype_frequency| Phenotype frequency calculation complete (/Users/eczech/repos/misc/ngly1-gpt/data/output/phenotype_frequencies.tsv)

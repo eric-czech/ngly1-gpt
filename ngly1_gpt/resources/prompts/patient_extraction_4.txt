@@ -1,0 +1,27 @@
+The following table in pipe-delimited CSV format contains details about individual rare disease patients:
+
+--- BEGIN PATIENT DETAILS ---
+{details}
+--- END PATIENT DETAILS ---
+
+Identify any statements that provide a count of patients with a particular phenotype.
+
+Report these statements as pipe (i.e. "|") delimited CSV records with the columns:
+
+- `doc_id`: The provided `doc_id` for the statement
+- `phenotype`: The phenotype mentioned in the statement
+  - If multiple phenotypes are mentioned in one statement, as will often be the case, split them into multiple rows in the resulting CSV
+  - This value must be a SINGLE phenotype
+- `n_patients`: The number (as an integer) of patients mentioned that definitely, with no ambiguity, have the phenotype also mentioned
+
+Requirements:
+- Ingore statements that do not mention a phenotype and an associated count for that phenotype
+- Extract as many phenotype patient counts as possible
+- Return the headers in the response
+- If no eligible statements are found, report only the headers
+
+Example response:
+doc_id|phenotype|n_patients
+PMC1|low cholesterol|3
+
+Patient phenotype counts CSV:
