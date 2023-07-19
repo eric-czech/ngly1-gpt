@@ -17,4 +17,6 @@ The variables currently necessary in `.env` are:
 
 ```bash
 OPENAI_API_KEY="xxxxx"
+# Use this in an IDE (e.g. VSCode) that exports from .env automatically
+# PYTHONPATH=/path/to/repo/root 
 ```
