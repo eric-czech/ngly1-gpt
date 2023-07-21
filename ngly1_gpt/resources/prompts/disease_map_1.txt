@@ -1,0 +1,11 @@
+Text will be provided that contains information from a published, biomedical research article about {disease}. 
+
+Identify any proteins, genes, variants, phenotypes, metabolites, pathways, biological functions or other biological entities of any kind that are linked to the pathogenesis of {disease}.
+
+The intent of this information will be to build a graph/network containing these entities and the relations between them.
+
+Let's think step by step.  List the nodes first and then the types of edges/relations.  Attempt to categorize the entities and relations as well, such that those with sufficient likeliness have the same category.
+
+--- BEGIN TEXT ---
+{text}
+--- END TEXT ---

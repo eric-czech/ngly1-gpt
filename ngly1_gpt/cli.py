@@ -1,11 +1,13 @@
 import io
 import logging
+import pickle
 from pathlib import Path
 from typing import Callable
 
 import fire
 import pandas as pd
 import tqdm
+import yaml
 
 from ngly1_gpt import doc
 from ngly1_gpt import llm
@@ -261,6 +263,50 @@ class Commands:
         path = utils.get_paths().output_data / output_filename
         phenotype_frequencies.to_csv(path, sep="\t", index=False)
         logger.info(f"Phenotype frequency calculation complete ({path})")
+
+    def extract_disease_maps(
+        self,
+        model: str = llm.DEFAULT_MODEL,
+        output_filename: str = "disease_maps.pkl",
+    ) -> None:
+        logger.info(
+            f"Starting diesease map extraction (model={model}, output_filename={output_filename})"
+        )
+        with open(utils.get_paths().resources / "evidence" / "diseases.yaml", "r") as f:
+            diseases = yaml.safe_load(f)
+
+        result = []
+        for disease in tqdm.tqdm(diseases):
+            evidence = disease["evidence"]
+            for source in evidence:
+                for i, chunk in enumerate(evidence[source].strip().split("\n\n")):
+                    graph_description = llm.retry(llm.chat_completion_from_template)(
+                        "disease_map_1.txt",
+                        temperature=0,
+                        disease=disease["label"],
+                        text=chunk,
+                    )
+                    graph_json = llm.retry(llm.chat_completion_from_template)(
+                        "disease_map_2.txt",
+                        temperature=0,
+                        disease=disease["label"],
+                        text=chunk,
+                        description=graph_description,
+                    )
+                    result.append(
+                        dict(
+                            disease=disease,
+                            source=source,
+                            chunk_index=i,
+                            chunk_text=chunk.strip(),
+                            graph_description=graph_description,
+                            graph_json=graph_json,
+                        )
+                    )
+        path = utils.get_paths().output_data / output_filename
+        with open(path, "wb") as f:
+            pickle.dump(result, f)
+        logger.info(f"Disease map extraction complete ({path})")
 
 
 if __name__ == "__main__":

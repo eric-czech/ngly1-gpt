@@ -1,0 +1,38 @@
+The following text contains information from a published, biomedical research article about {disease}:
+
+--- BEGIN TEXT ---
+{text}
+--- END TEXT ---
+
+This was summarized as a description of a graph (aka network) containing biological entities and processes that are hypothesized to be involved in the etiology of {disease} as follows:
+
+--- BEGIN DESCRIPTION ---
+{description}
+--- END DESCRIPTION ---
+
+Convert this description into a structed graph representation in node-link JSON format, using all of the above context where appropriate. Requirements:
+
+- Include ALL entities (nodes) and relations (edges) described
+- Include "{disease}" as a node
+- Use integer ids for the nodes and a `label` property containing their names
+- Add a node `type` property that best captures what kind of node it is
+- Include an edge `type` property describing the nature of the relation between nodes 
+
+Here is an example showing a partial response with placeholder values:
+
+--- BEGIN EXAMPLE JSON ---
+{{
+  "nodes": [
+    {{"id": $node_integer_id, "label": $node_label, "type": $node_type}},
+    ...
+  ],
+  "links": [
+    {{"source": $node_integer_id_1, "target": $node_integer_id_2, "type": $edge_type}},
+    ...
+  ]
+}}
+--- END EXAMPLE JSON ---
+
+Report only the JSON data.  Do not include other text or explanations of any kind.
+
+node-link JSON:

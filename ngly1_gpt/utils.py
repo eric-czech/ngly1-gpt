@@ -15,6 +15,7 @@ class Paths:
     raw_data: Path
     extract_data: Path
     output_data: Path
+    resources: Path
     prompts: Path
 
 
@@ -23,6 +24,7 @@ def get_paths() -> Paths:
         raw_data=Path(__file__).parent.parent / "data" / "raw",
         extract_data=Path(__file__).parent.parent / "data" / "extract",
         output_data=Path(__file__).parent.parent / "data" / "output",
+        resources=Path(__file__).parent / "resources",
         prompts=Path(__file__).parent / "resources" / "prompts",
     )
 

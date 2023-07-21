@@ -42,6 +42,12 @@ def chat_completion_from_template(
     return chat_completion(prompt, model=model, temperature=temperature)
 
 
+def text_embedding(text: str, model: str = "text-embedding-ada-002") -> list[float]:
+    # See https://platform.openai.com/docs/guides/embeddings/use-cases
+    text = text.replace("\n", " ")
+    return openai.Embedding.create(input=[text], model=model)["data"][0]["embedding"]  # type: ignore[no-any-return]
+
+
 def chat_completion(
     prompt: str,
     model: str = DEFAULT_MODEL,
@@ -85,7 +91,7 @@ def convert_graph_json(graph_json: str, disease: str) -> nx.MultiDiGraph:
     G = nx.node_link_graph(json.loads(graph_json), directed=True, multigraph=True)
     primary_node = None
     for node in G.nodes():
-        if G.nodes[node]["label"] == disease:
+        if G.nodes[node]["label"].lower() == disease.lower():
             primary_node = node
     if primary_node is None:
         raise ValueError(f"Could not find primary node with label '{disease}'")
